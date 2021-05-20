@@ -1,0 +1,7 @@
+1. __name__
+    __name__ is a special variable in python, we we excute the python file this variable will be assigned with value
+    if we directly execute the script the __name__ will be assigned with __main__
+    if we import the python file script1.py in script2.py, and if we execute the script2.py the scripy1.py will be excuted first and then the script2.py
+    for script1.py the __name__ variable will be assigned with "script1" and for script2.py the __name__ varibale will be assigned with value __main__
+    
+2. 

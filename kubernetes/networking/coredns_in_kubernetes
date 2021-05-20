@@ -1,0 +1,9 @@
+1. To know the coredns config file used by coredns
+we can get this coredns config details from arguments passed to creating the coredns deployment
+kubectl -n kube-system describe deployments.apps coredns | grep -A2 Args | grep Corefile
+
+2. To know the cluster root domain, see the configmap created for coreDNS
+kubectl describe configmap coredns -n kube-system 
+
+3. To access the service from inside the pod use the FQDN
+web-service.default.svc.cluster.local   (service-name.namespace-name.object-name.root-domain-name)

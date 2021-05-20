@@ -1,0 +1,7 @@
+Reference : https://kubernetes.io/docs/concepts/architecture/nodes/
+
+A Node's status contains the following information:
+  Addresses
+  Conditions
+  Capacity and Allocatable
+  Info

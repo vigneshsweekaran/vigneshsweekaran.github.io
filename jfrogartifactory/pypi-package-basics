@@ -1,0 +1,27 @@
+Reference : https://www.jfrog.com/confluence/display/JFROG/PyPI+Repositories
+1. To push python packages(.whl or .egg) to artifactory using python command, create a configuration file ~/pypirc
+
+[distutils]
+index-servers =
+    local
+    pypi
+ 
+[pypi]
+repository: https://pypi.org/pypi
+username: mrBagthrope
+password: notToBeSeen
+ 
+[local]
+repository: http://localhost:8081/artifactory/api/pypi/pypi-local
+username: %USER_NAME%
+password: %PASSWORD% 
+
+2. From jenkinsfile update this username and password
+withCredentials([usernamePassword(credentialsId: "${ARTIFACTORY_CREDENTIAL_ID}", passwordVariable: 'ARTIFACTORY_PWD', usernameVariable: 'ARTIFACTORY_USER')]) {
+        sh "sed -i 's/%USER_NAME%/${ARTIFACTORY_USER}/g' ~/.pypirc"
+        sh "sed -i 's/%PASSWORD%/${ARTIFACTORY_PWD}/g' ~/.pypirc"
+        sh "cat ~/.pypirc"
+}
+
+3. Call the python command like this
+python setup.py sdist upload -r local

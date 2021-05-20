@@ -1,0 +1,2 @@
+1. When the pod is stopped which was created by Job, by default it will create the next pod for maximum 7 times, because by default the .spec.backoffLimit is set to 6
+

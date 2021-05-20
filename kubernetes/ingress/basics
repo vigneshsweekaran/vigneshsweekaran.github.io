@@ -1,0 +1,11 @@
+1. Ingress Types
+  --> Ingress backed by a single Service (All requests to single backend service)
+      --> Single Backend service
+      --> Default Backend service
+  --> Simple fanout (Path based routing)
+  --> Name based virtual hosting (hostname based routing)
+  
+2. Types of Routing
+  Path based routing : http://example.com/wear, http://example.com/video
+  Host based routing : http://wear.example.com, http://video.example.com
+ 

@@ -1,0 +1,25 @@
+-k --> insecure connection
+-T --> specify filename to upload
+-d --> data to pass
+-A --> To pass data with spaces eg: -A "This is my data
+-u --> username:password
+-w --> write-out --> to pass specific output as a result eg: curl --write-out "%{http_code}\n" "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22" 
+
+1. To upload a file
+  curl -X PUT -T file_name "URL/file_name"
+  
+2. To download a file
+  curl URL --output file_name
+  --output or -o is used to save the file locally 
+  
+  If you run curl without -o it will print the content to the screen
+  curl http://example.com
+  
+  By default while downloading, it will show thw progress bar, If we dont want the progress bar use "-s or --silent"
+  curl http://example.com --output my.file --silent
+  shorhand:
+  curl -s http://example.com -o my.file
+  
+  Passing the content to other program
+  curl -s http://example.com | wc -l
+  

@@ -1,0 +1,185 @@
+Note:
+    string --> part of the word or line eg: "is" is a string part of "This"
+
+1. Rules to create a pattern
+    i[st] --> [is,it] --> it is a list
+    [abc] --> [a,b,c]
+    [a-d] --> [a,b,c,d]
+    [a-dg-ko-s] --> This is a-d, g-k, o-s --> [a,b,c,d,g,h,i,j,k,o,p,q,r,s]
+    [a-zA-Z0-9] --> a,b,c..z,A,B,C..Z,0,1,2..9
+    [\w] --> a,b,c..z,A,B,C..Z,0,1,2..9 and _
+    [\w\w] --> aa,ab,ac,ad....ba,bb,bc.........
+    [\w\w\w] ---> aaa,aab,aac............
+    [\W] --> Matches any character not part of \w
+    [\d] --> Matches decimal digit 0-9
+    [python\d] --> python0, python1, python2, .... python9
+    [\d\d] --> 11, 12, 13, ....99
+    . --> Matches any single character except newline character (space is included)
+    .. --> Any two characters except newline character (space is included)
+    \. --> If we want to search for dot (use escape sequence before . so that . will behave has dot)
+    ^ --> Start of the string and start of the line incase of multiline string
+    ^i[ts] --> ^ helps in returnig the first occurance of the string either "is" or "it"
+    $ --> End of the string and newline character incase of multiline string
+    learn$ --> $ helps in returnig the last occurance of the string "learn"
+    \b --> Empty string at the beginning or end of the word
+    \\blearn  --> Generally \b is for backspace so we have to put \\b Here it will return learn string which has space in beginning of string
+    Instead of \\b we can use r"\blearn" r"" means raw string it will skip the special characters
+    \B --> Empty string not at the beginning or end of the string
+    \t, \n, \r --> Matches tab, new line and carriage return respectively
+    {2} --> repeats exactly 2 times
+    {/bpython{4}/b} --> pythonnn
+    {2,4} --> 2,3 or 4 times
+    {2,} --> 2 or more times
+    + --> one or more times (same as {1,})
+    * --> zero or more times
+    ? --> one or none
+    xa?z --> xaz or xz
+    
+    Simple Flags for Regex :
+    re.I	re.IGNORECASE	ignore case.
+    re.M	re.MULTILINE	make begin/end {^, $} consider each line.
+    re.S	re.DOTALL	make . match newline too.
+    re.U	re.UNICODE	make {\w, \W, \b, \B} follow Unicode rules.
+    re.L	re.LOCALE	make {\w, \W, \b, \B} follow locale.
+    re.X	re.VERBOSE	allow comment in regex.
+    To specify more than one of them, use | operator to connect them. For example, re.search(pattern,string,flags=re.IGNORECASE|re.MULTILINE|re.UNICODE).
+    
+    re operations :
+    search --> It looks throughout the entire string and returns the first match. Search operation will look into all the lines
+    match --> same as search, but it will match the string in the first word of the line only(0th index position) (re.M will not work)
+    findall --> it will return a list with matchs
+    finditr --> returns a objects which we can iterate (which contains match, start and ending index)
+    split --> split the given line
+    sub --> replace the matches with given word
+    subn --> replace the matches with given word and prints how many times replaced and we can pass how many times we want to replace
+    compile --> compile the pattern with additional flags and parametrts and we can use the created object to do all operations
+ 
+ 2. Pattern for getting ipaddress
+     "\d\d\d\.\d\d\d\.\d\d\d\.\d\d\d"         (Here \. means .)
+     
+ 3. Example 1 pattern
+    import re
+    text="This . is a python and it is easy to learn and it is popular one for dev and automation"
+
+    my_pat= 'i[ston]' #is,it,io,in
+    #print(len(re.findall(my_pat,text)))
+    print(re.findall(my_pat,text))
+
+    #my_pat="x[abcdeflmnopq]y" ==> xay,xby.....xqy
+    #      ="x[a-fl-q]y"
+
+    my_pat='\.'
+    print(re.findall(my_pat,text))
+
+    text="This is a ip address of my db1 server: 255.255.255.255  2456234512341234"
+
+    my_pat="\d\d\d\.\d\d\d\.\d\d\d\.\d\d\d"
+    print(re.findall(my_pat,text))
+
+    text="This is python @ 345 _ - ("
+    print(re.findall('\w',text))
+    #print(re.findall('.',text))
+    print(re.findall("\W",text))
+
+    text="456 90 this is about deciaml re98gex"
+    print(re.findall('\d\d',text))
+    
+4. Example 2 pattern
+    import re
+    text='isa python l	earn and \n itis easy 	to'
+    #my_pat='^i[ts]'
+    #my_pat="learn$"
+    #my_pat=r"\blearn\b"
+    #my_pat=r"\Blearn\B"
+    my_pat=r"\n"
+    print(re.findall(my_pat,text))
+    
+5. Example 3 pattern
+    import re
+    '''
+    text="This is a pythonnnn and python aaa haaaafd xyzaaaaaaaa"
+    #my_pat=r'\bpython{4}\b'
+    my_pat=r'\bxyza{8}\b'
+    print(re.findall(my_pat,text))
+    '''
+    text="xaz asdfa sdf xaaz xaaaaaaaz xaaaaz  xz"
+    #my_pat=r'\bxa{2,}z\b'
+    #my_pat=r'xa{1,}z'
+    #my_pat=r'xa*z'   
+    my_pat=r'xa?z'
+    print(re.findall(my_pat,text))
+
+6. Example re flags
+    import re
+    '''
+    text="this is a string ThIs is a new staring THIS"
+    my_pat=r'this'
+    print(re.findall(my_pat,text,re.I))
+    '''
+    text="""this is a string EnD
+    this is second line enD
+    This is third line end
+    asfasd this end"""
+    #print(text)
+
+    #my_pat=r'^this'
+    my_pat=r'end$'
+
+    print(re.findall(my_pat,text,re.M|re.I))
+    
+7. Example search and match
+    import re
+    text="""This  is for
+    python2 and there are two major
+    vers python3 and python in future python4"""
+
+    pat=r'\bpython[23]?\b'
+    '''
+    #print(re.findall(pat,text))
+    match_ob=re.search(pat,text)
+    #rint(match_ob)
+    if match_ob:
+        print("match from ur pattern: ",match_ob.group())
+        print('Starting index: ',match_ob.start())
+        print('Ending index: ',match_ob.end()-1)
+        print("Length: ",match_ob.end()-match_ob.start())
+    else:
+        print("No match found")
+    '''
+    text="""PYTHON2 and there are two major
+    vers python3 and python in future python4"""
+
+    pat=r'\bpython[23]?\b'
+    match_ob=re.match(pat,text,re.I)
+    if match_ob:
+        print("match from ur pattern: ",match_ob.group())
+        print('Starting index: ',match_ob.start())
+        print('Ending index: ',match_ob.end()-1)
+        print("Length: ",match_ob.end()-match_ob.start())
+    else:
+        print("No match found")
+
+8. Findall and finditer
+    import re
+    my_str="This is python and we are having python2 and python3 version"
+    my_pat=r'\bpython[23]?\b'
+    #print(re.search(my_pat,my_str))
+    #print(len(re.findall(my_pat,my_str)))
+    #print(re.findall(my_pat,my_str))
+
+    for each_ob in re.finditer(my_pat,my_str):
+        print(f'The match is: {each_ob.group()} starting index: {each_ob.start()}, ending index {each_ob.end()-1}')
+        
+9. Compile
+    import re
+    my_str="This is about python. Python is easy to learn  and we have two major versions: python2 and python3 "
+
+    my_pat=r'\bPython[23]?\b'
+    #print(re.search(my_pat,my_str))
+    #print(re.findall(my_pat,my_str,flags=re.I))
+    #print(re.split(my_pat,my_str))
+    pat_ob=re.compile(my_pat,flags=re.I)
+    print(pat_ob)
+    print(pat_ob.search(my_str))
+    print(pat_ob.findall(my_str))
+    #re.findall(my_pat,my_str)===> re.complie(my_pat).findall(my_str)

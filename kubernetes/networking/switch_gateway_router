@@ -1,0 +1,45 @@
+Switching Basics: (Switches are used to transfer the packets only within the network)
+1. To check the the interface name:
+  ip link
+  
+2. To assign ip address to machine
+  ip addr add 192.168.1.10/24 dev eth0    (This will not persist across reboot, To do this add in /etc/networks file)
+  
+ROUTER (Helps to connect two different networks. It is a server with many network ports)
+  Router will get one IP from each network
+  
+GATEWAY(Route): (It is part of one network)
+1. To see Existing routing configuration
+  route or ip route
+  
+2. You have two networks with 2 systems each (A,B) and (C,D). To connect this two network we used Router. Then system B to reach system C in another network,
+we have to add the subnet to the route table to point to the gateway
+ip route add 192.168.2.0/24 via 192.168.1.1
+
+3. To route to internet
+ip route add default via 192.168.1.1  OR ip route add 0.0.0.0 via 192.168.1.1
+ip route add 192.168.1.0/24 via 0.0.0.0 (0.0.0.0 in gateway section means no gateway) Gateway is not required, since it is local network the packets will be transferred within
+the same network
+
+4. If you have two router one for private and one for public(Internet). The network will assign one Ip to each router like this privae(192.168.1.1) and public(192.168.1.2)
+To route to other internal network
+ip route add 192.168.2.0/24 via 192.168.1.1
+
+To route to Internet
+ip route add 0.0.0.0 via 192.168.1.2
+
+5. How to setup linux host as a Router
+We have three system A,B,C A and B connected to one network 192.169.1.0 and B and C to one network as 192.168.2.0 The system B is conneted to two networks using two Interface(eth0, eth1)
+If we ping C from A, it wont work, there is no routing specified . After adding the route still it wont work, because by default in linux the packets are not transferred from one
+interface eth0 to other interface eth1 in same system.
+This is for security purpose, lets say if the eth0 is private network and eth1 is punlic network, it should not transfer packets between this interfaces
+But in this case we know both are private network We change the update the filr to value 1 in /proc/sys/net/ipv4/ip_forward  By default it will be 0 means no forward
+This will not persists across reboots, To acheive this add in this file /etc/sysctl.conf
+...
+net.ipv4.ip_forward = 1
+...
+
+
+ 
+
+  

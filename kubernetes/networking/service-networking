@@ -1,0 +1,5 @@
+1. To know the Ip ranage assigned for Pod in kubeadm
+cat /etc/kubernetes/manifests/kube-apiserver.yaml | grep cluster-ip-range
+
+2. To know the proxy/forwarding mechanism used by kube-proxy service in kubeadm
+kubectl logs POD-NAME -n kube-system

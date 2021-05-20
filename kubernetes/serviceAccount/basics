@@ -1,0 +1,15 @@
+1. By default one Sevice account named "default" will be created in all namespaces. And If we craete the pod in default namespace and if we didnt specify the service account
+name in the yaml file, while creating the pod kubernetes will assign the "default" service account to this pod
+
+2. By defautlt for each service account one secret will be created automatically with the token for authenticating the api-server. And From within the pod, we we try to run kubectl 
+commands or try to create any kuberenetes resource, it will use that token in theat secret to authenticate the kubeapi-server.
+
+3. If we create new service account one new secret will be created automatically with the token for authenticating the api-server. And From within the pod, we we try to run kubectl 
+commands or try to create any kuberenetes resource, it will use that token in that secret to authenticate the kubeapi-server and for authorization it will use the Role mapped to
+this service-account. If the Role is ssigned with only listing the pods, then from inside the pod, we can only list the pods and we cannot do any other resource operation.
+
+4. we can create ImagePullSecret with type docker-registry and assign to the service account using either,
+kubectl patch serviceaccount default -p '{"imagePullSecrets": [{"name": "myregistrykey"}]}'
+or kubectl edit to to add the ImagePullSecrets details
+
+5. Service account is namespace scoped

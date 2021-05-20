@@ -1,0 +1,4 @@
+1. The get the directory name from the file path
+  os.path.dirname("file_path")
+  
+2. 

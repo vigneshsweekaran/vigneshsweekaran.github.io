@@ -1,0 +1,22 @@
+1. Functions with variable length arguments (the parameter *arg is a tuple)
+    def display(*arg):
+      for each in arg:
+        print(type(each))
+      return None
+    #display()
+    #display(4)
+    display(4,5,67)
+    print('-------------')
+    display("hi",4.65)
+    
+2. Functions with variable keyword arguments (the parameter **karg is a dictionary)
+    def display(p,**karg):
+      print(p)
+      print(karg)
+      return None
+    #display(4,5)
+    #display(b=5,a=4)
+    #display(a=4,b=5,c=6)
+    display(56,x=5,y="Hi",z=6.7,user="root")
+    
+3. 

@@ -1,0 +1,72 @@
+1. To have alias for IP address. Add the IP address to /etc/hosts file
+  192.168.1.10    db
+  
+  Now you can ping using the alias name
+  ping db (While pinging the db will be resolved from /etc/hosts file)
+  
+  Whatever we put in the /etc/hosts file is the source of truth. Host A does not check to make sure if the
+  Ip address hostname is correct not not. Even we can fool our host like, puutting some Ip address as google
+  in hosts file like this 
+  192.168.2.2    www.google.com
+
+  Now if we ping www.google.com it will reach that Ip address  
+  Translating Hostname to Ip address is known as Named Resolution
+  
+  Within a small network of few systems, you can easily get away with the entries in the /etc/hosts file. In each system,
+  we have to do this changes to resolve based on name. If the nework becomes big and the system are more, its very difficult 
+  to manage the entries. If one of the IP address are changed, we have to modify the IP address in all hosts.
+  
+  Thats where we decided to move all these entries into a single server whi will manage it centrally, we call that as DNS server
+  and we point all hosts to look up that server if they need to resolve the hostname to an IP address instead of its own /etc/hosts file
+  
+2. To point host to a DNS server. The DNS server will have an IP address (eg. 192.168.2.100)
+  Every host has a DNSrseolution configuration file at /etc/resolve.conf. We have to add entry in that like this
+  nameserver    192.168.2.100
+  
+  Once this is configured on all of your host, every time a host comes across a hostname that it does not know about, it looks it up from
+  the DNS server. If the Ip of any of the host was to change, simply update the DNS server and all host should resolve the new IP address going forward
+  We no longer need any entries in the /etc/hosts file in any of the hosts, but that does not mean we can't have entries in hosts file.
+  We still can, for example you provision a test server for our own needs, then this can be added only in out /etc/hosts file so only we will be able to 
+  resolve the name
+  
+  What if we have entries in both places, one in etc/hosts file and another in DNS server
+  /etc/hosts
+  192.168.1.115    test
+  
+  And in the DNS server as
+  192.168.1.116    test
+  
+  In this case, it first look the /etc/hosts file and then it checks the DNS server. If it finds in the /etc/hosts file then it will that name there, If it
+  didn't find it there, then it will read it from DNS server
+  
+  This oeder can changed in the /etc/nsswitch.conf The line with hosts entry, the order is files and follwed by dns
+  Files refer to /etc/hosts file and dns refer to DNS server
+  
+  To reach other websites, it is configured in DNS server, if no matche are present, then forward to public hoster DNS server hosted by google
+  
+  .com top level domain
+  google is the domain name assigned to Google company
+  maps, www, drive are the sub domains
+  
+  when we try to reach any of these domain names, say apps.google.com, it first hits our organization internal DNS server 
+  If it didnt find it will forward to the public hosted DNS server it will serch in multiple such servers and resolves it
+  In order to seep up all future results, our organization,s DNS server may choose to cache this IP for few munutes
+  
+  Similary our organizations internal application can be pointed by domain name from organization DNS server
+  
+3. To ping using short name(sub domain name) and to append the domain name automatically
+  Add the domain names in the /etc/resolv.conf file as
+  search mycompany.com prod.mycompany.com
+  
+  If first match is not found it will search with second domain name
+  
+  A -- for IP4
+  AAAA -- for IPV6
+  CNAME -- name to name
+  
+4. nslookup or dig (To the Ip address and some details from the domain name)
+  nslookup does not consider entries in the local /etc/hosts file
+  
+  
+  
+  

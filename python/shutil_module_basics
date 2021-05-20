@@ -1,0 +1,42 @@
+1. Default Module
+
+2. Methods :
+  copyfile --> Copy the file with new timestamp and default permissions
+  copy --> copy the file with src permissions
+  copy2 --> copy the file with same metadata(permissions and timestamp) for destination as well
+  copymode --> copy only permissions from src to dest (file will not be copied)
+  copystat --> copy only the metadata(permissions and timestamp) from src to dest (file content will not be copied)
+  copytree --> copy the entire folder to dest
+    Syntax: shutil.copytree(src, dst, symlinks = False, ignore = None, copy_function = copy2, igonre_dangling_symlinks = False)
+    src: A string representing the path of the source directory.
+    dest: A string representing the path of the destination.
+    symlinks (optional) : This parameter accepts True or False, depending on which the metadata of the original links or linked links will be copied to the new tree.
+    ignore (optional) : If ignore is given, it must be a callable that will receive as its arguments the directory being visited by copytree(), and a list of its contents, as returned by os.listdir().
+    copy_function (optional): The default value of this parameter is copy2. We can use other copy function like copy() for this parameter.
+    igonre_dangling_symlinks (optional) : This parameter value when set to True is used to put a silence on the exception raised if the file pointed by the symlink doesn’t exist.
+    Return Value: This method returns a string which represents the path of newly created directory.
+  rmtree --> delete the directory recursively
+  
+Example
+  #!/usr/local/bin/python3
+  import shutil
+  #copy', 'copy2', 'copyfile', 'copyfileobj', 'copymode', 'copystat', 'copytree'
+
+  #copyfile-->copy --> copy2
+  #src="/home/Automation/working_with_remote_server.py"
+  src="/home/Automation/shutil_part_1.py"
+  dest="/home/Automation/working_with_remote_server.py_bkp"
+  #shutil.copyfile(src,dest)       # Copy the file with new timestamp and default permissions
+  #shutil.copy(src,dest)   # copy the file with src permissions
+  #shutil.copy2(src,dest)   # same metadata(permissions and timestamp) for dest as well
+  #shutil.copymode(src,dest) 
+  #shutil.copystat(src,dest)
+
+  #f1=open('xyz.txt','r')
+  #f2=open('pqr.txt','w')
+  #shutil.copyfileobj(f1,f2)
+
+  #src="/home/Automation/tomcat7"
+  #shutil.copytree(src,'/tmp/tomcat')
+
+  shutil.rmtree('/tmp/tomcat')

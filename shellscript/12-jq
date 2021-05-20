@@ -1,0 +1,4 @@
+1. To print the json output in proper format
+cat test.json | jq .
+
+2. 

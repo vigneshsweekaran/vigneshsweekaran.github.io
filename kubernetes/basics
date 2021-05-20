@@ -1,0 +1,4 @@
+Points:
+  1. We cannot access secrets and Configmaps in pods which was created in diffrent namespace. These are namespace scoped. The scerets and configmaps can be accessed only by
+  resources within the same namespace
+  2. Eventhough if we map ClusterRole with RoleBinding still it will be namespace scoped of RoleBinding namespace.

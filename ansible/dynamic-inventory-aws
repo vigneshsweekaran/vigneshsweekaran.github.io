@@ -1,0 +1,19 @@
+IMPORTANT: Use aws_ec2 plugin instead of this steps
+
+To use aws ec2 dynamic inventory, we have to download the ec2.py, ec2.ini from the anisble github repo to our ansible host machine  
+To run this python scripy we need one dependency module to be installed boto or boto3 (which is python module for aws)
+sudo pip install boto
+
+Next, for aws account credentials, if our ansible host also in aws ec2 then we can use the IAM role for authentication or else we have to configure the credentials in
+the server manually by exporting aws ACCESS_ID and AWS_SECRET_ID as environment variable or put in ~/.boto fileansible 
+export AWS_ACCESS_KEY_ID='AK123'
+export AWS_SECRET_ACCESS_KEY='abc123'
+
+Then if we run the ec2.py it will return the josn data will lost of detials about the ec2-servers,
+The ec2 group will have all the ips in that account, and many more group are there in that json based on instance_type, ami_id, ec2_region etc...
+
+ansible -i ec2.py ec2 -m ping 
+Here -i ec2.py --> is the custom inventory script available from ansible
+ec2 --> is the group name avilable in the json data returned from ec2.py
+
+If we want custom group name, we have to craete our own python script for ec2

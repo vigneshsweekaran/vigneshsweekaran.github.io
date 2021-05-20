@@ -1,0 +1,63 @@
+1. To list the running process in linux
+ps aux
+
+2. To create new network namespace
+ip netns add namespace_name
+
+3. To list network namespace
+ip netns
+To delete network namespace
+ip netns del namespace_name
+
+4. To run the command inside the namespace
+ip netns exec NAMESPACE_NAME COMMAND  (eg. ip netns exec red ip link  --> will show the interfaces inside the namespce)
+OR
+ip -n NAMESPACE_NAME link 
+
+5. ARP functionality is to translate IP address to physical address (arp is euivalent to ip neigh or ip neighbour or ip neighbor)
+To get arp table
+ip neigh
+To get arp table in specific namespace
+ip netns exec NMAESPACE_NAME ip neigh
+
+6. To list the routing table (ip route is equivalent to route in new systems)
+ip route
+To list routing table in specific namespace
+ip netns exec NAMESPACE_NAME ip route
+
+7. Create virtual ethernet cable and attach to namespace
+ip link add veth-red type veth peer name veth-blue
+
+8. To attach interface to namespace
+ip link set INTERFACE_NAME netns NAMESPACE_NAME (eg. ip link set veth-red netns red)
+
+9. To assign IP address to namespce
+ip -n NAMESPCE_NAME addr add IP_ADDRESS dev INTERFACE_NAME (eg. ip -n red addr add 192.168.15.1/24 dev veth-red )
+
+10. To establish connection between two interfaces in the host using NAT
+iptables -t nat -A POSTROUTING -s 192.168.15.0/24 -j MASQUERADE
+
+11. To Port forward from host to namespace/container,s IPaddress and port
+iptables -t nat -A PREROUTING --dport 80 --to-destination 192.168.15.2:80 -j DNAT
+
+
+10 To bring up the interface in namespce
+ip -n NAMESPCE_NAME link set INTERFACE_NAME up (eg. ip -n red link set veth-red up )
+
+11. To create network interface in host to act as virtual bridge the solution is provided by bridge network
+ip link add INTERFACE_NAME type bridge (eg. ip link add v-net-0 type bridge)
+
+12. To attach interface to virtual bridge interface(virtual switch)
+ip link set INTERFACE_NAME master BRIDGE_INTERFACE_NAME (eg. ip link set veth-red master v-net-0)
+
+13. To know about specific interface
+ip link show interface_name (eg. ip link show eth0)
+
+14. To run arp command in another node
+arp node_name (eg. aro node01)
+
+15. To get port no of service
+netstat -tnlp
+
+16. To know how many connections established to etcd
+netstat -anp | grep etcd
