@@ -22,7 +22,7 @@ Reference: https://linuxconfig.org/ubuntu-20-04-tomcat-installation
 
 ##### To access the tomcat in browser
 By default tomcat starts in port 8080. Open the browser and use `http://<ip-address>:8080`
-
+![tomcat-home]()
 
 ##### To change the port no of tomcat
 All the configuration files for tomcat9 are located in **/var/lib/tomcat9** folder
