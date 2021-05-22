@@ -25,7 +25,3 @@ docker run --name artifactory -d -p 8081:8081 -p 8082:8082 -v $(pwd)/artifactory
 ##### By default it will create one volume
 > docker run -d -p 5000:5000 --restart=always --name registry registry:2
 
-### Reference
-Udemy-docker-mastery by bretfisher, examples are here: https://github.com/vigneshsweekaran/udemy-docker-mastery
-
-Security best practise: https://github.com/BretFisher/ama/issues/17
