@@ -25,3 +25,15 @@ docker run --name artifactory -d -p 8081:8081 -p 8082:8082 -v $(pwd)/artifactory
 ##### By default it will create one volume
 > docker run -d -p 5000:5000 --restart=always --name registry registry:2
 
+### Cadvisor
+```
+docker run \
+  --volume=/:/rootfs:ro \
+  --volume=/var/run:/var/run:rw \
+  --volume=/sys:/sys:ro \
+  --volume=/var/lib/docker/:/var/lib/docker:ro \
+  --publish=8080:8080 \
+  --detach=true \
+  --name=cadvisor \
+  google/cadvisor:latest
+```
