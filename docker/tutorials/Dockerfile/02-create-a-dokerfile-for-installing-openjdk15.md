@@ -105,7 +105,7 @@ RUN chmod +x build.sh && \
     ./build.sh
 ```
 
-# Approach 4
+### Approach 4
 Still if we want to reduce the image size, we can use `alipne` as base image. alpine is very light weight base image.
 
 ##### Create a Dockerfile and copy the below content
