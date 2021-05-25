@@ -14,7 +14,7 @@ RUN apt update && apt install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 ```
 
-### Using Centos base image
+### Using Centos as base image
 ```Dockerfile
 FROM centos:latest
 
@@ -33,7 +33,7 @@ RUN mkdir /opt/gradle \
     && rm -f gradle-7.0.2-bin.zip
 ```
 
-### Using Alpine base image
+### Using Alpine as base image
 ```Dockerfile
 FROM alpine:latest
 
