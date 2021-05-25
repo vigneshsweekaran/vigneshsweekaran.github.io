@@ -5,7 +5,7 @@ Downloading the openjdk 15 tar file from official website, untar the file and se
 
 ##### Create a Dockerfile and copy a  below content
 
-```Dockerfile
+```
 FROM centos:8
 
 ENV PATH=$PATH:/opt/java/jdk-15.0.2/bin
@@ -28,5 +28,5 @@ Run the following command to check the docker images avilable in local machine
 ```
 docker images
 ```
-![Docker Images]()
+![Docker Images](https://github.com/vigneshsweekaran/vigneshsweekaran.github.io/blob/master/docker/tutorials/images/openjdk-15-docker-images.png)
 
