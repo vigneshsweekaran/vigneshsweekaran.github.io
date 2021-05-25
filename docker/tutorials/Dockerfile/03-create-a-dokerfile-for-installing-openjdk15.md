@@ -128,7 +128,7 @@ docker build -t java-approach-4 .
 ```
 docker images
 ```
-![](https://github.com/vigneshsweekaran/vigneshsweekaran.github.io/blob/master/docker/tutorials/Dockerfile/images/openjdk-15-reduced-docker-images.png)
+![](https://github.com/vigneshsweekaran/vigneshsweekaran.github.io/blob/master/docker/tutorials/Dockerfile/images/openjdk-15-approach-4-docker-images.png)
 
 Now we can see, the size of the docker image is reduced very much.
 
