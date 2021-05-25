@@ -66,7 +66,7 @@ Run the following command to check the docker images available in local machine
 ```
 docker images
 ```
-![](https://github.com/vigneshsweekaran/vigneshsweekaran.github.io/blob/master/docker/tutorials/Dockerfile/images/openjdk-15-reduced-docker-images.png)
+![](/docker/tutorials/Dockerfile/images/openjdk-15-reduced-docker-images.png)
 
 Now we can see, the size of the docker image is reduced.
 
@@ -74,7 +74,7 @@ Now we can see, the size of the docker image is reduced.
 ```
 docker run --rm java:15 java -version
 ```
-![checking java version](https://github.com/vigneshsweekaran/vigneshsweekaran.github.io/blob/master/docker/tutorials/Dockerfile/images/openjdk-15-reduced-checking-java-version.png)
+![checking java version](/docker/tutorials/Dockerfile/images/openjdk-15-reduced-checking-java-version.png)
 
 ### Approach 3 (Best pratice)
 Same as approach 2, but instead of putting all the commands in Dockerfile, put the commands in shellscript file, copy the file to Dockerfile then run the shellscript.
@@ -128,7 +128,7 @@ docker build -t java-approach-4 .
 ```
 docker images
 ```
-![](https://github.com/vigneshsweekaran/vigneshsweekaran.github.io/blob/master/docker/tutorials/Dockerfile/images/openjdk-15-approach-4-docker-images.png)
+![](/docker/tutorials/Dockerfile/images/openjdk-15-approach-4-docker-images.png)
 
 Now we can see, the size of the docker image is reduced very much.
 
