@@ -19,7 +19,7 @@ RUN tar -xzf openjdk-15.0.2_linux-x64_bin.tar.gz && \
 ```
 ##### Build a docker image
 ```
-docker build -t java:15 .
+docker build -t java-approach-1:15 .
 ```
 ##### Check the size of docker image
 Run the following command to check the docker images avilable in local machine
