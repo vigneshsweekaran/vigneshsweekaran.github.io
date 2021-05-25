@@ -28,13 +28,13 @@ Run the following command to check the docker images available in local machine
 ```
 docker images
 ```
-![Docker Images](https://github.com/vigneshsweekaran/vigneshsweekaran.github.io/blob/master/docker/tutorials/Dockerfile/images/openjdk-15-approach-1-docker-images.png)
+![Docker Images](/images/openjdk-15-approach-1-docker-images.png)
 
 ##### Create a docker container from the created image and check the java version
 ```
 docker run --rm java:15 java -version
 ```
-![checking java version](https://github.com/vigneshsweekaran/vigneshsweekaran.github.io/blob/master/docker/tutorials/Dockerfile/images/openjdk-15-checking-java-version.png)
+![checking java version](/images/openjdk-15-checking-java-version.png)
 
 ### Approach 2 (Best Practice)
 Downloading the openjdk 15 tar file from official website, untar it and delete the tar file in a single layer and set the path to java binary.
