@@ -24,7 +24,7 @@ docker build -t java-approach-1:15 .
 ```
 
 ##### Check the size of docker image
-Run the following command to check the docker images avilable in local machine
+Run the following command to check the docker images available in local machine
 ```
 docker images
 ```
@@ -39,7 +39,7 @@ docker run --rm java:15 java -version
 ### Approach 2 (Best Practice)
 Downloading the openjdk 15 tar file from official website, untar it and delete the tar file in a single layer and set the path to java binary.
 
-##### Create a Dockerfile and copy a  below content
+##### Create a Dockerfile and copy a below content
 ```Dockerfile
 FROM centos:8
 
@@ -52,9 +52,9 @@ If you are downloading a file inside dockerfile and if that file is not needed a
 
 This is because, Docker images are layered architecture, file added in one layer cannot be deleted in second layer, we have to remove it in the same layer if that file is not required.
 
-Even if we delete the file in the next layer, it will not have any effect because the file is already added in the last layer and that layer we cannot ovveride.
+Even if we delete the file in the next layer, it will not have any effect because the file is already added in the last layer and we cannot override that layer.
 
-Every 'RUN' command wil create one layer for docker image.
+Every 'RUN' command will create one layer for docker image.
 
 ##### Build a docker image
 ```
@@ -62,7 +62,7 @@ docker build -t java:15 .
 ```
 
 ##### Check the size of docker image
-Run the following command to check the docker images avilable in local machine
+Run the following command to check the docker images available in local machine
 ```
 docker images
 ```
@@ -77,9 +77,9 @@ docker run --rm java:15 java -version
 ![checking java version](https://github.com/vigneshsweekaran/vigneshsweekaran.github.io/blob/master/docker/tutorials/Dockerfile/images/openjdk-15-reduced-checking-java-version.png)
 
 ### Approach 3 (Best pratice)
-Same as approach 2, but instead of putting all the commands in Dockerfile, put the commands in shellscript file, copy the file to Dcokerfile then run the shellscript.
+Same as approach 2, but instead of putting all the commands in Dockerfile, put the commands in shellscript file, copy the file to Dockerfile then run the shellscript.
 
-Approach 2 would be better, if you want to habdle evreything from the Dockerfile itself.
+Approach 2 would be better, if you want to handle everything from the Dockerfile itself.
 
 Use Approach 3 if you want to put lot of logic in single layer, if the commands are less we can use the approach 2
 
