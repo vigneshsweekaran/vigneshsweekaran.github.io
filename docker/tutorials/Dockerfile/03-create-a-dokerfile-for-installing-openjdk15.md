@@ -5,7 +5,7 @@ Downloading the openjdk 15 tar file from official website, untar the file and se
 
 ##### Create a Dockerfile and copy a  below content
 
-```
+```Dockerfile
 FROM centos:8
 
 ENV PATH=$PATH:/opt/java/jdk-15.0.2/bin
@@ -30,3 +30,8 @@ docker images
 ```
 ![Docker Images](https://github.com/vigneshsweekaran/vigneshsweekaran.github.io/blob/master/docker/tutorials/images/openjdk-15-docker-images.png)
 
+##### Create a docker container from the created image and check the java version
+```Docker
+docker run --rm java:15 java -version
+```
+![checking java version]()
