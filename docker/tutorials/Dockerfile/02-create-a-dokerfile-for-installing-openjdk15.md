@@ -1,4 +1,4 @@
-# Write a dockerfile for installing openjdk15 and build the image
+# How to write a dockerfile for installing openjdk15 and build the image
 
 ### Approach 1
 Downloading the openjdk 15 tar file from official website, untar the file , delete the downloaded tar file and set the path to java binary.
