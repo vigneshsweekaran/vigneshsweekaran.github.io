@@ -28,10 +28,10 @@ Run the following command to check the docker images avilable in local machine
 ```
 docker images
 ```
-![Docker Images](https://github.com/vigneshsweekaran/vigneshsweekaran.github.io/blob/master/docker/tutorials/images/openjdk-15-docker-images.png)
+![Docker Images](https://github.com/vigneshsweekaran/vigneshsweekaran.github.io/blob/master/docker/tutorials/Dockerfile/images/openjdk-15-docker-images.png)
 
 ##### Create a docker container from the created image and check the java version
 ```Docker
 docker run --rm java:15 java -version
 ```
-![checking java version]()
+![checking java version](https://github.com/vigneshsweekaran/vigneshsweekaran.github.io/blob/master/docker/tutorials/Dockerfile/images/openjdk-15-checking-java-version.png)
