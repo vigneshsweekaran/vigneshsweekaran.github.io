@@ -27,7 +27,20 @@ FROM nginx:alpine
 
 COPY --from=builder /build/dist/my-dream-app /usr/share/nginx/html
 ```
+In the first stage we have used **node:10.0** as base image for compiling the Angular Js source code, then copied the entire source code inside and then executing the **npm install** to download the dependencies and then running the **npm run build** to compile the source code. It will keep the compiled code in **dist/my-dream-app**.
 
+Now we are intrested to copy only the compiled code from **dist/my-dream-app** folder to the Docker image, other files are not required during runtime.
+
+Now create a second stage with **nginx:alpine** as base image and then copy the compiled code from first stage which are needed during runtime and put it to second stage
+
+The final docker image is created from the second stage and first stage is thrown away.
+
+##### Build a docker image
+```
+docker build -t 2-stage:latest .
+```
+
+### 2 stage Dockerfile
 
 
 
