@@ -6,8 +6,24 @@ Using the multi stage Dockerfile we can define two stages, one for building code
 
 ### 2 stage Dockerfile
 To test this feature, I have a sample application code which is developed using Angular JS, we have to clone the repo first.
-```
+```Shell
 git clone https://github.com/vigneshsweekaran/easyclaim-frontend.git
+```
+
+##### Create Dockerfile
+```Dockerfile
+FROM node:10.0 AS builder
+
+WORKDIR /build
+
+COPY easyclaim-frontend .
+
+RUN npm install \
+    && npm run build
+    
+FROM nginx:alpine
+
+COPY --from=builder /build/dist/my-dream-app /usr/share/nginx/html
 ```
 
 
