@@ -37,3 +37,13 @@ docker run \
   --name=cadvisor \
   google/cadvisor:latest
 ```
+### Nexus Repository Manager 3
+##### With volume
+```
+docker run -d -p 8081:8081 --name nexus -v nexus-data:/nexus-data sonatype/nexus3
+```
+
+##### Without volume
+```
+docker run -d -p 8081:8081 --name nexus sonatype/nexus3
+```
