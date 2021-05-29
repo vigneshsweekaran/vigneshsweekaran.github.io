@@ -5,3 +5,5 @@
 4. Docker - To build, run and  push docker images in freestyle job
 5. Docker Pipeline - To build, run and  push docker images in Pipeline job
 6. NodeJs - To install multiple versions of nodejs from Global tool configuration
+7. Slack Notification - To post messaege to slac channel, generally we will post build status to slack channel
+8. sonarqube - To connect to the sonarqube server
