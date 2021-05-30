@@ -7,3 +7,4 @@
 6. NodeJs - To install multiple versions of nodejs from Global tool configuration
 7. Slack Notification - To post messaege to slac channel, generally we will post build status to slack channel
 8. SonarQube Scanner - To connect to the sonarqube server and install the sonarqube scanner from global tool configuration
+9. Anchore Container Image Scanner - To connect to Anchore engine for docker image scanning

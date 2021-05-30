@@ -51,3 +51,13 @@ docker run \
 
 ##### Without volume
 `docker run --name sonarqube -d --restart=always -p 9000:9000 -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true sonarqube:8.9.0-community`
+
+### Anchore
+Anchore is a tool for scanning the Docker Images
+
+##### With volume
+```
+mkdir anchore-engine && cd anchore-engine
+curl https://engine.anchore.io/docs/quickstart/docker-compose.yaml > docker-compose.yaml
+docker-compose up -d
+```
