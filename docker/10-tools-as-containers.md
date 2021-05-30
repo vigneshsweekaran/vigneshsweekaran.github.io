@@ -8,7 +8,7 @@ sudo chown 1030:1030 -R artifactory/var
 docker run --name artifactory -d -p 8081:8081 -p 8082:8082 -v $(pwd)/artifactory/var:/var/opt/jfrog/artifactory releases-docker.jfrog.io/jfrog/artifactory-oss:7.5.5
 ```
 ##### Without volume
-`docker run --name artifactory -d -p 8081:8081 -p 8082:8082 releases-docker.jfrog.io/jfrog/artifactory-oss:7.5.5`
+`docker run --name artifactory -d -p 8081:8081 releases-docker.jfrog.io/jfrog/artifactory-oss:7.5.5`
 
 ### Jenkins
 ##### With volume
@@ -37,13 +37,17 @@ docker run \
   --name=cadvisor \
   google/cadvisor:latest
 ```
+
 ### Nexus Repository Manager 3
 ##### With volume
-```
-docker run -d -p 8081:8081 --name nexus -v nexus-data:/nexus-data sonatype/nexus3
-```
+`docker run -d -p 8081:8081 --name nexus -v nexus-data:/nexus-data sonatype/nexus3`
 
 ##### Without volume
-```
-docker run -d -p 8081:8081 --name nexus sonatype/nexus3
-```
+`docker run -d -p 8081:8081 --name nexus sonatype/nexus3`
+
+### Sonarqube
+##### With volume
+`docker run --name sonarqube -d --restart=always -p 9000:9000 -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -v sonarqube-volume:/opt/sonarqube sonarqube:8.9.0-community`
+
+##### Without volume
+`docker run --name sonarqube -d --restart=always -p 9000:9000 -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true sonarqube:8.9.0-community`
