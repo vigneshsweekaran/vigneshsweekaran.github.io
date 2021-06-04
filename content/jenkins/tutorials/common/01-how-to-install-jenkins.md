@@ -1,15 +1,15 @@
 # How to install Jenkins
 
 ### In Centos7/Redhat/OracleLinux
-Go to Jenkins offial download page [](https://www.jenkins.io/doc/book/installing/)
-
-![Jenkins website Download page](/content/jenkins/tutorials/common/images/installation/jenkins-website-dowload-page.png)
+Go to Jenkins offial download page [Jenkins official download page](https://www.jenkins.io/doc/book/installing/)
 
 Click on Linux
 
-![jenkins website Download Linux page](/content/jenkins/tutorials/common/images/installation/jenkins-website-download-linux-page.png)
+![Jenkins website Download page](/content/jenkins/tutorials/common/images/installation/jenkins-website-dowload-page.png)
 
 Click on Red Hat / CentOS
+
+![jenkins website Download Linux page](/content/jenkins/tutorials/common/images/installation/jenkins-website-download-linux-page.png)
 
 ![jenkins website Download centos page](/content/jenkins/tutorials/common/images/installation/jenkins-website-download-centos-page.png)
 
@@ -69,8 +69,11 @@ Change to root user and open the /var/lib/jenkins/secrets/initialAdminPassword f
 
 Click on **continue**
 
-Click on **Install suggested plugins** this will automatically install the necessary plugins for Jenkins
+Click on **Install suggested plugins** 
 
 ![jenkins website Download centos page](/content/jenkins/tutorials/common/images/installation/jenkins-suggested-plugins.png)
 
+This will automatically install the necessary plugins for Jenkins
+
+![jenkins website Download centos page](/content/jenkins/tutorials/common/images/installation/jenkins-suggested-plugins-installation.png)
 
