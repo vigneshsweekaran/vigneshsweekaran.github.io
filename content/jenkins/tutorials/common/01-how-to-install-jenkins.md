@@ -1,0 +1,58 @@
+# How to install Jenkins
+
+### In Centos7/Redhat/OracleLinux
+Go to Jenkins offial download page
+![Jenkins website Download page](/content/jenkins/tutorials/commo/images/installation/jenkins-website-dowload-page.png)
+
+Click on Linux
+![jenkins website Download Linux page](/content/jenkins/tutorials/common/images/installation/jenkins-website-download-linux-page.png)
+
+Click on Red Hat / CentOS
+![jenkins website Download centos page](/content/jenkins/tutorials/commonn/images/installation/jenkins-website-download-centos-page.png)
+
+##### Prerequisites:
+* Java should be installed, prefabally Java 11
+
+##### Run the below commands to install Jenkins stable release and Java 11
+```Shell
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo yum upgrade
+sudo yum install jenkins java-11-openjdk-devel
+sudo systemctl daemon-reload
+```
+
+##### Start and enable the jenkins
+```Shell
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+```
+
+##### Check the Jenkins running status
+```
+sudo systemctl status jenkins
+```
+![jenkins website Download centos page](/content/jenkins/tutorials/commonn/images/installation/jenkins-running-status.png)
+
+### Install Jenkins using docker
+
+Now we will install jenkins as a docker container
+
+##### Ports
+* 8080:8080 --> To see the Jenkins UI
+* 50000:50000 --> This port is used for slave nodes to connnect, if it is configured
+
+##### Volumes
+* jenkins-volume:/var/jenkins_home jenkins/ --> This will create a docker volume named **jenkins-volume** and store the jenkins data from **/var/jenkins_home jenkins/** where the jenkins data are stored
+* /var/run/docker.sock:/var/run/docker.sock --> To execute docker commnads from jenkins
+
+```
+docker run --name jenkins -d -p 8080:8080 -p 50000:50000 -v jenkins-volume:/var/jenkins_home jenkins/jenkins:2.263.3
+```
+
+### Common steps for configuring Jenkins
+Once Jenkins is installed, by default jenkins starts on port 8080
+
+we can access the jenkins by opening the ip-address:8080 or localhost:8080 (if its insatlled locally) from  the browser
+![jenkins website Download centos page](/content/jenkins/tutorials/commonn/images/installation/jenkins-unlock-password.png)
