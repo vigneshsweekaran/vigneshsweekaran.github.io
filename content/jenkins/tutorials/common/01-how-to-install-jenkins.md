@@ -77,3 +77,18 @@ This will automatically install the necessary plugins for Jenkins
 
 ![jenkins website Download centos page](/content/jenkins/tutorials/common/images/installation/jenkins-suggested-plugins-installation.png)
 
+Enter the username, password and click on **Save and Continue**
+
+![jenkins set username password](/content/jenkins/tutorials/common/images/installation/jenkins-set-username-password.png)
+
+Click on **Save and Finish**
+
+![jenkins final save and finish](/content/jenkins/tutorials/common/images/installation/jenkins-finish.png)
+
+Click on **Start using Jenkins**
+
+![jenkins start using](/content/jenkins/tutorials/common/images/installation/jenkins-start-using.png)
+
+Jenkins Dashboard
+
+![jenkins start using](/content/jenkins/tutorials/common/images/installation/jenkins-dashboard.png)
