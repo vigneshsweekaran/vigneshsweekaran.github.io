@@ -65,7 +65,7 @@ Now get the initialadminpassword from /var/lib/jenkins/secrets/initialAdminPassw
 
 Change to root user and open the /var/lib/jenkins/secrets/initialAdminPassword file to get the password
 
-![jenkins intila admi password](/content/jenkins/tutorials/common/images/installation/jenkins-unlock-password.png)
+![jenkins intila admin password](/content/jenkins/tutorials/common/images/installation/jenkins-initial-admin-password.png)
 
 Click on **continue**
 
