@@ -1,17 +1,20 @@
 # How to install Jenkins
 
 ### In Centos7/Redhat/OracleLinux
-Go to Jenkins offial download page
-![Jenkins website Download page](/content/jenkins/tutorials/commo/images/installation/jenkins-website-dowload-page.png)
+Go to Jenkins offial download page [](https://www.jenkins.io/doc/book/installing/)
+
+![Jenkins website Download page](/content/jenkins/tutorials/common/images/installation/jenkins-website-dowload-page.png)
 
 Click on Linux
+
 ![jenkins website Download Linux page](/content/jenkins/tutorials/common/images/installation/jenkins-website-download-linux-page.png)
 
 Click on Red Hat / CentOS
-![jenkins website Download centos page](/content/jenkins/tutorials/commonn/images/installation/jenkins-website-download-centos-page.png)
+
+![jenkins website Download centos page](/content/jenkins/tutorials/common/images/installation/jenkins-website-download-centos-page.png)
 
 ##### Prerequisites:
-* Java should be installed, prefabally Java 11
+* Java should be installed, preferably Java 11
 
 ##### Run the below commands to install Jenkins stable release and Java 11
 ```Shell
@@ -33,7 +36,7 @@ sudo systemctl enable jenkins
 ```
 sudo systemctl status jenkins
 ```
-![jenkins website Download centos page](/content/jenkins/tutorials/commonn/images/installation/jenkins-running-status.png)
+![jenkins running status](/content/jenkins/tutorials/common/images/installation/jenkins-running-status.png)
 
 ### Install Jenkins using docker
 
@@ -55,4 +58,19 @@ docker run --name jenkins -d -p 8080:8080 -p 50000:50000 -v jenkins-volume:/var/
 Once Jenkins is installed, by default jenkins starts on port 8080
 
 we can access the jenkins by opening the ip-address:8080 or localhost:8080 (if its insatlled locally) from  the browser
-![jenkins website Download centos page](/content/jenkins/tutorials/commonn/images/installation/jenkins-unlock-password.png)
+
+![jenkins ublock password page](/content/jenkins/tutorials/common/images/installation/jenkins-unlock-password.png)
+
+Now get the initialadminpassword from /var/lib/jenkins/secrets/initialAdminPassword file
+
+Change to root user and open the /var/lib/jenkins/secrets/initialAdminPassword file to get the password
+
+![jenkins intila admi password](/content/jenkins/tutorials/common/images/installation/jenkins-unlock-password.png)
+
+Click on **continue**
+
+Click on **Install suggested plugins** this will automatically install the necessary plugins for Jenkins
+
+![jenkins website Download centos page](/content/jenkins/tutorials/common/images/installation/jenkins-suggested-plugins.png)
+
+
