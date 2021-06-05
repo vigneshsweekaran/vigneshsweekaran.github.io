@@ -1,7 +1,7 @@
 # How to install Jenkins
 
 ### In Centos7/Redhat/OracleLinux
-Go to Jenkins offial download page [Jenkins official download page](https://www.jenkins.io/doc/book/installing/)
+Go to Jenkins official download page [Jenkins official download page](https://www.jenkins.io/doc/book/installing/)
 
 Click on Linux
 
@@ -47,7 +47,7 @@ Now we will install jenkins as a docker container
 * 50000:50000 --> This port is used for slave nodes to connnect, if it is configured
 
 ##### Volumes
-* jenkins-volume:/var/jenkins_home jenkins/ --> This will create a docker volume named **jenkins-volume** and store the jenkins data from **/var/jenkins_home jenkins/** where the jenkins data are stored
+* jenkins-volume:/var/jenkins_home --> This will create a docker volume named **jenkins-volume** and store the jenkins data from **/var/jenkins_home jenkins/** where the jenkins data are stored
 * /var/run/docker.sock:/var/run/docker.sock --> To execute docker commnads from jenkins
 
 ```
