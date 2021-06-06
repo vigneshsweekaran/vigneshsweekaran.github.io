@@ -28,13 +28,13 @@ Run the following command to check the docker images available in local machine
 ```
 docker images
 ```
-![Docker Images](/docker/tutorials/Dockerfile/images/openjdk-15-approach-1-docker-images.png)
+![Docker Images](/content/docker/tutorials/Dockerfile/images/openjdk-15-approach-1-docker-images.png)
 
 ##### Create a docker container from the created image and check the java version
 ```
 docker run --rm java:15 java -version
 ```
-![checking java version](/docker/tutorials/Dockerfile/images/openjdk-15-checking-java-version.png)
+![checking java version](/content/docker/tutorials/Dockerfile/images/openjdk-15-checking-java-version.png)
 
 ### Approach 2 (Best Practice)
 Downloading the openjdk 15 tar file from official website, untar it and delete the tar file in a single layer and set the path to java binary.
@@ -66,7 +66,7 @@ Run the following command to check the docker images available in local machine
 ```
 docker images
 ```
-![](/docker/tutorials/Dockerfile/images/openjdk-15-reduced-docker-images.png)
+![Docker](/content/docker/tutorials/Dockerfile/images/openjdk-15-reduced-docker-images.png)
 
 Now we can see, the size of the docker image is reduced.
 
@@ -74,7 +74,7 @@ Now we can see, the size of the docker image is reduced.
 ```
 docker run --rm java:15 java -version
 ```
-![checking java version](/docker/tutorials/Dockerfile/images/openjdk-15-reduced-checking-java-version.png)
+![checking java version](/content/docker/tutorials/Dockerfile/images/openjdk-15-reduced-checking-java-version.png)
 
 ### Approach 3 (Best pratice)
 Same as approach 2, but instead of putting all the commands in Dockerfile, put the commands in shellscript file, copy the file to Dockerfile then run the shellscript.
@@ -128,7 +128,7 @@ docker build -t java-approach-4 .
 ```
 docker images
 ```
-![](/docker/tutorials/Dockerfile/images/openjdk-15-approach-4-docker-images.png)
+![Docker](/content/docker/tutorials/Dockerfile/images/openjdk-15-approach-4-docker-images.png)
 
 Now we can see, the size of the docker image is reduced very much.
 
