@@ -5,7 +5,7 @@
 mkdir -p artifactory/var
 chmod 755 artifactory/var
 sudo chown 1030:1030 -R artifactory/var
-docker run --name artifactory -d -p 8081:8081 -p 8082:8082 -v $(pwd)/artifactory/var:/var/opt/jfrog/artifactory releases-docker.jfrog.io/jfrog/artifactory-oss:7.5.5
+docker run --name artifactory -d -p 8081:8081 -v $(pwd)/artifactory/var:/var/opt/jfrog/artifactory releases-docker.jfrog.io/jfrog/artifactory-oss:7.5.5
 ```
 ##### Without volume
 `docker run --name artifactory -d -p 8081:8081 releases-docker.jfrog.io/jfrog/artifactory-oss:7.5.5`
