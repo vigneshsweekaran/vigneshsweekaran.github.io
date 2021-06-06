@@ -31,4 +31,3 @@ Click on **Add Credentials** Select **kind** as **SSH Username with private key*
 Click on **Add Credentials** Select **kind** as **Secret text** enter the token, id and click on **OK** 
 
 ![Jenkins](/content/jenkins/tutorials/common/images/credentials/jenkins-token-credential.png)
-
