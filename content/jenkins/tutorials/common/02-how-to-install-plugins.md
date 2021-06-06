@@ -4,7 +4,7 @@ From Jenkins dashboard, click on **Manage Jenkins**
 
 ![Jenkins](/content/jenkins/tutorials/common/images/plugins/jenkins-manage-jenkins.png)
 
-Click on **ManagePlugins**
+Click on **Manage Plugins**
 
 ![Jenkins](/content/jenkins/tutorials/common/images/plugins/jenkins-manage-plugins.png)
 
