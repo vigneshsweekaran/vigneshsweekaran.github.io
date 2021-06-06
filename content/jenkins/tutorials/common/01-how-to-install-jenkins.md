@@ -1,6 +1,6 @@
 # How to install Jenkins
 
-### In Centos7/Redhat/OracleLinux
+### Approach 1: Installing Jenkins as a service in Centos7/Redhat/OracleLinux
 Go to Jenkins official download page [Jenkins official download page](https://www.jenkins.io/doc/book/installing/)
 
 Click on Linux
@@ -38,7 +38,8 @@ sudo systemctl status jenkins
 ```
 ![jenkins running status](/content/jenkins/tutorials/common/images/installation/jenkins-running-status.png)
 
-### Install Jenkins using docker
+### Approach 2: Install Jenkins using docker
+If you have followed Approach 1 you can skip Approach 2 and continue with **Common steps for configuring Jenkins**
 
 Now we will install jenkins as a docker container
 
@@ -48,11 +49,18 @@ Now we will install jenkins as a docker container
 
 ##### Volumes
 * jenkins-volume:/var/jenkins_home --> This will create a docker volume named **jenkins-volume** and store the jenkins data from **/var/jenkins_home jenkins/** where the jenkins data are stored
-* /var/run/docker.sock:/var/run/docker.sock --> To execute docker commnads from jenkins
+
+##### Problems:
+* We cannot run docker commands if we run jenkins as docker container. Some alternatives are also there, will update soon.
 
 ```
-docker run --name jenkins -d -p 8080:8080 -p 50000:50000 -v jenkins-volume:/var/jenkins_home jenkins/jenkins:2.263.3
+docker run --name jenkins -d -p 8080:8080 -p 50000:50000 -v jenkins-volume:/var/jenkins_home jenkins/jenkins:lts-jdk11
 ```
+
+<!---
+**Optional:** If you want to run docker commands inside Jenkins use this approach
+* Volume: /var/run/docker.sock:/var/run/docker.sock To execute docker commnads from jenkins
+-->
 
 ### Common steps for configuring Jenkins
 Once Jenkins is installed, by default jenkins starts on port 8080
