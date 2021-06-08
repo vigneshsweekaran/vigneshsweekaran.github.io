@@ -1,6 +1,6 @@
 # Global Tool Configurations
 
-In linux servers, we can install only one version of the tool at a time eg: we can install only maven 3.6 and we cannot have both maven 3.6 and 3.7 in same server.
+In linux servers, we can install only one version of the tool at a time eg: we can install only maven 3.6 version and we cannot have both maven 3.6 and 3.7 version in same server.
 
 By configuring **Global Tool configuration**, we can have multiple version of maven, nodejs, gradle, java and ant
 
@@ -24,7 +24,7 @@ Now click on **Add Maven** once again
 Add the name and select the version 3.8.1 and click on save
 ![Jenkins](/content/jenkins/tutorials/common/images/global-tool-configurations/jenkins-maven-3.8.1.png)
 
-##### How to use this maven in Jenkinsfile
+##### How to this maven in Jenkinsfile
 ```
 tools {
     maven 'maven-3.6.3'
@@ -51,7 +51,7 @@ Click on **Add NodeJs** add the name and selcet the version 10.0.0(As per your r
 Now click on **Add NodeJs** once again, give the name and select the required version and click on save
 ![Jenkins](/content/jenkins/tutorials/common/images/global-tool-configurations/jenkins-add-nodejs-additional.png)
 
-##### How to use this nodejs in Jenkinsfile
+##### How to use nodejs in Jenkinsfile
 ```
 tools {
     nodejs "nodejs-10.0.0"
