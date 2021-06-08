@@ -17,7 +17,7 @@ Click on **Global credentials**
 Click on **Add Credentials**
 ![Jenkins](/content/jenkins/tutorials/common/images/credentials/jenkins-add-credentials.png)
 
-Select **kind** as **Username with password**, enter username, password and the enter unique id and click on **OK**
+Select **kind** as **Username with password**, enter username, password and enter unique id and click on **OK**
 ![Jenkins](/content/jenkins/tutorials/common/images/credentials/jenkins-username-credential.png)
 
 ### To store ssh private key
@@ -27,7 +27,7 @@ Click on **Add Credentials** Select **kind** as **SSH Username with private key*
 
 ![Jenkins](/content/jenkins/tutorials/common/images/credentials/jenkins-private-key-credential-2.png)
 
-### To store ant token eg: gitlab, Jfrog, artifactory and sonarqube token 
+### To store any token eg: gitlab, Jfrog, artifactory and sonarqube token 
 Click on **Add Credentials** Select **kind** as **Secret text** enter the token, id and click on **OK** 
 
 ![Jenkins](/content/jenkins/tutorials/common/images/credentials/jenkins-token-credential.png)
