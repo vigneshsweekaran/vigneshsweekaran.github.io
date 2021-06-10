@@ -13,7 +13,7 @@ Declarative and Scripted Pipelines are constructed fundamentally differently.
 
 Declarative Pipeline is a more recent feature of Jenkins Pipeline which:
 
-* provides richer syntactical features over Scripted Pipeline syntax, and
+  --> provides richer syntactical features over Scripted Pipeline syntax, and
 
-* is designed to make writing and reading Pipeline code easier.
+  --> is designed to make writing and reading Pipeline code easier.
 ```
