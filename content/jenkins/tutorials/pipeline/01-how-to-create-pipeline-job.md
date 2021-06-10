@@ -4,32 +4,39 @@
 
 This approach is good when we want to test some feature quickly. Now we will create a Job to print "Hello World" This approach is not recommended for realtime project.
 
-From Jenkins dashboard, click on **New Item** 
+From Jenkins dashboard, click on **New Item**
+
 ![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-job-new-item.png)
 
 Enter the job name, select **Pipeline** and click on **OK**
+
 ![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-first-job-create.png)
 
-Scroll down, go to **Pipeline** section, in **definition** select **Pipeline script**, from **try sample Pipeline...** select **Hello World** sample pipeline script is added. click on **Save**
+Scroll down, go to **Pipeline** section, in **Definition** select **Pipeline script**, from **try sample Pipeline...** select **Hello World** sample pipeline script is added. click on **Save**
 
 In this we have **Hello** stage, which will execute a echo command to print "Hello World"
 
 ![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-first-job-configuration.png)
 
 Click on **Build Now**
+
 ![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-click-build-now.png)
 
 Click on build no **#1**
+
 ![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-click-on-build-number.png)
 
 Click on **Console Output** Now we can see the **Hello World** is printed on the screen
+
 ![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-click-on-console-output.png)
 
 ### Approach 2: Jenkins pipeline script(Declarative pipeline) in Jenkinsfile
 
 In this approach, the pipeline script is written to a file called **Jenkinsfile** then this file is added to the source code repository eg: Github, Gitlab
 
-The **Jenkinsfile** can be named to anything like thsi **Jenkinsfile-dev**, **01-Jenkinsfile-helloworld**
+This approach is used in realtime project.
+
+The **Jenkinsfile** can be named to anything like this **Jenkinsfile-dev**, **01-Jenkinsfile-helloworld**
 
 While running the pipeline job we will clone the repository first, read the **Jenkinsfile** and execute all the stages defined in the Jenkinsfile.
 
@@ -59,10 +66,12 @@ In above Jenkinsfile I have created two stages **Build** and **Test**, in both t
 
 Now lets see how to create a pipeline job uisng **Jenkinsfile** from github repository.
 
-From Jenkins dashboard, click on **New Item** 
+From Jenkins dashboard, click on **New Item**
+
 ![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-job-new-item.png)
 
 Enter the job name, select **Pipeline** and click on **OK**
+
 ![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-first-job-create.png)
 
 Scroll down, go to **Pipeline** section, in **definition** select **Pipeline script from SCM**, select **Git** from SCM. In **Repository URL** give the github url **https://github.com/vigneshsweekaran/hello-world.git**
