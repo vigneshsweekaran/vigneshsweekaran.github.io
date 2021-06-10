@@ -80,7 +80,7 @@ This is a public repository so credentials are not required. If your reository i
 
 ![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-pipeline-scm.png)
 
-Now enter the branch name **master** in **Branches to build** feild, then enter the Jenkinsfile name **cicd/01-Jenkinsfile-helloworld** in **Script path** click on **save**
+Now enter the branch name `master` in **Branches to build** field, then enter the Jenkinsfile name `cicd/01-Jenkinsfile-helloworld` in **Script path** click on **save**
 
 ![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-pipeline-jenkinsfile.png)
 
@@ -93,9 +93,3 @@ From the **Console Output** first line, we can see first it fetches the **cicd/0
 Echo commands from stages are printed to console output
 
 ![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-pipeline-echo-hello-world.png)
-
-
-
-
-
-
