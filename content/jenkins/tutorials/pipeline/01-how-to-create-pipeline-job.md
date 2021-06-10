@@ -37,6 +37,26 @@ I have a sample **Jenkinsfile** named **01-Jenkinsfile-helloworld** in the cicd 
 
 [hello-world](https://github.com/vigneshsweekaran/hello-world.git)
 
+```
+pipeline {
+    agent any
+    stages {
+        stage ('Build') {
+            steps {
+                sh 'echo Hello Build stage'
+            }
+        }
+        stage ('Test') {
+            steps {
+                sh 'echo hello Test stage'
+            }
+        }
+    }
+}
+```
+
+In above Jenkinsfile I have created two stages **Build** and **Test**, in both the stages for now I am just executing the echo command in **sh** step
+
 Now lets see how to create a pipeline job uisng **Jenkinsfile** from github repository.
 
 From Jenkins dashboard, click on **New Item** 
@@ -57,6 +77,15 @@ Now enter the branch name **master** in **Branches to build** feild, then enter 
 
 ![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-pipeline-jenkinsfile.png)
 
+Click on **Build Now** then go to **Console Output** 
+
+From the **Console Output** first line, we can see first it fetches the **cicd/01-Jenkinsfile-helloworld** from Github, then clone the source code and executes the steps inside each stage.
+
+![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-pipeline-jenkinsfile-reference.png)
+
+Echo commands from stages are printed to console output
+
+![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-pipeline-echo-hello-world.png)
 
 
 
