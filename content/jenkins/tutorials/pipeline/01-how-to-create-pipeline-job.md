@@ -40,9 +40,7 @@ The **Jenkinsfile** can be named to anything like this **Jenkinsfile-dev**, **01
 
 While running the pipeline, it will fetch the **Jenkinsfile** and execute all the stages defined in the Jenkinsfile.
 
-I have a sample **Jenkinsfile** named **01-Jenkinsfile-helloworld** in the cicd folder of the following github repo 
-
-[hello-world](https://github.com/vigneshsweekaran/hello-world.git)
+I have a sample **Jenkinsfile** named **01-Jenkinsfile-helloworld** in the cicd folder of the following github repo [hello-world](https://github.com/vigneshsweekaran/hello-world.git)
 
 ```
 pipeline {
@@ -64,7 +62,7 @@ pipeline {
 
 In above Jenkinsfile I have created two stages **Build** and **Test**, in both the stages for now I am just executing the echo command in **sh** step
 
-Now lets see how to create a pipeline job uisng **Jenkinsfile** from github repository.
+Now lets see how to create a pipeline job using **Jenkinsfile** from github repository.
 
 From Jenkins dashboard, click on **New Item**
 
@@ -74,9 +72,9 @@ Enter the job name, select **Pipeline** and click on **OK**
 
 ![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-first-job-create.png)
 
-Scroll down, go to **Pipeline** section, in **definition** select **Pipeline script from SCM**, select **Git** from SCM. In **Repository URL** give the github url **https://github.com/vigneshsweekaran/hello-world.git**
+Scroll down, go to **Pipeline** section, in **Definition** select **Pipeline script from SCM**, select **Git** from SCM. In **Repository URL** give the github url **https://github.com/vigneshsweekaran/hello-world.git**
 
-This is a public repository so credentials are not required. If your reository is private then we need credentials to pull the code. Store the username and password in credentials. Then from the **Credentials** drop down select your git repository credentail.
+This is a public repository so credentials are not required. If your reository is private then we need credentials to pull the code. Store the username and password in credentials. Then from the **Credentials** drop down select your git repository credential.
 
 [How to store credentials in Jenkins](/content/jenkins/tutorials/common/04-how-to-store-credentials-in-jenkins)
 
