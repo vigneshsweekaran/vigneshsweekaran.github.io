@@ -10,7 +10,7 @@ From Jenkins dashboard, click on **New Item**
 Enter the job name, select **Pipeline** and click on **OK**
 ![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-first-job-create.png)
 
-Scroll down and got to **Pipeline** section, in **definition** select **Pipeline script**, from **try sample Pipeline...** select **Hello World** sample pipeline script is added. click on **Save**
+Scroll down, go to **Pipeline** section, in **definition** select **Pipeline script**, from **try sample Pipeline...** select **Hello World** sample pipeline script is added. click on **Save**
 
 In this we have **Hello** stage, which will execute a echo command to print "Hello World"
 
@@ -27,6 +27,39 @@ Click on **Console Output** Now we can see the **Hello World** is printed on the
 
 ### Approach 2: Jenkins pipeline script(Declarative pipeline) in Jenkinsfile
 
-In this approach, the pipeline script is written to a file called **Jenkinsfile** then this file is added to root folder of source code repository eg: Github, Gitlab
+In this approach, the pipeline script is written to a file called **Jenkinsfile** then this file is added to the source code repository eg: Github, Gitlab
 
-While creating the pipeline job we will clone the repository first, read the **Jenkinsfile** and execute all the stages defined in the Jenkinsfile.
+The **Jenkinsfile** can be named to anything like thsi **Jenkinsfile-dev**, **01-Jenkinsfile-helloworld**
+
+While running the pipeline job we will clone the repository first, read the **Jenkinsfile** and execute all the stages defined in the Jenkinsfile.
+
+I have a sample **Jenkinsfile** named **01-Jenkinsfile-helloworld** in the cicd folder of the following github repo 
+
+[hello-world](https://github.com/vigneshsweekaran/hello-world.git)
+
+Now lets see how to create a pipeline job uisng **Jenkinsfile** from github repository.
+
+From Jenkins dashboard, click on **New Item** 
+![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-job-new-item.png)
+
+Enter the job name, select **Pipeline** and click on **OK**
+![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-first-job-create.png)
+
+Scroll down, go to **Pipeline** section, in **definition** select **Pipeline script from SCM**, select **Git** from SCM. In **Repository URL** give the github url **https://github.com/vigneshsweekaran/hello-world.git**
+
+This is a public repository so credentials are not required. If your reository is private then we need credentials to pull the code. Store the username and password in credentials. Then from the **Credentials** drop down select your git repository credentail.
+
+[How to store credentials in Jenkins](/content/jenkins/tutorials/common/04-how-to-store-credentials-in-jenkins)
+
+![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-pipeline-scm.png)
+
+Now enter the branch name **master** in **Branches to build** feild, then enter the Jenkinsfile name **cicd/01-Jenkinsfile-helloworld** in **Script path** click on **save**
+
+![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-pipeline-jenkinsfile.png)
+
+
+
+
+
+
+

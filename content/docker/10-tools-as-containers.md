@@ -18,6 +18,9 @@ docker run --name artifactory -d -p 8081:8081 -v $(pwd)/artifactory/var:/var/opt
 `docker run --name jenkins -d -p 8080:8080 -p 50000:500000 jenkins/jenkins:2.263.3`
 
 ### Mysql 5.6
+##### With volume
+`docker run --name mysql -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=test -v mysql-volume:/var/lib/mysql mysql:5.6`
+
 ##### Without volume
 `docker run --name mysql -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=test mysql:5.6`
 
