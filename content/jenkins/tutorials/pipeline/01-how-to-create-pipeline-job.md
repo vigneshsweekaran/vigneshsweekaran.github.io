@@ -38,7 +38,7 @@ This approach is used in realtime project.
 
 The **Jenkinsfile** can be named to anything like this **Jenkinsfile-dev**, **01-Jenkinsfile-helloworld**
 
-While running the pipeline job we will clone the repository first, read the **Jenkinsfile** and execute all the stages defined in the Jenkinsfile.
+While running the pipeline, it will fetch the **Jenkinsfile** and execute all the stages defined in the Jenkinsfile.
 
 I have a sample **Jenkinsfile** named **01-Jenkinsfile-helloworld** in the cicd folder of the following github repo 
 
