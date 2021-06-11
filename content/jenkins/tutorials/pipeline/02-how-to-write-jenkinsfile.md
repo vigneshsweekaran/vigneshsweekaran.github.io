@@ -31,7 +31,7 @@ pipeline {
 * Inside pipeline block we have **agent** block `(Mandatory)` and **stages** block `(Mandatory)`
 * Inside satges block we should have atleast one **stage** block
 * Inside stage block we should have **steps** block
-* Inside steps we should have atleast one **step(inbuild function name)**
+* Inside steps block we should have atleast one **step(inbuild function name)**
   eg:
     * **sh** step to execute any shell commands
     * **echo** step to print some data
@@ -55,7 +55,7 @@ pipeline {
 * **steps** block is used to group the step
 * **step** is the basic unit which executes the command.
 
-In the above Jenkinsfile, we have created the **Print** stage which uses the **echo** step to print ` Hello DevOps Engineers`
+In the above Jenkinsfile, we have created the **Print** stage which uses the **echo** step to print `Hello DevOps Engineers`
 
 ### post block in Jenkinsfile
 
