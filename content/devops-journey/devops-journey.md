@@ -7,6 +7,7 @@
 ## Linux basics
 
 ## Git
+* [Git basics](https://www.youtube.com/watch?v=Lr7sYCrhxE0&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=18)
 
 ## Build Tools
 
@@ -25,6 +26,18 @@
 * [Docker training video](https://www.youtube.com/watch?v=zJ6WbK9zFpI&t=5722s) 
 
 ## Kubernetes
+
+* [Kubernetes Concept](https://www.youtube.com/watch?v=QJ4fODH6DXI&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=3)
+* [Kubernetes Architecture](https://www.youtube.com/watch?v=8C_SCDbUJTg)
+* [Pod,ReplicaSet,Deployment](https://www.youtube.com/watch?v=deFfAUZpoxs&list=PL34sAs7_26wP009Cl03TZbtRFZ2DMJovl&index=2)
+* [Namespace](https://www.youtube.com/watch?v=j_UUnlVC2Ss&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=6)
+* [service](https://www.youtube.com/watch?v=5lzUpDtmWgM&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=4)
+* [Configmap]()
+* [Secret]()
+* [Taints & Tolerations](https://www.youtube.com/watch?v=mo2UrkjA7FE&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=9)
+
+#### Reference Youtube channels for learning kubernetes
+* [Justmeandopensource youtube channel Kubernetes](https://www.youtube.com/c/wenkatn-justmeandopensource/playlists)
 
 ## Monitoring
 
