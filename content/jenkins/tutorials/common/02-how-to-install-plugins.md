@@ -17,7 +17,8 @@ Click on **Availabe** tab and type the plugin name in search box, select the plu
 ### Commonly used plugins and their uses
 
 * **Artifactory** - To interact with Jfrog Artifactory
-* **Kubernetes** - To interact with kubernetes cluster and also to create jenkins agents in kubernetes cluster
+* **Kubernetes** -  To create jenkins agents in kubernetes cluster
+* **Kubernetes CLI** - Allows you to configure kubectl in your job to interact with Kubernetes clusters. To deploy kubernetes configurations/objects/yamls to kubernetes cluster.
 * **Deploy to container** - To deploy war file to tomcat
 * **Docker** - To build, run and  push docker images in freestyle job
 * **Docker Pipeline** - To build, run and  push docker images in Pipeline job
