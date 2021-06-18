@@ -5,6 +5,7 @@
 * [Devops prerequisite course video](https://www.youtube.com/watch?v=Wvf0mBNGjXY) This has a handson lab also register for it and do the handon for free.
 
 ## Linux basics
+* [How to install virtualbox and create ubuntu virtual machine](/content/linux/virtualbox)
 
 ## Git
 * [Git basics](https://www.youtube.com/watch?v=Lr7sYCrhxE0&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=18)
@@ -14,7 +15,7 @@
 * Maven/Gradle - for Java programming language (Backend application)
 * Nodejs - For AngularJs (Frontend application)
 
-## Websersers
+## Web ersers
 
 * Tomcat - Majorly for java based application
 * Nginx/httpd - For frontend based application
