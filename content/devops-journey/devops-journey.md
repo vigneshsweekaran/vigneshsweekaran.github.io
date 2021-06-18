@@ -6,6 +6,8 @@
 
 ## Linux basics
 * [How to install virtualbox and create ubuntu virtual machine](/content/linux/virtualbox)
+* [Linux basic commands](https://hackr.io/blog/basic-linux-commands)
+* [ssh in Linux](https://linuxize.com/post/ssh-command-in-linux/)
 
 ## Git
 * [Git basics](https://www.youtube.com/watch?v=Lr7sYCrhxE0&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=18)
