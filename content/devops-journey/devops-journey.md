@@ -17,7 +17,7 @@
 * Maven/Gradle - for Java programming language (Backend application)
 * Nodejs - For AngularJs (Frontend application)
 
-## Web ersers
+## Web servers
 
 * Tomcat - Majorly for java based application
 * Nginx/httpd - For frontend based application
