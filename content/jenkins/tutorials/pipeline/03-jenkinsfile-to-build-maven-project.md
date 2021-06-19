@@ -4,6 +4,36 @@
 * **maven** plugin should be installed in Jenkins. By default maven plugin will be installed in Jenkins
 * Install specific version of maven from Jenkins **Global Tool Configuration**
 
-I have a sample hello-world maven project in my [github repo]())
+### Reference
+* [How to install plugins in Jenkins](/content/jenkins/tutorials/common/02-how-to-install-plugins)
+* [How to configure maven in Global Tool Configuration](/content/jenkins/tutorials/common/03-global-tool-configurations)
+* [How to create pipeline job in Jenkins]()
+
+I have a sample hello-world maven project in [github](https://github.com/vigneshsweekaran/hello-world))
 
 Maven is a build tool used to compile, test and package the application developed using Java programming language.
+
+Jenkinsfile
+```
+pipeline {
+  agent any
+  tools {
+    maven 'maven-3.6.3' 
+  }
+  stages {
+    stage ('Build') {
+      steps {
+        sh 'mvn clean package'
+      }
+    }
+  }
+}
+```
+
+In the `tools` block we have used `maven` definition to refer the maven installation **maven-3.6.3** configured in Jenkins Global tool configuration.
+
+We have craeted one stage called **Build**, here we are executing the **mvn clean package** command to compile and package the java application.
+
+It will compile the java code and generate the package in **targets** folder.
+
+![jenkins](/content/jenkins/tutorials/pipeline/images/jenkins-maven-job.png)
