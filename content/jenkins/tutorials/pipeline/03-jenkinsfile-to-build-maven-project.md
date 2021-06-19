@@ -36,4 +36,4 @@ We have craeted one stage called **Build**, here we are executing the **mvn clea
 
 It will compile the java code and generate the package in **targets** folder.
 
-![jenkins](/content/jenkins/tutorials/pipeline/images/jenkins-maven-job.png)
+![jenkins](/content/jenkins/tutorials/pipeline/images/03-maven-job/jenkins-maven-job.png)
