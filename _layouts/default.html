@@ -24,20 +24,15 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
-<!--
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
+    {% if page.enable_header %}
     <header class="page-header" role="banner">
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-      {% endif %}
+      <h1>Welcome Devops Engineers</h1>
+      <p>All the Best</p>
+      <p> Want to kickstart your DevOps Journey ? Dont know where to start ?   <a class="badge badge-success" href="/content/devops-journey/devops-journey">Click here for RoadMap</a></p>
+      <p>For contribution <a class="badge badge-success" href="https://github.com/vigneshsweekaran/vigneshsweekaran.github.io">Fork here</a> and raise Pull Request<p>
     </header>
--->
+    {% endif %}
+
     <main id="content" class="main-content" role="main">
       {{ content }}
 
