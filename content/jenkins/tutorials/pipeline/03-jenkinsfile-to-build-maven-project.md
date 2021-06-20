@@ -4,7 +4,7 @@
 * **maven** plugin should be installed in Jenkins. By default maven plugin will be installed in Jenkins
 * Configure specific version of maven in Jenkins **Global Tool Configuration**
 
-### Reference
+### References
 * [How to install plugins in Jenkins](/content/jenkins/tutorials/common/02-how-to-install-plugins)
 * [How to configure maven in Global Tool Configuration](/content/jenkins/tutorials/common/03-global-tool-configurations)
 * [How to create pipeline job in Jenkins]()
