@@ -1,4 +1,3 @@
-Published on {% date %}
 # How to install Jenkins
 
 ### Approach 1: Installing Jenkins as a service in Centos7/Redhat/OracleLinux
