@@ -32,33 +32,11 @@
     </style>
     <nav class="navbar navbar-expand-sm navbar-custom navbar-light">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="https://vigneshsweekaran.github.io">HOME</a>
+        {% for item in site.data.nav.nav-list %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ item.url }}">{{ item.title }}</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="https://vigneshsweekaran.github.io">HOME</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="https://vigneshsweekaran.github.io">HOME</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="https://vigneshsweekaran.github.io">HOME</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="https://vigneshsweekaran.github.io">HOME</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="https://vigneshsweekaran.github.io">HOME</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="https://vigneshsweekaran.github.io">HOME</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="https://vigneshsweekaran.github.io">HOME</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="https://vigneshsweekaran.github.io">HOME</a>
-        </li>
+        {% endfor %}
       </ul>
     </nav>
   </head>
