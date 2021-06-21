@@ -27,150 +27,152 @@ enable_header: true
 </head>
 <body>
 
-{% include interview-questions.html %}
-<div class="row">
-  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#interview-questions">DevOps Interview Questions</button>
-  <div id="interview-questions" class="collapse show">
-    <p><a href="/content/git/interview_questions">Git</a></p>
-    <p><a href="/content/jenkins/3-interview_questions">Jenkins</a></p>
-    <p><a href="/content/docker/3-interview-questions">Docker</a></p>
-    <p><a href="/content/kubernetes/interview-questions">Kubernetes</a></p>
-    <p><a href="/content/shellscript/07-interview-questions">Shell script</a></p>
-    <p><a href="/content/linux/interview-questions">Linux commands</a></p>
-    <p><a href="/content/ansible/interview-questions">Ansible</a></p>
-  </div>
-</div>
-<div class="row">
-  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#git">Git</button>
-  <div id="git" class="collapse show">
-    <a class="badge badge-primary" data-toggle="collapse" data-target="#git-notes">Notes</a>
-    <div id="git-notes" class="collapse show">
-      <p><a href="/content/git/basics">Git</a></p>
-      <p><a href="/content/git/branching-merging">Branching & Merging</a></p>
-      <p><a href="/content/git/pull_fetch">Pull vs Fetch</a></p>
-      <p><a href="/content/git/stash">Stash</a></p>
-      <p><a href="/content/git/tags">Tags</a></p>
-      <p><a href="/content/git/reset">Reset</a></p>
+<div class="containers">
+  {% include interview-questions.html %}
+  <div class="row">
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#interview-questions">DevOps Interview Questions</button>
+    <div id="interview-questions" class="collapse show">
+      <p><a href="/content/git/interview_questions">Git</a></p>
+      <p><a href="/content/jenkins/3-interview_questions">Jenkins</a></p>
+      <p><a href="/content/docker/3-interview-questions">Docker</a></p>
+      <p><a href="/content/kubernetes/interview-questions">Kubernetes</a></p>
+      <p><a href="/content/shellscript/07-interview-questions">Shell script</a></p>
+      <p><a href="/content/linux/interview-questions">Linux commands</a></p>
+      <p><a href="/content/ansible/interview-questions">Ansible</a></p>
     </div>
   </div>
-</div>
-<div class="row">
-  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#jenkins">Jenkins</button>
-  <div id="jenkins" class="collapse show">
-    <a class="badge badge-primary" data-toggle="collapse" data-target="#jenkins-tutorial">Tutorials</a>
-    <div id="jenkins-tutorial" class="collapse show">
-      <p><a href="/content/jenkins/tutorials/common/01-how-to-install-jenkins">How to install Jenkins</a></p>
-      <p><a href="/content/jenkins/tutorials/common/02-how-to-install-plugins">How to install plugins in Jenkins</a></p>
-      <p><a href="/content/jenkins/tutorials/common/03-global-tool-configurations">Use of Global Tool Configuration in Jenkins</a></p>
-      <p><a href="/content/jenkins/tutorials/common/04-how-to-store-credentials-in-jenkins">How to store credentials in Jenkins</a></p>
-      <a class="badge badge-primary" data-toggle="collapse" data-target="#jenkins-pipeline">Pipeline</a>
-      <div id="jenkins-pipeline" class="collapse show">
-        <p><a href="/content/jenkins/tutorials/pipeline/01-how-to-create-pipeline-job">How to create pipeline job in Jenkins</a></p>
-        <p><a href="/content/jenkins/tutorials/pipeline/02-how-to-write-jenkinsfile">How to write a Jenkinsfile</a></p>
-        <p><a href="/content/jenkins/tutorials/pipeline/03-jenkinsfile-to-build-maven-project">[Part-1] Jenkinsfile to build a maven project</a></p>
-        <p><a href="/content/jenkins/tutorials/pipeline/04-jenkinsfile-to-build-maven-project-and-deploy-to-tomcat">[Part-2] Jenkinsfile to build and deploy to Tomcat</a></p>
-        <p><a href="/content/jenkins/tutorials/pipeline/05-jenkinsfile-to-build-docker-image-push-deploy-to-same-server">[Part-3] Jenkinsfile to build docker image, push to dockerhub and deploy to same server</a></p>
-        <p><a href="/content/jenkins/tutorials/pipeline/06-jenkinsfile-to-build-docker-image-push-deploy-to-different-server">[Part-4] Jenkinsfile to build docker image, push to dockerhub and deploy to different server</a></p>
-        <p><a href="/content/jenkins/tutorials/pipeline/07-jenkinsfile-to-integrate-with-sonarqube">[Part-5] Jenkinsfile to integrate with Sonarqube server</a></p>
-        <p><a href="/content/jenkins/tutorials/pipeline/08-jenkinsfile-to-integrate-with-anchore-scanning">[Part-6] Jenkinsfile to integrate with Anchore scanning</a></p>
-        <p><a href="/content/jenkins/6-environments">How to define Environment varibles in Jenkinsfile</a></p>
-        <p><a href="/content/jenkins/7-parallelstage">How to define parallel stage in Jenkinsfile</p>
-        <p><a href="/content/jenkins/8-jenkins-triggers">How to define triggers in Jenkinsfile</p>
+  <div class="row">
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#git">Git</button>
+    <div id="git" class="collapse show">
+      <a class="badge badge-primary" data-toggle="collapse" data-target="#git-notes">Notes</a>
+      <div id="git-notes" class="collapse show">
+        <p><a href="/content/git/basics">Git</a></p>
+        <p><a href="/content/git/branching-merging">Branching & Merging</a></p>
+        <p><a href="/content/git/pull_fetch">Pull vs Fetch</a></p>
+        <p><a href="/content/git/stash">Stash</a></p>
+        <p><a href="/content/git/tags">Tags</a></p>
+        <p><a href="/content/git/reset">Reset</a></p>
       </div>
     </div>
-    <a class="badge badge-primary" data-toggle="collapse" data-target="#jenkins-notes">Notes</a>
-    <div id="jenkins-notes" class="collapse">
-      <p><a>Updating soon!!</a></p>
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#jenkins">Jenkins</button>
+    <div id="jenkins" class="collapse show">
+      <a class="badge badge-primary" data-toggle="collapse" data-target="#jenkins-tutorial">Tutorials</a>
+      <div id="jenkins-tutorial" class="collapse show">
+        <p><a href="/content/jenkins/tutorials/common/01-how-to-install-jenkins">How to install Jenkins</a></p>
+        <p><a href="/content/jenkins/tutorials/common/02-how-to-install-plugins">How to install plugins in Jenkins</a></p>
+        <p><a href="/content/jenkins/tutorials/common/03-global-tool-configurations">Use of Global Tool Configuration in Jenkins</a></p>
+        <p><a href="/content/jenkins/tutorials/common/04-how-to-store-credentials-in-jenkins">How to store credentials in Jenkins</a></p>
+        <a class="badge badge-primary" data-toggle="collapse" data-target="#jenkins-pipeline">Pipeline</a>
+        <div id="jenkins-pipeline" class="collapse show">
+          <p><a href="/content/jenkins/tutorials/pipeline/01-how-to-create-pipeline-job">How to create pipeline job in Jenkins</a></p>
+          <p><a href="/content/jenkins/tutorials/pipeline/02-how-to-write-jenkinsfile">How to write a Jenkinsfile</a></p>
+          <p><a href="/content/jenkins/tutorials/pipeline/03-jenkinsfile-to-build-maven-project">[Part-1] Jenkinsfile to build a maven project</a></p>
+          <p><a href="/content/jenkins/tutorials/pipeline/04-jenkinsfile-to-build-maven-project-and-deploy-to-tomcat">[Part-2] Jenkinsfile to build and deploy to Tomcat</a></p>
+          <p><a href="/content/jenkins/tutorials/pipeline/05-jenkinsfile-to-build-docker-image-push-deploy-to-same-server">[Part-3] Jenkinsfile to build docker image, push to dockerhub and deploy to same server</a></p>
+          <p><a href="/content/jenkins/tutorials/pipeline/06-jenkinsfile-to-build-docker-image-push-deploy-to-different-server">[Part-4] Jenkinsfile to build docker image, push to dockerhub and deploy to different server</a></p>
+          <p><a href="/content/jenkins/tutorials/pipeline/07-jenkinsfile-to-integrate-with-sonarqube">[Part-5] Jenkinsfile to integrate with Sonarqube server</a></p>
+          <p><a href="/content/jenkins/tutorials/pipeline/08-jenkinsfile-to-integrate-with-anchore-scanning">[Part-6] Jenkinsfile to integrate with Anchore scanning</a></p>
+          <p><a href="/content/jenkins/6-environments">How to define Environment varibles in Jenkinsfile</a></p>
+          <p><a href="/content/jenkins/7-parallelstage">How to define parallel stage in Jenkinsfile</p>
+          <p><a href="/content/jenkins/8-jenkins-triggers">How to define triggers in Jenkinsfile</p>
+        </div>
+      </div>
+      <a class="badge badge-primary" data-toggle="collapse" data-target="#jenkins-notes">Notes</a>
+      <div id="jenkins-notes" class="collapse">
+        <p><a>Updating soon!!</a></p>
+      </div>
     </div>
   </div>
-</div>
-<div class="row">
-  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#docker">Docker</button>
-  <div id="docker" class="collapse show">
-    <a class="badge badge-primary" data-toggle="collapse" data-target="#docker-tutorial">Tutorials</a>
-    <div id="docker-tutorial" class="collapse show">
-      <p><a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">Dockerfile best practices<a/></p>
-      <p><a href="/content/docker/tutorials/Dockerfile/01-create-dockerfile-to-install-packages">How to write a dockerfile for installing packages</a></p>
-      <p><a href="/content/docker/tutorials/Dockerfile/02-create-a-dokerfile-for-installing-openjdk15">How to write a dockerfile for installing openjdk15</a></p>
-      <p><a href="/content/docker/tutorials/Dockerfile/03-create-multi-stage-dockerfile">How to create multi stage Dockerfile</a></p>
-    </div>
-    <a class="badge badge-primary" data-toggle="collapse" data-target="#docker-notes">Notes</a>
-    <div id="docker-notes" class="collapse show">
-      <p><a href="/content/docker/10-tools-as-containers">Devops tools as docker containers</a></p>
-    </div>
-  </div>
-</div>
-<div class="row"><br><hr><br>
-  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#kubernetes">Kubernetes</button>
-  <div id="kubernetes" class="collapse show">
-    <a class="badge badge-primary" data-toggle="collapse" data-target="#kubernetes-tutorial">Tutorials</a>
-    <div id="kubernetes-tutorial" class="collapse show">
-      <p><a>Updating soon!!</a></p>
-    </div>
-    <a class="badge badge-primary" data-toggle="collapse" data-target="#kubernetes-notes">Notes</a>
-    <div id="kubernetes-notes" class="collapse">
-      <p><a>Updating soon!!</a></p>
+  <div class="row">
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#docker">Docker</button>
+    <div id="docker" class="collapse show">
+      <a class="badge badge-primary" data-toggle="collapse" data-target="#docker-tutorial">Tutorials</a>
+      <div id="docker-tutorial" class="collapse show">
+        <p><a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">Dockerfile best practices<a/></p>
+        <p><a href="/content/docker/tutorials/Dockerfile/01-create-dockerfile-to-install-packages">How to write a dockerfile for installing packages</a></p>
+        <p><a href="/content/docker/tutorials/Dockerfile/02-create-a-dokerfile-for-installing-openjdk15">How to write a dockerfile for installing openjdk15</a></p>
+        <p><a href="/content/docker/tutorials/Dockerfile/03-create-multi-stage-dockerfile">How to create multi stage Dockerfile</a></p>
+      </div>
+      <a class="badge badge-primary" data-toggle="collapse" data-target="#docker-notes">Notes</a>
+      <div id="docker-notes" class="collapse show">
+        <p><a href="/content/docker/10-tools-as-containers">Devops tools as docker containers</a></p>
+      </div>
     </div>
   </div>
-</div>
-<div class="row"><br><hr><br>
-  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#shell-script">Shell Script</button>
-  <div id="shell-script" class="collapse show">
-    <a class="badge badge-primary" data-toggle="collapse" data-target="#shell-script-tutorial">Tutorials</a>
-    <div id="shell-script-tutorial" class="collapse show">
-      <p><a>Updating soon!!</a></p>
-    </div>
-    <a class="badge badge-primary" data-toggle="collapse" data-target="#shell-script-notes">Notes</a>
-    <div id="shell-script-notes" class="collapse">
-      <p><a>Updating soon!!</a></p>
-    </div>
-  </div>
-</div>
-<div class="row"><br><hr><br>
-  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#linux-commands">Linux</button>
-  <div id="linux-commands" class="collapse show">
-    <a class="badge badge-primary" data-toggle="collapse" data-target="#linux-commands-tutorial">Tutorials</a>
-    <div id="linux-commands-tutorial" class="collapse show">
-      <p><a>Updating soon!!</a></p>
-    </div>
-    <a class="badge badge-primary" data-toggle="collapse" data-target="#linux-commands-notes">Notes</a>
-    <div id="linux-commands-notes" class="collapse">
-      <p><a>Updating soon!!</a></p>
+  <div class="row"><br><hr><br>
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#kubernetes">Kubernetes</button>
+    <div id="kubernetes" class="collapse show">
+      <a class="badge badge-primary" data-toggle="collapse" data-target="#kubernetes-tutorial">Tutorials</a>
+      <div id="kubernetes-tutorial" class="collapse show">
+        <p><a>Updating soon!!</a></p>
+      </div>
+      <a class="badge badge-primary" data-toggle="collapse" data-target="#kubernetes-notes">Notes</a>
+      <div id="kubernetes-notes" class="collapse">
+        <p><a>Updating soon!!</a></p>
+      </div>
     </div>
   </div>
-</div>
-<div class="row"><br><hr><br>
-  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#ssl-tls">SSL/TLS</button>
-  <div id="ssl-tls" class="collapse show">
-    <a class="badge badge-primary" data-toggle="collapse" data-target="#ssl-tls-tutorial">Tutorials</a>
-    <div id="ssl-tls-tutorial" class="collapse show">
-      <p><a href="https://vigneshsweekaran.github.io/https/self-signed-certificate-using-openssl">self signed certificate using openssl</a></p>
+  <div class="row"><br><hr><br>
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#shell-script">Shell Script</button>
+    <div id="shell-script" class="collapse show">
+      <a class="badge badge-primary" data-toggle="collapse" data-target="#shell-script-tutorial">Tutorials</a>
+      <div id="shell-script-tutorial" class="collapse show">
+        <p><a>Updating soon!!</a></p>
+      </div>
+      <a class="badge badge-primary" data-toggle="collapse" data-target="#shell-script-notes">Notes</a>
+      <div id="shell-script-notes" class="collapse">
+        <p><a>Updating soon!!</a></p>
+      </div>
     </div>
   </div>
-</div>
-<div class="row"><br><hr><br>
-  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#sonarqube">Sonarqube</button>
-  <div id="sonarqube" class="collapse show">
-    <a class="badge badge-primary" data-toggle="collapse" data-target="#sonarqube-tutorial">Tutorials</a>
-    <div id="sonarqube-tutorial" class="collapse show">
-      <p><a href="https://tomgregory.com/sonarqube-quality-gates-in-jenkins-build-pipeline/">Sonarqube Quality gate in Jenkins</a></p>
-    </div>
-    <a class="badge badge-primary" data-toggle="collapse" data-target="#sonarqube-notes">Notes</a>
-    <div id="sonarqube-notes" class="collapse">
-      <p><a>Updating soon!!</a></p>
+  <div class="row"><br><hr><br>
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#linux-commands">Linux</button>
+    <div id="linux-commands" class="collapse show">
+      <a class="badge badge-primary" data-toggle="collapse" data-target="#linux-commands-tutorial">Tutorials</a>
+      <div id="linux-commands-tutorial" class="collapse show">
+        <p><a>Updating soon!!</a></p>
+      </div>
+      <a class="badge badge-primary" data-toggle="collapse" data-target="#linux-commands-notes">Notes</a>
+      <div id="linux-commands-notes" class="collapse">
+        <p><a>Updating soon!!</a></p>
+      </div>
     </div>
   </div>
-</div>
-<div class="row"><br><hr><br>
-  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#kubernetes">Kubernetes</button>
-  <div id="kubernetes" class="collapse show">
-    <a class="badge badge-primary" data-toggle="collapse" data-target="#kubernetes-tutorial">Tutorials</a>
-    <div id="kubernetes-tutorial" class="collapse show">
-      <p><a>Updating soon!!</a></p>
+  <div class="row"><br><hr><br>
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#ssl-tls">SSL/TLS</button>
+    <div id="ssl-tls" class="collapse show">
+      <a class="badge badge-primary" data-toggle="collapse" data-target="#ssl-tls-tutorial">Tutorials</a>
+      <div id="ssl-tls-tutorial" class="collapse show">
+        <p><a href="https://vigneshsweekaran.github.io/https/self-signed-certificate-using-openssl">self signed certificate using openssl</a></p>
+      </div>
     </div>
-    <a class="badge badge-primary" data-toggle="collapse" data-target="#kubernetes-notes">Notes</a>
-    <div id="kubernetes-notes" class="collapse">
-      <p><a>Updating soon!!</a></p>
+  </div>
+  <div class="row"><br><hr><br>
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#sonarqube">Sonarqube</button>
+    <div id="sonarqube" class="collapse show">
+      <a class="badge badge-primary" data-toggle="collapse" data-target="#sonarqube-tutorial">Tutorials</a>
+      <div id="sonarqube-tutorial" class="collapse show">
+        <p><a href="https://tomgregory.com/sonarqube-quality-gates-in-jenkins-build-pipeline/">Sonarqube Quality gate in Jenkins</a></p>
+      </div>
+      <a class="badge badge-primary" data-toggle="collapse" data-target="#sonarqube-notes">Notes</a>
+      <div id="sonarqube-notes" class="collapse">
+        <p><a>Updating soon!!</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="row"><br><hr><br>
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#kubernetes">Kubernetes</button>
+    <div id="kubernetes" class="collapse show">
+      <a class="badge badge-primary" data-toggle="collapse" data-target="#kubernetes-tutorial">Tutorials</a>
+      <div id="kubernetes-tutorial" class="collapse show">
+        <p><a>Updating soon!!</a></p>
+      </div>
+      <a class="badge badge-primary" data-toggle="collapse" data-target="#kubernetes-notes">Notes</a>
+      <div id="kubernetes-notes" class="collapse">
+        <p><a>Updating soon!!</a></p>
+      </div>
     </div>
   </div>
 </div>
