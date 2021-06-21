@@ -1,31 +1,31 @@
 nav-list:
 
 - title: Home
-  url: /index.html
+  url: index.html
 
 - title: Interview Questions
-  url: /nav/interview-questions.html
+  url: interview-questions.html
 
 - title: Git
-  url: /nav/git.html
+  url: git.html
 
 - title: Jenkins
-  url: /nav/jenkins.html
+  url: jenkins.html
 
 - title: Docker
-  url: /nav/docker.html
+  url: docker.html
 
 - title: Kubernetes
-  url: /nav/kubernetes.html
+  url: kubernetes.html
 
 - title: Shell Script
-  url: /nav/shell-script.html
+  url: shell-script.html
 
 - title: Linux
-  url: /nav/linux.html
+  url: linux.html
 
 - title: SSL/TLS
-  url: /nav/ssl-tls.html
+  url: ssl-tls.html
 
 - title: Sonarqube
-  url: /nav/sonarqube.html
+  url: sonarqube.html
