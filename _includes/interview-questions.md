@@ -1,0 +1,7 @@
+[Git](/content/git/interview_questions)
+[Jenkins](/content/jenkins/3-interview_questions)
+[Docker](/content/docker/3-interview-questions)
+[Kubernetes](/content/kubernetes/interview-questions)
+[Shell script](/content/shellscript/07-interview-questions")
+[Linux commands](/content/linux/interview-questions)
+[Ansible](/content/ansible/interview-questions)
