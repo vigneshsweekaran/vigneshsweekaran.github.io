@@ -8,8 +8,9 @@ nav-list:
 
 - title: DevOps-RoadMap
   url: https://vigneshsweekaran.github.io/content/devops-journey/devops-journey
+
 - title: Git
-  url: git.html
+  url: https://vigneshsweekaran.github.io/git.html
 
 - title: Jenkins
   url: https://vigneshsweekaran.github.io/jenkins.html
