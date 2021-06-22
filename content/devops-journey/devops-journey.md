@@ -42,6 +42,10 @@
 #### Reference Youtube channels for learning kubernetes
 * [Justmeandopensource youtube channel Kubernetes](https://www.youtube.com/c/wenkatn-justmeandopensource/playlists)
 
+#### Kubernetes free lab environment
+* https://www.ibm.com/cloud/kubernetes-service/kubernetes-tutorials
+* https://www.katacoda.com/learn
+
 ## Monitoring
 
 ## Logging

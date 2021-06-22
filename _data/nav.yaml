@@ -3,9 +3,11 @@ nav-list:
 - title: Home
   url: index.html
 
-- title: Interview Questions
+- title: Interview-Questions
   url: interview-questions.html
 
+- title: DevOps-RoadMap
+  url: /content/devops-journey/devops-journey
 - title: Git
   url: git.html
 
@@ -18,7 +20,7 @@ nav-list:
 - title: Kubernetes
   url: kubernetes.html
 
-- title: Shell Script
+- title: Shell-Script
   url: shell-script.html
 
 - title: Linux
