@@ -13,6 +13,11 @@ enable_header: true
     hr {
       height:3px;border-width:0;color:#0275d8;background-color:#0275d8
     }
+      /* Make the image fully responsive */
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
   </style>
   <title>Devops Tutorial</title>
   <meta charset="utf-8">
@@ -23,6 +28,7 @@ enable_header: true
 </head>
 <body>
 
+{% include carousel.html %}
 {% include interview-questions.html %}
 {% include git.html %}
 {% include jenkins.html %}
