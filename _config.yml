@@ -1,6 +1,6 @@
 title: DevOps Tutorial
 description: Best tutorial blog for learning DevOps
-google_analytics:
+google_analytics: G-GRT1Q26TZC
 plugins:
   - jekyll-relative-links
 relative_links:
