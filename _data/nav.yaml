@@ -4,31 +4,34 @@ nav-list:
   url: https://vigneshsweekaran.github.io/index.html
 
 - title: Interview-Questions
-  url: https://vigneshsweekaran.github.io/interview-questions.html
+  url: https://vigneshsweekaran.github.io/nav/interview-questions.html
 
 - title: DevOps-RoadMap
   url: https://vigneshsweekaran.github.io/content/devops-journey/devops-journey
 
 - title: Git
-  url: https://vigneshsweekaran.github.io/git.html
+  url: https://vigneshsweekaran.github.io/nav/git.html
 
 - title: Jenkins
-  url: https://vigneshsweekaran.github.io/jenkins.html
+  url: https://vigneshsweekaran.github.io/nav/jenkins.html
 
 - title: Docker
-  url: https://vigneshsweekaran.github.io/docker.html
+  url: https://vigneshsweekaran.github.io/nav/docker.html
 
 - title: Kubernetes
-  url: https://vigneshsweekaran.github.io/kubernetes.html
+  url: https://vigneshsweekaran.github.io/nav/kubernetes.html
 
 - title: Shell-Script
-  url: https://vigneshsweekaran.github.io/shell-script.html
+  url: https://vigneshsweekaran.github.io/nav/shell-script.html
 
 - title: Linux
-  url: https://vigneshsweekaran.github.io/linux.html
+  url: https://vigneshsweekaran.github.io/nav/linux.html
 
 - title: SSL/TLS
-  url: https://vigneshsweekaran.github.io/ssl-tls.html
+  url: https://vigneshsweekaran.github.io/nav/ssl-tls.html
 
 - title: Sonarqube
-  url: https://vigneshsweekaran.github.io/sonarqube.html
+  url: https://vigneshsweekaran.github.io/nav/sonarqube.html
+
+- title: Tomcat
+  url: https://vigneshsweekaran.github.io/nav/tomcat.html

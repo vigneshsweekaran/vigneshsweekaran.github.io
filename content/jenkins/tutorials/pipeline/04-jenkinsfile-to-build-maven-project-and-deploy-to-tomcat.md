@@ -8,7 +8,7 @@
 * [How to install plugins in Jenkins](/content/jenkins/tutorials/common/02-how-to-install-plugins)
 * [How to configure maven in Global Tool Configuration](/content/jenkins/tutorials/common/03-global-tool-configurations)
 * [How to create pipeline job in Jenkins](/content/jenkins/tutorials/pipeline/01-how-to-create-pipeline-job)
-* [How to install Tomcat]()
+* [How to install Tomcat](/content/tomcat/tutorials/installation)
 * [How to manually deploy the java application in Tomcat]()
 
 I have a sample hello-world maven project in [github](https://github.com/vigneshsweekaran/hello-world)
