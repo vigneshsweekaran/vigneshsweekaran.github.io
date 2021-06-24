@@ -64,3 +64,10 @@ mkdir anchore-engine && cd anchore-engine
 curl https://engine.anchore.io/docs/quickstart/docker-compose.yaml > docker-compose.yaml
 docker-compose up -d
 ```
+
+### Tomcat 9
+
+##### With volume
+```
+docker run --name tomcat9 -d --restart=always -p 8080:8080 -v tomcat9-volume:/usr tomcat:9.0
+```
