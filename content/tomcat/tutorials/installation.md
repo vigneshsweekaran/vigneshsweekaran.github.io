@@ -63,3 +63,6 @@ docker run --name tomcat9 -d --restart=always -p 8080:8080 -v tomcat9-volume:/us
 
 ##### Other References:
 * [Reference 1](https://linuxconfig.org/ubuntu-20-04-tomcat-installation)
+
+### Next Topic
+* [How to manually deploy the java application to Tomcat 9 webserver](/content/tomcat/tutorials/how-to-manually-deploy-java-application-to-tomcat)

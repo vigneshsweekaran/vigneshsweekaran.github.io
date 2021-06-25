@@ -32,7 +32,7 @@ Then restart the tomcat9
 sudo systemctl restart tomcat9
 ```
 
-Now go to you browser and type http://your-ip-address:8080/manager you will see the tomcat manager GUI
+Now go to you browser and type http://your-ip-address:8080/manager enter username and password, you will see the tomcat manager GUI
  
 ![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-manager-gui.png)
 
@@ -40,7 +40,7 @@ Now to deploy the java web application to tomcat, we have to compile the Java co
 
 I have a sample hello-world maven project in github [hello-world](https://github.com/vigneshsweekaran/hello-world)
 
-To download and compile this code we need two tools **git** and **maven**
+To download and compile this code we need two tools to be installed in our system **git** and **maven**
 
 If you are using **Ubuntu** machine, you can easily install git and maven using following commands.
 ```
@@ -84,10 +84,12 @@ Enter **/hello-world** in the **Context Path:** feild and war file absolute path
 
 ![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-deploy-war-gui.png)
 
-Now we can verify the deployment my checking the list in **Applications** section.
+Now we can verify the deployment by checking the list in **Applications** section.
 
 ![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-deployed-gui.png)
 
 Now we can access the deployed application from browser by http://your-ip-address:8080/hello-world
 
 ![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-hello-world-context.png)
+
+Hurray! we have succesfully deployed the java web application manually to Tomcat 9 using Manager GUI
