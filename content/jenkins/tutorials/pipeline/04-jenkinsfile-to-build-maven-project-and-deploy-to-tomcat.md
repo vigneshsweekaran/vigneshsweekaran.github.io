@@ -11,7 +11,7 @@
 * [How to install Tomcat](/content/tomcat/tutorials/installation)
 * [How to manually deploy the java application in Tomcat]()
 
-I have a sample hello-world maven project in [github](https://github.com/vigneshsweekaran/hello-world)
+I have a sample hello-world maven project in github [hello-world](https://github.com/vigneshsweekaran/hello-world)
 
 Maven is a build tool used to compile, test and package the application developed using Java programming language.
 

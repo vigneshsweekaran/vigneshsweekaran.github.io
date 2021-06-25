@@ -51,6 +51,7 @@ Restart the tomcat to take effect.
 sudo systemctl restart tomcat9
 ```
 Now access the Tomcat webserver in 9000 port from browser. eg: http://your-ip-address:9000
+
 ![tomcat](/content/tomcat/tutorials/images/installation/tomcat-server-9000.png)
 
 ### Install Tomcat 9 as docker container

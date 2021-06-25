@@ -9,7 +9,7 @@
 * [How to configure maven in Global Tool Configuration](/content/jenkins/tutorials/common/03-global-tool-configurations)
 * [How to create pipeline job in Jenkins](/content/jenkins/tutorials/pipeline/01-how-to-create-pipeline-job)
 
-I have a sample hello-world maven project in [github](https://github.com/vigneshsweekaran/hello-world)
+I have a sample hello-world maven project in github [hello-world](https://github.com/vigneshsweekaran/hello-world)
 
 Maven is a build tool used to compile, test and package the application developed using Java programming language.
 
