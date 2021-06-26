@@ -1,15 +1,10 @@
-# How to manually deploy the java application to Tomcat 9 webserver
+# How to deploy the java application to Tomcat 9 webserver using Maven
 
 ### References:
 * [How to install Tomcat](/content/tomcat/tutorials/installation)
+* [How to manually deploy the java application to Tomcat 9 webserver](/content/tomcat/tutorials/how-to-manually-deploy-java-application-to-tomcat)
 
-### How to access the Manager GUI in Tomcat 9 webserver
-
-After installation if we directly try to access the web application manager, it will ask for username and password.
-
-Access the manger application by http://your-ip-address:8080/manager in browser
-
-![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-manger-login.png)
+We are going to deploy the java application war file to Tomcat webserver using maven, which means without touching the Tomcat manager GUI we are going to deploy the java application.
 
 To create users in Tomcat, open the file **/var/lib/tomcat9/conf/tomcat-users.xml**
 ```
@@ -18,23 +13,21 @@ sudo vi /var/lib/tomcat9/conf/tomcat-users.xml
 
 Go to end of the file and paste the following lines inside tomcat-users block and save it.
 
-Here we have defined two roles **admin-gui** **manager-gui** and created user **admin** and assigned the roles to admin user
+Here we have defined one role **manager-script** and created user **deployer** and assigned the role to the deployer user.
+
+The **manager-script** role will not give access to Tomcat manager web application GUI, it will give access to deploy the application using scripts.
+
 ```
-  <role rolename="admin-gui"/>
-  <role rolename="manager-gui"/>
-  <user username="admin" password="admin" roles="admin-gui,manager-gui"/>
+  <role rolename="manager-script"/>
+  <user username="deployer" password="deployer" roles="manager-script"/>
 ```
 
-![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-users-xml.png)
+![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-user-script.png)
 
 Then restart the tomcat9
 ```
 sudo systemctl restart tomcat9
 ```
-
-Now go to you browser and type http://your-ip-address:8080/manager enter username and password, you will see the tomcat manager GUI
- 
-![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-manager-gui.png)
 
 Now to deploy the java web application to tomcat, we have to compile the Java code and package it to .war file extension type.
 
@@ -95,7 +88,4 @@ Now we can access the deployed application from browser by http://your-ip-addres
 Hurray! we have succesfully deployed the java web application manually to Tomcat 9 using Manager GUI
 
 ### Previous Topic
-* [How to install Tomcat](/content/tomcat/tutorials/installation)
-
-### Next Topic
-* [How to deploy the java application to Tomcat 9 webserver using Maven](/content/tomcat/tutorials/how-to-deploy-java-application-to-tomcat-using-maven)
+* [How to manually deploy the java application to Tomcat 9 webserver](/content/tomcat/tutorials/how-to-manually-deploy-java-application-to-tomcat)
