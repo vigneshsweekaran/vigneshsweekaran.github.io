@@ -13,12 +13,6 @@ sudo vi /var/lib/tomcat9/conf/tomcat-users.xml
 
 Go to end of the file and paste the following lines inside tomcat-users block and save it.
 
-Here we have defined two roles **manager-gui** **manager-script** and created two user **admin** **deployer** and assigned the **manager-gui** role to admin user and **manager-script** role to deployer user.
-
-Using admin user we will be able to access the manager web application GUI and using deployer user we will be able to deploy the war file to tomcat using maven command.
-
-`Note:` The **manager-script** role will not give access to Tomcat manager web application GUI, it will give access to deploy the application using scripts.
-
 ```
   <role rolename="manager-gui"/>
   <role rolename="manager-script"/>
@@ -27,6 +21,12 @@ Using admin user we will be able to access the manager web application GUI and u
 ```
 
 ![tomcat](/content/tomcat/tutorials/images/deploy-app-maven/tomcat-user-script.png)
+
+Here we have defined two roles **manager-gui** **manager-script** and created two user **admin** **deployer** and assigned the **manager-gui** role to admin user and **manager-script** role to deployer user.
+
+Using admin user we will be able to access the manager web application GUI and using deployer user we will be able to deploy the war file to tomcat using maven command.
+
+`Note:` The **manager-script** role will not give access to Tomcat manager web application GUI, it will give access to deploy the application using scripts.
 
 Then restart the tomcat9
 ```
