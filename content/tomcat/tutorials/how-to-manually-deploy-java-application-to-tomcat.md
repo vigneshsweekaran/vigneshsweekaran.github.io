@@ -61,7 +61,7 @@ Go inside hello-world folder
 cd hello-world
 ```
 
-Now we run the maven commands to compile the Java code and package it to .war file extension.
+Now we can run the maven commands to compile the Java code and package it to .war file extension.
 ```
 mvn clean package
 ```
@@ -92,7 +92,7 @@ Now we can access the deployed application from browser by http://your-ip-addres
 
 ![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-hello-world-context.png)
 
-Hurray! we have succesfully deployed the java web application manually to Tomcat 9 using Manager GUI
+Hurray!! we have succesfully deployed the java web application manually to Tomcat 9 using Manager GUI
 
 ### Previous Topic
 * [How to install Tomcat](/content/tomcat/tutorials/installation)

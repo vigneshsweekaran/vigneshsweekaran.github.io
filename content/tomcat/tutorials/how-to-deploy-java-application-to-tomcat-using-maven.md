@@ -13,16 +13,20 @@ sudo vi /var/lib/tomcat9/conf/tomcat-users.xml
 
 Go to end of the file and paste the following lines inside tomcat-users block and save it.
 
-Here we have defined one role **manager-script** and created user **deployer** and assigned the role to the deployer user.
+Here we have defined two roles **manager-gui** **manager-script** and created two user **admin** **deployer** and assigned the **manager-gui** role to admin user and **manager-script** role to deployer user.
 
-The **manager-script** role will not give access to Tomcat manager web application GUI, it will give access to deploy the application using scripts.
+Using admin user we will be able to access the manager web application GUI and using deployer user we will be able to deploy the war file to tomcat using maven command.
+
+`Note:` The **manager-script** role will not give access to Tomcat manager web application GUI, it will give access to deploy the application using scripts.
 
 ```
+  <role rolename="manager-gui"/>
   <role rolename="manager-script"/>
+  <user username="admin" password="admin" roles="manager-gui"/>
   <user username="deployer" password="deployer" roles="manager-script"/>
 ```
 
-![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-user-script.png)
+![tomcat](/content/tomcat/tutorials/images/deploy-app-maven/tomcat-user-script.png)
 
 Then restart the tomcat9
 ```
@@ -35,57 +39,95 @@ I have a sample hello-world maven project in github [hello-world](https://github
 
 To download and compile this code we need two tools to be installed in our system **git** and **maven**
 
-If you are using **Ubuntu** machine, you can easily install git and maven using following commands.
+If you are using **Ubuntu** system, you can easily install git and maven using following commands.
 ```
 sudo apt install -y git maven
 ```
 
-![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-install-git-maven.png)
+![tomcat](/content/tomcat/tutorials/images/deploy-app-maven/tomcat-install-git-maven.png)
 
 Now we can clone the **hello-world** project from Github
 ```
-git clone https://github.com/vigneshsweekaran/hello-world.git
+git clone -b maven-deploy-to-tomcat https://github.com/vigneshsweekaran/hello-world.git
 ```
 
-![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-git-clone.png)
+![tomcat](/content/tomcat/tutorials/images/deploy-app-maven/tomcat-git-clone.png)
+
+Before compiling the code, we have to do some configuration in maven to deploy the hello-world.war to tomcat.
+
+We are going to use `cargo` maven plugin to deploy the war file to tomcat.
+
+After installing the maven, `.m2` directory will be created in home folder. If your server username is **ubuntu** then the home folder is **/home/ubuntu**
+
+Create `settings.xml` file in `/home/ubuntu/.m2` folder.
+
+![tomcat](/content/tomcat/tutorials/images/deploy-app-maven/tomcat-setting-xml-location.png)
+
+Paste the following content in `settings.xml`
+
+```
+<settings>
+  <servers>
+    <server>
+      <id>tomcat-server</id>
+      <configuration>
+        <cargo.tomcat.manager.url>http://152.70.71.239:8080/manager/text</cargo.tomcat.manager.url>
+        <cargo.remote.username>deployer</cargo.remote.username>
+        <cargo.remote.password>deployer</cargo.remote.password>
+      </configuration>
+    </server>
+  </servers>
+</settings>
+```
+![tomcat](/content/tomcat/tutorials/images/deploy-app-maven/tomcat-settings-xml.png)
+
+**settings.xml** file is used to save some useful or secret data and these data can be fetched into pom.xml by refering the id.
+
+Here we have stored the tomcat url, username and password, which are needed by cargo maven plugin to deploy the hello-world-war to tomcat.
+
+And i have already added the `cargo` maven plugin details to the pom.xml. While executing `mvn clean install` maven will download the cargo plugin from maven repository.
+
+While creating the `settings.xml` we have created a id `<id>tomcat-server</id>` for the tomcat details. This id we have to refer in cargo maven plugin definition in pom.xml file to fetch the tomcat details.
+
+![tomcat](/content/tomcat/tutorials/images/deploy-app-maven/tomcat-cargo-plugin-pom.png)
 
 Go inside hello-world folder
 ```
 cd hello-world
 ```
 
-Now we run the maven commands to compile the Java code and package it to .war file extension.
+Now we can run the maven command to compile the Java code and package it to .war file extension.
 ```
-mvn clean package
+mvn clean install
 ```
 
-![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-mvn-clean-package.png)
+![tomcat](/content/tomcat/tutorials/images/deploy-app-maven/tomcat-mvn-clean-install.png)
 
 After compilation, the **hello-world.war** file is generated in **target** folder
 
-![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-target-folder.png)
+![tomcat](/content/tomcat/tutorials/images/deploy-app-maven/tomcat-target-folder.png)
 
-Now we have our artifact **hello-world.war** in **/home/ubuntu/hello-world/target** folder
+Now we can run the `mvn cargo:deploy` command to deploy the hello-world.war file to tomcat
+```
+mvn cargo:deploy
+```
+![tomcat](/content/tomcat/tutorials/images/deploy-app-maven/tomcat-mvn-cargo-deploy.png)
 
-Lets deploy the **hello-world.war** to tomact using Manager GUI
+While executing `mvn cargo:deploy` command, maven will fetch the tomcat details from settings.xml and deploy to tomcat
 
-Goto Tomcat manager GUI --> **Deploy directory or WAR file located on server** section
+Now, we can verify the deployment by visiting the http://your-ip-address:8080/hello-world
 
-Since we have our **hello-world.war** file in the same server. We will use this option.
+![tomcat](/content/tomcat/tutorials/images/deploy-app-maven/tomcat-hello-world-page.png)
 
-Enter **/hello-world** in the **Context Path:** feild and war file absolute path /home/ubuntu/hello-world/target/hello-world.war in **WAR or Directory path:** feild
+To undeploy the hello-world.war file from tomcat
+```
+mvn cargo:undeploy
+```
 
-![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-deploy-war-gui.png)
+![tomcat](/content/tomcat/tutorials/images/deploy-app-maven/tomcat-maven-cargo-undeploy.png)
 
-Now we can verify the deployment by checking the list in **Applications** section.
 
-![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-deployed-gui.png)
-
-Now we can access the deployed application from browser by http://your-ip-address:8080/hello-world
-
-![tomcat](/content/tomcat/tutorials/images/manually-deploy-app/tomcat-hello-world-context.png)
-
-Hurray! we have succesfully deployed the java web application manually to Tomcat 9 using Manager GUI
+Hurray!! we have succesfully deployed and undeployed the java web application to Tomcat 9 using Maven
 
 ### Previous Topic
 * [How to manually deploy the java application to Tomcat 9 webserver](/content/tomcat/tutorials/how-to-manually-deploy-java-application-to-tomcat)
