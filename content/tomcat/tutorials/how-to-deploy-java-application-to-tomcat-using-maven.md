@@ -22,7 +22,7 @@ Go to end of the file and paste the following lines inside tomcat-users block an
 
 ![tomcat](/content/tomcat/tutorials/images/deploy-app-maven/tomcat-user-script.png)
 
-Here we have defined two roles **manager-gui** **manager-script** and created two user **admin** **deployer** and assigned the **manager-gui** role to admin user and **manager-script** role to deployer user.
+Here we have defined two roles **manager-gui**, **manager-script** and created two users **admin**, **deployer** and assigned the **manager-gui** role to admin user and **manager-script** role to deployer user.
 
 Using admin user we will be able to access the manager web application GUI and using deployer user we will be able to deploy the war file to tomcat using maven command.
 
@@ -83,7 +83,7 @@ Paste the following content in `settings.xml`
 
 **settings.xml** file is used to save some useful or secret data and these data can be fetched into pom.xml by refering the id.
 
-Here we have stored the tomcat url, username and password, which are needed by cargo maven plugin to deploy the hello-world-war to tomcat.
+Here we have stored the tomcat url, username and password, which are needed by cargo maven plugin to deploy the hello-world.war to tomcat.
 
 And i have already added the `cargo` maven plugin details to the pom.xml. While executing `mvn clean install` maven will download the cargo plugin from maven repository.
 
