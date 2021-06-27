@@ -45,6 +45,15 @@
 * [Katacoda kubernetes Lab](https://www.katacoda.com/learn)
 * [Play with kubernetes](https://labs.play-with-k8s.com/)
 
+##### Kubernetes Paid course
+* [Certified Kubernetes Administrator course in Udemy](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/)
+
 ## Monitoring
 
 ## Logging
+
+## Cloud certification (AWS, AZURE, GCP) preferably you start with AWS Solution Architect Associate
+
+##### AWS Paid course
+* [AWS Certified Solution Architect Associate course in Udemy](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c02/)
+* [AWS Certified Solutions Architect Associate Practice Exams](https://www.udemy.com/course/aws-certified-solutions-architect-associate-amazon-practice-exams-saa-c02/) 
