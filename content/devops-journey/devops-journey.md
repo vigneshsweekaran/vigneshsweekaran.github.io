@@ -1,7 +1,7 @@
 # Kickstart your DevOps Journey
 
 ## Devops Prerequisite course:
-* [Devops prerequisite course video](https://www.youtube.com/watch?v=Wvf0mBNGjXY) This course has a handson lab also register for it and do the handon for free.
+* [Devops prerequisite course video](https://www.youtube.com/watch?v=Wvf0mBNGjXY) This course has a handson lab also register for it and do the handson for free.
 
 ## Linux basics
 * [How to install virtualbox and create ubuntu virtual machine](/content/linux/virtualbox)
@@ -24,7 +24,7 @@
 * [How to manually deploy the java application to Tomcat 9 webserver](https://vigneshsweekaran.github.io/content/tomcat/tutorials/how-to-manually-deploy-java-application-to-tomcat)
 * [How to deploy the java application to Tomcat 9 webserver using maven](https://vigneshsweekaran.github.io/content/tomcat/tutorials/how-to-deploy-java-application-to-tomcat-using-maven)
 
-`Nginx/httpd` Majorly used for deploying frontend application developed using HTML,CSS,Javscript, AngularJs and ReactJS 
+`Nginx/httpd` Majorly used for deploying frontend application developed using HTML,CSS,Javascript, AngularJs and ReactJS 
 
 ## Jenkins
 `Jenkins`
