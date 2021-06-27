@@ -19,10 +19,29 @@
 * Nodejs - For AngularJs (Frontend application)
 
 ## Web servers
-* Tomcat - Majorly for java based application
-* Nginx/httpd - For frontend based application
+`Tomcat` :` Majorly used for deploying Java based application
+* [How to install Tomcat](https://vigneshsweekaran.github.io/content/tomcat/tutorials/installation)
+* [How to manually deploy the java application to Tomcat 9 webserver](https://vigneshsweekaran.github.io/content/tomcat/tutorials/how-to-manually-deploy-java-application-to-tomcat)
+* [How to deploy the java application to Tomcat 9 webserver using maven](https://vigneshsweekaran.github.io/content/tomcat/tutorials/how-to-deploy-java-application-to-tomcat-using-maven)
+
+`Nginx/httpd` : Majorly used for deploying frontend application developed using HTML,CSS,Javscript, AngularJs and ReactJS 
 
 ## Jenkins
+`Jenkins`
+* [How to install Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/common/01-how-to-install-jenkins)
+* [How to install plugins in Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/common/02-how-to-install-plugins)
+* [Use of Global Tool Configuration in Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/common/03-global-tool-configurations)
+* [How to store credentials in Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/common/04-how-to-store-credentials-in-jenkins)
+
+`Jenkins Freestyle Job`
+
+`Jenkins Pipeline Job`
+* [How to create pipeline job in Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/01-how-to-create-pipeline-job)
+* [How to write a Jenkinsfile](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/02-how-to-write-jenkinsfile)
+* [[Part-1] Jenkinsfile to build a maven project](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/03-jenkinsfile-to-build-maven-project)
+* [[Part-2] Jenkinsfile to build and deploy to Tomcat](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/04-jenkinsfile-to-build-maven-project-and-deploy-to-tomcat)
+* [[Part-3] Jenkinsfile to build docker image, push to dockerhub and deploy to same server](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/05-jenkinsfile-to-build-docker-image-push-deploy-to-same-server)
+* [[Part-4] Jenkinsfile to build docker image, push to dockerhub and deploy to different server](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/06-jenkinsfile-to-build-docker-image-push-deploy-to-different-server)
 
 ## Docker
 * [Docker training video](https://www.youtube.com/watch?v=zJ6WbK9zFpI&t=5722s) 
@@ -52,8 +71,14 @@
 
 ## Logging
 
-## Cloud certification (AWS, AZURE, GCP) preferably you start with AWS Solution Architect Associate
+## Cloud certification (AWS, AZURE, GCP)
+Preferably you can start with AWS Solution Architect Associate
 
 ##### AWS Paid course
 * [AWS Certified Solution Architect Associate course in Udemy](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c02/)
-* [AWS Certified Solutions Architect Associate Practice Exams](https://www.udemy.com/course/aws-certified-solutions-architect-associate-amazon-practice-exams-saa-c02/) 
+* [AWS Certified Solutions Architect Associate Practice Exams](https://www.udemy.com/course/aws-certified-solutions-architect-associate-amazon-practice-exams-saa-c02/)
+
+## Terraform
+
+##### Terraform free course
+* [Terraform free course in youtube](https://www.youtube.com/watch?v=YcJ9IeukJL8&t=1s)
