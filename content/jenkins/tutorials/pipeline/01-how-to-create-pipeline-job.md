@@ -93,3 +93,6 @@ From the **Console Output** first line, we can see first it fetches the **cicd/0
 Echo commands from stages are printed to console output
 
 ![Jenkins](/content/jenkins/tutorials/pipeline/images/01-first-pipeline-job/jenkins-pipeline-echo-hello-world.png)
+
+##### Next Topic
+[How to write a Jenkinsfile](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/02-how-to-write-jenkinsfile)

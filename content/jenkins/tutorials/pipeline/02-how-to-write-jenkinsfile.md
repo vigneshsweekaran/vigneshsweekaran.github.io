@@ -238,4 +238,10 @@ pipeline {
     }
 }
 ```
-If environment block is defined within the stage block, then those environment variables will be accessible only within that stage. 
+If environment block is defined within the stage block, then those environment variables will be accessible only within that stage.
+
+##### Previous Topic
+[How to create pipeline job in Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/01-how-to-create-pipeline-job)
+
+##### Next Topic
+* [[Part-1] Jenkinsfile to build a maven project](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/03-jenkinsfile-to-build-maven-project)

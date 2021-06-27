@@ -37,3 +37,9 @@ We have created one stage called **Build**, here we are executing the **mvn clea
 It will compile the java code and generate the package in **targets** folder.
 
 ![jenkins](/content/jenkins/tutorials/pipeline/images/03-maven-job/jenkins-maven-job.png)
+
+##### Previous Topic
+[How to write a Jenkinsfile](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/02-how-to-write-jenkinsfile)
+
+##### Next Topic
+[[Part-2] Jenkinsfile to build and deploy to Tomcat](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/04-jenkinsfile-to-build-maven-project-and-deploy-to-tomcat)

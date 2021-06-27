@@ -71,7 +71,7 @@ Parameters passed to `Deploy to container` plugin definition.
     <user username="deployer" password="deployer" roles="manager-script"/>
   ```
 
-  ![tomcat](/content/tomcat/tutorials/images/deploy-app-maven/jenkins-tomcat-users-xml.png)
+  ![jenkins](/content/jenkins/tutorials/pipeline/images/04-maven-tomcat/jenkins-tomcat-users-xml.png)
 
   Here we have defined one role **manager-script** and created one user **deployer** and assigned the **manager-script** role to the deployer user.
 
@@ -85,4 +85,10 @@ Parameters passed to `Deploy to container` plugin definition.
 * onFailure: false --> Flag used to control the deployment, I dont want to deploy If my pipeline JOb fails, thatswhy I am setting `onFailure` flag to `false`
 * war: 'target/*.war' --> Your war file name
 
-![tomcat](/content/tomcat/tutorials/images/deploy-app-maven/jenkins-output.png)
+![tomcat](/content/jenkins/tutorials/pipeline/images/04-maven-tomcat/jenkins-output.png)
+
+##### Previous Topic
+[[Part-1] Jenkinsfile to build a maven project](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/03-jenkinsfile-to-build-maven-project)
+
+##### Next Topic
+* [[Part-3] Jenkinsfile to build docker image, push to dockerhub and deploy to same server](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/
