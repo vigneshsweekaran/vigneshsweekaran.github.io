@@ -40,7 +40,7 @@ The final docker image is created from the second stage and first stage is throw
 docker build -t 2-stage:latest .
 ```
 
-### 2 stage Dockerfile
+### 3 stage Dockerfile
 
 
 
