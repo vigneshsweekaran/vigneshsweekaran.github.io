@@ -134,4 +134,4 @@ sh "docker rm hello-world | true"
 [[Part-2] How to write a Jenkinsfile to build a Maven project and deploy to Apache Tomcat webserver](/content/jenkins/tutorials/pipeline/04-jenkinsfile-to-build-maven-project-and-deploy-to-tomcat)
 
 ##### Next Topic
-* [[Part-4] How to write a Jenkinsfile to build a Maven project, build and push docker image to Jfrog artifactort and deploy the container to same server](/content/jenkins/tutorials/pipeline/06-jenkinsfile-to-build-docker-image-push-to-artifactory)
+[[Part-4] How to write a Jenkinsfile to build a Maven project, build and push docker image to Jfrog artifactort and deploy the container to same server](/content/jenkins/tutorials/pipeline/06-jenkinsfile-to-build-docker-image-push-to-artifactory)
