@@ -75,7 +75,7 @@ docker.build("vigneshsweekaran/hello-world:${TAG}")
 ```
 vigneshsweekaran --> dockerhub account name
 
-hello-world --> Repository name / Image name
+hello-world --> Repository name/Image name
 
 TAG --> Unique tag for the Image, defined in environment variable
 
@@ -93,7 +93,7 @@ docker_credential --> Jenkins credential id, where the dockerhub credentials are
 First we are pushing the docker image with uniwue tag(${TAG}) to the dockerhub  
 ```
 docker.image("vigneshsweekaran/hello-world:${TAG}").push()
-``
+```
 
 Second we are retagging the generated docker image to latest tag and pushing to dockerhub.
 
