@@ -74,7 +74,9 @@ In the `Docker Build` stage we have used `docker` plugin to build the docker ima
 docker.build("vigneshsweekaran/hello-world:${TAG}")
 ```
 vigneshsweekaran --> dockerhub account name
+
 hello-world --> Repository name / Image name
+
 TAG --> Unique tag for the Image, defined in environment variable
 
 In the `Pushing Docker Image to Dockerhub` we are pushing the docker images with two tags unique tag(${TAG}) and the latest tag to dockerhub using credentials stored in Jenkins credentials
@@ -85,6 +87,7 @@ docker.withRegistry('https://registry.hub.docker.com', 'docker_credential') {
 }
 ```
 https://registry.hub.docker.com --> Dockerhub registry url
+
 docker_credential --> Jenkins credential id, where the dockerhub credentials are stored
 
 First we are pushing the docker image with uniwue tag(${TAG}) to the dockerhub  
@@ -119,7 +122,7 @@ vigneshsweekaran/hello-world:${TAG} --> Generated docker image name and tag
 
 ```
 sh "docker run --name hello-world -d -p 9004:8080 vigneshsweekaran/hello-world:${TAG}"
-``
+```
 
 And we are executing the docker stop and rm command to remove the old container by referring the container name `hello-world`.
 ```
