@@ -90,7 +90,7 @@ https://registry.hub.docker.com --> Dockerhub registry url
 
 docker_credential --> Jenkins credential id, where the dockerhub credentials are stored
 
-First we are pushing the docker image with uniwue tag(${TAG}) to the dockerhub  
+First we are pushing the docker image with unique tag(${TAG}) to the dockerhub  
 ```
 docker.image("vigneshsweekaran/hello-world:${TAG}").push()
 ```
