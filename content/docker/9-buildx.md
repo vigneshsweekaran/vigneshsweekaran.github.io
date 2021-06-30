@@ -4,6 +4,15 @@ Docker buildx is a cli plugin to build the multi architeture docker images
 ### Reference
 Buildx github repo: https://github.com/docker/buildx
 
+### Install buildx
+```
+mkdir -p ~/.docker/cli-plugins
+cd ~/.docker/cli-plugins
+wget https://github.com/docker/buildx/releases/download/v0.5.1/buildx-v0.5.1.linux-amd64
+mv buildx-v0.5.1.linux-amd64 docker-buildx
+chmod a+x docker-buildx
+```
+
 ### Notes
 * Multi platform/architecure build feature is not supported with docker driver. we have to create a new driver that will run in side the docker container, and the buildx will use that driver to build muti architecure docker images
 
