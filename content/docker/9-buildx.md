@@ -1,5 +1,5 @@
 # Docker buildx
-Docker buildx is a cli plugin to build the multi architeture docker images
+Docker buildx is a dockercli plugin to build multi architeture(linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v8) docker images
 
 ### Reference
 Buildx github repo: https://github.com/docker/buildx
