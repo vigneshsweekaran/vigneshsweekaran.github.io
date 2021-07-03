@@ -1,20 +1,5 @@
 # Git basics
 
-### Changing Notepad++ as default editor in git
-```
-Command Listing
-notepad++ # testing to make sure it works
-notepad++ .bashrc # see contents of .bashrc file below
-npp # testing npp alias
-git config --global core.editor "notepad++.exe -multiInst -nosession"
-npp .gitconfig # open Git config file, should contain snip below
-~/.bashrc File
-alias npp='notepad++.exe -multiInst -nosession'
-~/.gitconfig File (snip)
-[core]
-editor = notepad++.exe -multiInst -nosession
-```
-
 ### To see files tracked in staging area
 git ls-files
   

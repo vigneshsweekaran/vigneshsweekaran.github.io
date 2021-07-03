@@ -16,6 +16,10 @@
 
 * How to schedule a pod on particular node ?
 
+* How you can securely connect to any server from your pod ?
+
+* How you can pull images from private registry to kubernetes cluster ?
+
 * What is RBAC or What is service account, role and role binding concepts are used?
 
 * What is the default service account in kubernetes used by pod ?

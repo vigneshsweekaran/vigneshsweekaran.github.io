@@ -1,6 +1,11 @@
 # Secret
 
-### Why we need secret
+### what is secret ?
+Kubernetes Secrets let you store and manage sensitive information, such as passwords, OAuth tokens, and ssh keys. 
+
+Storing confidential information in a Secret is safer and more flexible than putting it verbatim in a Pod definition or in a container image.
+
+`Note:` Kubernetes Secrets are, by default, stored as unencrypted base64-encoded strings. By default they can be retrieved - as plain text - by anyone with API access, or anyone with access to Kubernetes'
 
 ### Types of secret
 |Builtin Type|Usage|
@@ -13,7 +18,9 @@
 |kubernetes.io/ssh-auth| 	credentials for SSH authentication|
 |kubernetes.io/tls| 	data for a TLS client or server|
 |bootstrap.kubernetes.io/token| bootstrap token data|
+
 ### How to create secret using cli
+
 
 ### How to create secret using yaml file
 
