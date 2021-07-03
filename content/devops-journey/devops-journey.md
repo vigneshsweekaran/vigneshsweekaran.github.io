@@ -13,6 +13,8 @@
 
 ## Git
 * [Git basics](https://www.youtube.com/watch?v=Lr7sYCrhxE0&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=18)
+* [How to create a free account in Github and how to create repository in it](/content/git/tutorials/01-how-to-create-github-account)
+
 
 ## Build Tools
 * Maven/Gradle - for Java programming language (Backend application)
