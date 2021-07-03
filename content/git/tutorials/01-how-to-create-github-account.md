@@ -1,6 +1,6 @@
-# How to create Github Account and Github repositories
+# How to create free Github Account and Github repositories
 
-`Github` --> Github is a open source platform to store source code in central place (cloud https://github.com) 
+`Github` --> Github is a open source platform to store source code in central place (cloud [https://github.com](https://github.com)) 
 
 `Git` --> Git is a command line utility, which is installed in our computer to connect to Github.
 
@@ -19,7 +19,7 @@ Enter the `email id`, `password`, `username` verify the puzzle and click on `Cre
 
 ![git](/content/git/tutorials/images/01-account-creation/git-github-signup3.png)
 
-Click on the link received on your mail for complete the email verification. Once verification is completed login to https://github.com
+Click on the link received on your mail for complete the email verification. Once the email verification is completed, login to [https://github.com](https://github.com)
 
 After login, click on `Create repository` to create a first repository in Github.
 
