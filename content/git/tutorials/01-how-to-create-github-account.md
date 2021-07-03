@@ -37,7 +37,7 @@ Enter the repository name eg: `firstproject` and select the repository type as `
 
 Click the check box `Add a README file`
 
-`README.md` file used to tell about your repository, like for what purpose you have created this reposirory.
+`README.md` file is used to tell about your repository, like for what purpose you have created this reposirory.
 
 ![git](/content/git/tutorials/images/01-account-creation/git-github-create-repository2.png)
 
