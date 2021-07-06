@@ -2,6 +2,9 @@
 
 `Main components`
 * What are the main components of Kubernetes architecture?
+  **Master Node :** kube-apiserver, etcd, kube-scheduler and kube-controller-manager 
+  **Worker Node :** kubelet, kube-proxy and container runtime
+  **Official :** [Kubernetes main components](https://kubernetes.io/docs/concepts/overview/components/)
 
 `Pod`
 * Can we have multiple containers running inside the pod? If yes, any one container fails how would you troubleshot?
