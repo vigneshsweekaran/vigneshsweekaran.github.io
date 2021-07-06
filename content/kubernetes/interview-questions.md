@@ -2,8 +2,11 @@
 
 `Main components`
 * What are the main components of Kubernetes architecture?
+  
   **Master Node :** kube-apiserver, etcd, kube-scheduler and kube-controller-manager 
+  
   **Worker Node :** kubelet, kube-proxy and container runtime
+  
   **Official :** [Kubernetes main components](https://kubernetes.io/docs/concepts/overview/components/)
 
 `Pod`
