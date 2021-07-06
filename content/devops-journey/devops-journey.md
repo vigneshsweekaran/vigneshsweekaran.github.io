@@ -52,6 +52,7 @@
 * [Kubernetes Concept](https://www.youtube.com/watch?v=QJ4fODH6DXI&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=3)
 * [Kubernetes Architecture](https://www.youtube.com/watch?v=8C_SCDbUJTg)
 * [Pod,ReplicaSet,Deployment](https://www.youtube.com/watch?v=deFfAUZpoxs&list=PL34sAs7_26wP009Cl03TZbtRFZ2DMJovl&index=2)
+* [Horizontal Pod Autoscaler](https://www.youtube.com/watch?v=3BnrXapY7zo)
 * [Namespace](https://www.youtube.com/watch?v=j_UUnlVC2Ss&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=6)
 * [service](https://www.youtube.com/watch?v=5lzUpDtmWgM&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=4)
 * [Configmap]()
