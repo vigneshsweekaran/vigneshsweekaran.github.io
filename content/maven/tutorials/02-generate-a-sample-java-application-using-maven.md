@@ -1,10 +1,10 @@
-# Generate a sample java application using maven
+## Generate a sample java application using maven
 
 ### Reference
 * [How to install Maven](/content/maven/tutorials/01-installations)
 * [Official documentaion](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
 
-Maven has a build in command to generate a sample maven application.
+Maven has a build in command to generate a sample java application.
 
 Run the following command to generate the sample java application
 ```
@@ -22,11 +22,8 @@ sudo apt install tree -y
 ```
 
 ![Maven](/content/maven/tutorials/images/generate-sample-app/maven-generated-files.png)
-maven-generated-files
 
-It has generated one pom.xml file and some java files in `src folder`.
-
-Inside `src` folder it has two important folders `main` and `test`. 
+It has generated one pom.xml file and some java files in `src folder`. Inside `src` folder it has two important folders `main` and `test`. 
 
 The actual functionality java files are kept in `main` folder
 
@@ -49,7 +46,7 @@ mvn package
 
 After executing the `mvn package` command it will download the defined dependencies from maven remote repository, then compile the code, test the code and package the compiled code to `jar` package type.
 
-It will generate the the jar package in target folder.
+It will generate the jar package in target folder.
 
 Go to `target` folder and we can see our artifact `my-app-1.0-SNAPSHOT.jar`
 ```

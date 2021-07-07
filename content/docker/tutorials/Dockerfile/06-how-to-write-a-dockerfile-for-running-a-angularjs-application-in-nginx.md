@@ -1,4 +1,4 @@
-# How to write a dockerfile for running a java application (*.war) in Apache tomcat webserver
+## How to write a dockerfile for running a java application (*.war) in Apache tomcat webserver
 
 I have a sample hello-world maven project in github [hello-world](https://github.com/vigneshsweekaran/hello-world)
 
