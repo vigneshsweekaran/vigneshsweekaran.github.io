@@ -17,8 +17,11 @@
 
 
 ## Build Tools
-* Maven/Gradle - for Java programming language (Backend application)
-* Nodejs - For AngularJs (Frontend application)
+`Maven/Gradle` : for Java programming language (Backend application)
+* [How to install Maven](/content/maven/tutorials/installations)
+* [About Maven](https://www.youtube.com/watch?v=x8sMN4tossY)
+
+`Nodejs` : For AngularJs (Frontend application)
 
 ## Web servers
 `Tomcat` Majorly used for deploying Java based application
@@ -26,7 +29,7 @@
 * [How to manually deploy the java application to Tomcat 9 webserver](https://vigneshsweekaran.github.io/content/tomcat/tutorials/how-to-manually-deploy-java-application-to-tomcat)
 * [How to deploy the java application to Tomcat 9 webserver using maven](https://vigneshsweekaran.github.io/content/tomcat/tutorials/how-to-deploy-java-application-to-tomcat-using-maven)
 
-`Nginx/httpd` Majorly used for deploying frontend application developed using HTML,CSS,Javascript, AngularJs and ReactJS 
+`Nginx/httpd` Majorly used for deploying frontend application developed using HTML,CSS,Javascript, AngularJs and ReactJS
 
 ## Jenkins
 `Jenkins`
