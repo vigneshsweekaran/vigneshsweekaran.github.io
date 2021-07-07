@@ -11,7 +11,15 @@
 
 `Pod`
 * Can we have multiple containers running inside the pod? If yes, any one container fails how would you troubleshot?
-  Yes, we can have more than one container inside a pod. If we have more than one container, we can check the logs of container by referring the container name.
+  
+  Yes, we can have more than one container inside a pod.
+
+  First describe the pod and check the events 
+  ```
+  kubectl describe pod-name
+  ```
+  
+  If we have more than one container, we can check the logs of one container by referring the container name.
   ```
   kubectl logs pod-name -c container-name
   ```
@@ -22,14 +30,31 @@
    ```
 
 * How will you check which pod has been deployed on which node?
+  ```
+  kubectl describe pod-name
+  kubectl get pods -o wide
+  ```
 
 * If a pod status is pending what does that mean? What are the other statuses?
+  
+  Kube-scheduler not working, scheduler not present
+  Your worker nodes are not ready
+
+  Containercreating
+  Created
+  Running
+  ERROR --> If your application is crashing, it will show this status
+  ImagePullBackOFF
+  ConfigERROr-- >
+
 
 `Deployment`
 * What concepts you will adopt to keep your application highly available?
+  
   Deployment with more than 2 replicas or using Horizontal Pod Autoscaler
 
 * You want to upgrade the application running in kubernetes without downtime, how you can do it ?
+  
   Use "Rolling Update" deployment startegy, by default **Rolling Update** is the default strategy
 
 `Service`
