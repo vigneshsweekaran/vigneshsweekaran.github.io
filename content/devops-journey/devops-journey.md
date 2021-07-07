@@ -18,8 +18,10 @@
 
 ## Build Tools
 `Maven/Gradle` : for Java programming language (Backend application)
-* [How to install Maven](/content/maven/tutorials/installations)
+* [How to install Maven](/content/maven/tutorials/01-installations)
 * [About Maven](https://www.youtube.com/watch?v=x8sMN4tossY)
+* [Generate a sample java application using maven]()
+* [Building Java Projects with Maven](https://spring.io/guides/gs/maven/#initial)
 
 `Nodejs` : For AngularJs (Frontend application)
 

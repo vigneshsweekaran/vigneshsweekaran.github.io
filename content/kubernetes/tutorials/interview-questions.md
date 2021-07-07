@@ -72,6 +72,7 @@
 
 `Service`
 * Why do we need service in Kubernetes ?
+  
   A Kubernetes service is a logical abstraction for a deployed group of pods in a cluster (which all perform the same function). 
   
   Since pods are ephemeral, a service enables a group of pods, which provide specific functions to be assigned a name and unique IP address (clusterIP).
@@ -79,6 +80,7 @@
   And service can also do load balancing.
 
 * Types of services ? or When you will use ClusterIp, NodePort and LoadBalancer service ?
+  
   ClusterIp --> For internal communication, within the kubernetes cluster.
   
   NodePort --> Used to access the pods from outside world, Forward the port fron any node to service. 
@@ -86,20 +88,25 @@
   LoadBalancer --> Creates a LoadBalnacer with External Ipaddress.
 
 * What is the use of service **service/kubernetes** in default namespace ?
+  
   This service is used to talk to the kube-apiserver from inside the pod. Communication happens only within the kubernetes cluster from any namespace. 
 
 * How you can access the service **myapp** from default namespace which was created on dev namespace ?
+  
   By referring the FQDN, **dev.myapp.svc.cluster.local**  
 
 `Configmap`
 * In what ways you can map the confimap to the Deployment ?
+  
   We can map the configmap as environment variable and volume mounts to the Deployments.
 
 * How the changes updated in the configmap are updated to pod, which component is doing this?
+  
   kubelet watches for the changes in configmap, if the configmap is updated, it will update the changes to pod only if we map the configmap as volume mounts. 
 
 `Secret`
 * How you can securely connect to any server from your pod ?
+  
   Store the ssh private key in secret as type **kubernetes.io/ssh-auth** and map it as volume mount.
 
   Now we can access the private key securely inside the pod. 
