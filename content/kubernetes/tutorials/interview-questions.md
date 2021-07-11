@@ -133,8 +133,18 @@
 
 * What is Headless service ?
 
-`HPA`
-* How you can scale you pod based on load ?
+`HPA(Horizontal Pod Autoscaler)`
+* How you can scale you pod based on load (cpu,ram) ?
+  
+  We can scale our pod automatically by creating the Horizontal Pod Autoscaler. The HPA will check the cpu and ram usage to scale the pod.
+
+* How you will refer the target to scale while creating the HPA ?
+  
+  While creating the HPA, we will refer the target by referring the Deployment name.
+
+* Based on what condition the HPA will trigger the auto scaling ?
+  
+  The HPA will check the usage of Requested CPU and Requested RAM to scale the targetted Deployment 
 
 `Daemonsets`
 * Why do we need deamon sets ?
