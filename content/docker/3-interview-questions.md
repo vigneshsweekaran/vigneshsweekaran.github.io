@@ -2,29 +2,29 @@
 
 `Docker Image`
 * How you can pull a mysql docker image from dockerhub to your local machine ?
-```
-docker pull mysql
-```
+  ```
+  docker pull mysql
+  ```
 
 * How you can pull a docker image from private repository in dockerhub. The username is **test**, repository/image name is **myimage** and the tag is 1.0.0
 
-Since its a private repository, first we have to login to the repository.
-```
-docker login -u test -p ***************
-```
-Then we can pull the image with the following image name format **username/imagename:tag**
-```
-docker pull test/myimage:1.0.0
-```
+  Since its a private repository, first we have to login to the repository.
+  ```
+  docker login -u test -p ***************
+  ```
+  Then we can pull the image with the following image name format **username/imagename:tag**
+  ```
+  docker pull test/myimage:1.0.0
+  ```
 
 * What is the image name format to pull a docker image from Jfrog docker registry or any registry apart from dockerhub ?
 
-registry-url/registry-name/image-name:tag
+  registry-url/registry-name/image-name:tag
 
-Example for pulling a docker image from Jfrog Docker Registry.
-```
-username.jfrog.io/default-docker-local/hello-world:tag
-```
+  Example for pulling a docker image from Jfrog Docker Registry.
+  ```
+  username.jfrog.io/default-docker-local/hello-world:tag
+  ```
 
 `Docker Container`
 * Can you write a command to create a nginx docker container
