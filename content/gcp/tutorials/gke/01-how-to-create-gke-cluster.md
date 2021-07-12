@@ -3,7 +3,7 @@
 ### Create a standard cluster using gcloud utility
 ```
 gcloud container clusters create cluster-test \
-  --machine-type n2-standard-8 \
+  --machine-type n2-standard-4 \
   --num-nodes 1 \
   --zone us-central1-a \
   --enable-autoscaling --min-nodes 1 --max-nodes 3
