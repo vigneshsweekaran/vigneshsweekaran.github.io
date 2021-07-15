@@ -5,7 +5,7 @@
 gcloud container clusters create cluster-test \
   --machine-type n2-standard-4 \
   --num-nodes 1 \
-  --zone us-central1-a \
+  --zone us-central1-c \
   --enable-autoscaling --min-nodes 1 --max-nodes 3
 ```
 n2-standard-2 --> 2vCPU,8GB RAM
