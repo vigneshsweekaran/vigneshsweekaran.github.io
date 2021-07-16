@@ -12,7 +12,9 @@ The frontend is developed using AngularJS 8 and backend is developed using Java 
 ![kubernetes](/content/kubernetes/tutorials/images/sample-application/3-tier/easyclaim-nodeport-mysql-deploy.png)
 
 ### Easyclaim application details
+
 |Application|Kubernetes kind|Kubernetes service|Port|
+|----|-----|-----|-----|
 |Easyclaim frontend|Deployment|NodePort|32011|
 |Easyclaim backend|Deployment|NodePort|32012|
 |mysql|Deployment|ClusterIp|3306|
