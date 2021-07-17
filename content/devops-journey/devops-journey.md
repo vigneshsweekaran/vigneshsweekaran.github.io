@@ -17,7 +17,7 @@
 
 
 ## Build Tools
-`Maven/Gradle` : for Java programming language (Backend application)
+`Maven/Gradle` : For Java programming language (Backend application)
 * [How to install Maven](/content/maven/tutorials/01-installations)
 * [About Maven](https://www.youtube.com/watch?v=x8sMN4tossY)
 * [How to generate a sample java application using Maven](/content/maven/tutorials/02-generate-a-sample-java-application-using-maven)
