@@ -20,4 +20,4 @@ mvn --version
 ```
 
 ##### Next Topic
-[/content/maven/tutorials/02-generate-a-sample-java-application-using-maven](How to generate a sample java application using Maven)
+[How to generate a sample java application using Maven](/content/maven/tutorials/02-generate-a-sample-java-application-using-maven)
