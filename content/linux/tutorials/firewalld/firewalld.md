@@ -59,5 +59,11 @@ sudo firewall-cmd --list-all
 ```
 ![firewalld](/content/linux/tutorials/firewalld/images/firewalld-remove-port.png)
 
+### To uninstall firewalld
+```
+sudo apt autoremove firewalld -y
+```
+![firewalld](/content/linux/tutorials/firewalld/images/firewalld-uninstall.png)
+
 ### Reference
 * https://computingforgeeks.com/install-and-use-firewalld-on-ubuntu-18-04-ubuntu-16-04/
