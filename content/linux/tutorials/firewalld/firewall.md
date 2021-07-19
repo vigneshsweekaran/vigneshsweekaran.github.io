@@ -1,4 +1,5 @@
-# Firewalld
+# How to use Firewalld service to enable/disable port in Linux machine
+
 Firewalld is Linux firewall management tool with support for IPv4, IPv6, Ethernet bridges and IPSet firewall settings. 
 
 It acts as a front-end to Linux kernel’s netfilter framework. 
