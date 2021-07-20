@@ -29,6 +29,7 @@
   ```
 
   devopspilot --> alias repo name to point to the Helm chart repository.
+  
   https://devopspilot.com/helm/charts/ --> Helm chart repository url.
 
 * How you can install the helm chart to specific namespace ?
