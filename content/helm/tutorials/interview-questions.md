@@ -1,6 +1,6 @@
 # Helm Interview Questions
 
-* Whats is the folder structure of Helm chart?
+* What is the folder structure of Helm chart?
 
   |Chart.yaml        |A YAML file containing information about the chart|
   |LICENSE           |OPTIONAL: A plain text file containing the license for the chart|
@@ -27,6 +27,10 @@
   helm repo add devopspilot https://devopspilot.com/helm/charts/
   helm update
   ```
+
+  devopspilot --> alias repo name to point to the Helm chart repository.
+  https://devopspilot.com/helm/charts/ --> Helm chart repository url.
+
 * How you can install the helm chart to specific namespace ?
 
   By passing cli flag `-n` or `--namespace`
@@ -36,6 +40,7 @@
   ``` 
 
 * You have installed Helm chart, somebody from the team updated pod manifest manually, after which when you update the same Release what will happen?
+
 
 * Can we have same Release names in different namespaces?
 
@@ -80,7 +85,7 @@
   Error: create: failed to create: namespaces "database" not found
   ```
 
-* what functions have you used in helm charts; can you list few?
+* What functions have you used in helm charts? Can you list down some functions ?
 
   default, lookup, eq, ne, lt, gt, and, or
 
@@ -92,12 +97,14 @@
 
 * What is the use of _helpers.tpl?
 
-  Is used to define some templates or functions 
+  It is used to define some templates or functions and then it can be referred in Kubernetes manifest files in templates folder.
 
 * Did you work on any flow controls, if yes where did you use?
 
   `if/else` for creating conditional blocks
+  
   `with` to specify a scope
+  
   `range` which provides a "for each"-style loop
 
   [Official Documentation](https://helm.sh/docs/chart_template_guide/control_structures/)
@@ -108,15 +115,15 @@
 
   CRDs are never installed on upgrade or rollback. Helm will only create CRDs on installation operations.
 
-* You have installed the chart which has CRD. Now you have uninstalled the chart, what will happen to the craeted CRDs ?
+* You have installed the chart which has CRD. Now you have uninstalled the chart, what will happen to the created CRDs ?
   
   The created CRDs will not be deleted automatically during helm uninstall. We have to explicitly delete the CRDs.
 
-* What is the default timeout wile installing each kubernetes object ?
+* What is the default timeout wile installing each kubernetes object using Helm ?
   
   The default duration time to wait for any individual Kubernetes operation (like Jobs for hooks) (default 5m0s).
 
-  We are ovveride this timout limit by passing the cli flag --timout to helm install/update command.
+  We are ovveride this timout limit by passing the cli flag `--timout` to helm install/update command.
 
   ```
   helm install mysql devopspilot/mysql -n database --timeout 10m
@@ -124,7 +131,7 @@
 
 * You are going to install the chart which has some hooks. While installing the chart you want to skip those hooks. Is it possible ?
 
-  Yes its possible to skip the helm hooks during installation by passing the cli flag --no-hooks
+  Yes its possible to skip the helm hooks during installation by passing the cli flag `--no-hooks`
 
   ```
   helm install easyclaim-backend devopspilot/easyclaim-backend --no-hooks
@@ -138,9 +145,9 @@
   helm install mysql devopspilot/mysql -f values.yaml -f values-dev.yaml
   ```
 
-* While installing the chart, you have specified both values.yaml and --set cli-flag for the helm install command, which will happen now ?
+* While installing the chart, you have specified both values.yaml and `--set` cli-flag for the helm install command, what will happen now ?
 
-  If both are passed, --set values are merged into passed values.yaml and then the values.yaml file is passed to helm install command.
+  If both are passed, `--set` values are merged into passed values.yaml and then the values.yaml file is passed to helm install command.
 
   ```
   helm install mysql devopspilot/mysql --set deploymentType=statefulset -f values.yaml
