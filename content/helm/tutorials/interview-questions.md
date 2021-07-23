@@ -38,7 +38,7 @@
 
   ```
   helm install mysql devopspilot/mysql -n database
-  ``` 
+  ```
 
 * You have installed Helm chart, somebody from the team updated pod manifest manually, after which when you update the same Release what will happen?
 
