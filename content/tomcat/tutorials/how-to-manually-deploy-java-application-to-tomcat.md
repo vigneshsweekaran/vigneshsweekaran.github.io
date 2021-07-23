@@ -94,6 +94,19 @@ Now we can access the deployed application from browser by http://your-ip-addres
 
 Hurray!! we have succesfully deployed the java web application manually to Tomcat 9 using Manager GUI
 
+### Manager web application not opening - Fix
+If manager application is not opening, paste the following content in 
+
+```
+<Context antiResourceLocking="false" privileged="true" >
+  <!--
+    <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+  -->
+  <Manager sessionAttributeValueClassNameFilter="java\.lang\.(?:Boolean|Integer|Long|Number|String)|org\.apache\.catalina\.filters\.CsrfPreventionFilter\$LruCache(?:\$1)?|java\.util\.(?:Linked)?HashMap"/>     
+</Context>
+```
+
 ### Previous Topic
 * [How to install Tomcat](/content/tomcat/tutorials/installation)
 
