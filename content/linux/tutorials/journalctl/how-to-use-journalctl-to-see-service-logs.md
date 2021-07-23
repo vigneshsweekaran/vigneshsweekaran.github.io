@@ -45,7 +45,7 @@ Lets check the logs of tomcat9 service from "2021-07-20 09:30" to "2021-07-22 10
 sudo journalctl --unit tomcat9 --since "2021-07-20 09:30" --until "2021-07-22 10:00"
 ```
 
-![journalctl](/content/linux/tutorials/journalctl/images/unit/journalctl-tomcat9-specific-date-time-to.png)
+![journalctl](/content/linux/tutorials/journalctl/images/unit/journalctl-tomcat9-specific-date-time-to-date.png)
 
 ### Reference
 https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs
