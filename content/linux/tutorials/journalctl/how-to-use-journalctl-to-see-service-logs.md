@@ -1,4 +1,4 @@
-# How to use journalctl to see the logs of running services in linux machine
+# How to use journalctl command to see the logs of running services in linux machine
 
 ### To check the full logs of service
 Lets check the logs of tomcat9. Which is currently running as systemd service in my linux machine. You can check the logs for any systemd service.
