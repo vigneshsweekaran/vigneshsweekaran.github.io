@@ -153,3 +153,55 @@
   ```
   helm install mysql devopspilot/mysql --set deploymentType=statefulset -f values.yaml
   ```
+
+* How will you define dependency charts ?
+
+  We can define dependency chart in parent Chart.yaml under `dependencies` feild.
+
+  ```
+  apiVersion: v2
+  name: easyclaim
+  version: 1.0.0
+  description: Helm chart for deploying Easyclaim application
+  appVersion: 1.0.0
+
+  dependencies:
+    - name: easyclaim-frontend
+      version: 1.0.0
+      repository: https://devopspilot.com/helm/charts
+    - name: easyclaim-backend
+      version: 1.0.0
+      repository: https://devopspilot.com/helm/charts
+    - name: mysql
+      version: 1.0.0
+      repository: https://devopspilot.com/helm/charts
+  ```
+  [Official Documentaion](https://helm.sh/docs/helm/helm_dependency/)
+
+* You have a chart locally and defined couple of dependency charts in Chart.yaml file. Whether you can directly install the chart or you have to run any other commands before running helm install command ?
+
+  We have to run `helm dependency update` command so that the dependency charts will be downloaded and stored in `charts` directory and then we can install the chart.
+  ```
+  helm dependency update
+  ```
+  ```
+  Output:
+  Hang tight while we grab the latest from your chart repositories...
+  ...Successfully got an update from the "devopspilot" chart repository
+  Update Complete. ⎈Happy Helming!⎈
+  Saving 3 charts
+  Downloading easyclaim-frontend from repo https://devopspilot.com/helm/charts
+  Downloading easyclaim-backend from repo https://devopspilot.com/helm/charts
+  Downloading mysql from repo https://devopspilot.com/helm/charts
+  Deleting outdated charts
+  ```
+
+* You have defined couple of dependency charts. In which order the charts will be installed ?
+
+  First all the charts will be merged together and then the manifest files will be deployed in the right order.
+
+  Helm has the intelligence to install all the manifests in right order. We no need to handle it maually.
+
+* How will you push the helm chart to Chart museum ?
+
+* How will you push the helm chart to Jfrog artifactory helm repository ?
