@@ -113,9 +113,9 @@ we can access the jenkins by opening the ip-address:8080 or localhost:8080 (if i
 
 ![jenkins ublock password page](/content/jenkins/tutorials/common/images/installation/jenkins-unlock-password.png)
 
-Now get the initialadminpassword from /var/lib/jenkins/secrets/initialAdminPassword file
+Now get the **initialadminpassword** from `/var/lib/jenkins/secrets/initialAdminPassword` file
 
-Change to root user and open the /var/lib/jenkins/secrets/initialAdminPassword file to get the password
+Change to root user and open the `/var/lib/jenkins/secrets/initialAdminPassword` file to get the password
 
 ![jenkins intila admin password](/content/jenkins/tutorials/common/images/installation/jenkins-initial-admin-password.png)
 
