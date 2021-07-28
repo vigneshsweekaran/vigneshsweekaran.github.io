@@ -93,7 +93,13 @@
 
 * How you can access the service **myapp** from default namespace which was created on dev namespace ?
   
-  By referring the FQDN, **dev.myapp.svc.cluster.local**  
+  By referring the FQDN, **dev.myapp.svc.cluster.local**
+
+* How you can do Blue/Green deplloyment in Kubernetes ?
+
+* How you can do canary deployment in kubernetes ?
+
+* How you can send the subsequent requests to same pod ?
 
 `Configmap`
 * In what ways you can map the confimap to the Deployment ?

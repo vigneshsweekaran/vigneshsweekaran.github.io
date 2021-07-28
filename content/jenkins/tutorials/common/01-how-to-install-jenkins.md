@@ -1,6 +1,8 @@
 # How to install Jenkins
 
-### Approach 1: Installing Jenkins as a service in Centos7/Redhat/OracleLinux
+### Approach 1: Installing Jenkins as a service in Linux machine
+
+#### For Centos7/Redhat/OracleLinux operating system
 Go to Jenkins official download page [Jenkins official download page](https://www.jenkins.io/doc/book/installing/)
 
 Click on Linux
@@ -26,7 +28,7 @@ sudo yum install jenkins java-11-openjdk-devel
 sudo systemctl daemon-reload
 ```
 
-##### Start and enable the jenkins
+##### Start and enable the Jenkins to automatically start after reboot
 ```Shell
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
@@ -37,6 +39,48 @@ sudo systemctl enable jenkins
 sudo systemctl status jenkins
 ```
 ![jenkins running status](/content/jenkins/tutorials/common/images/installation/jenkins-running-status.png)
+
+#### For Ubuntu operating system
+Go to Jenkins official download page [Jenkins official download page](https://www.jenkins.io/doc/book/installing/)
+
+Click on Linux
+
+![Jenkins website Download page](/content/jenkins/tutorials/common/images/installation/jenkins-website-dowload-page.png)
+
+Click on Debian/Ubuntu
+
+![jenkins website Download Linux page](/content/jenkins/tutorials/common/images/installation/jenkins-website-download-linux-page-ubuntu.png)
+
+![jenkins website Download centos page](/content/jenkins/tutorials/common/images/installation/jenkins-website-download-ubuntu-page.png)
+
+##### Prerequisites:
+* Java should be installed, preferably Java 11
+
+##### Run the below commands to install Java 11
+```
+sudo apt update
+sudo apt install openjdk-11-jdk
+```
+
+##### Run the below commands to install Jenkins stable release
+```Shell
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
+    /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+```
+
+##### Enable the Jenkins to automatically start after reboot
+```Shell
+sudo systemctl status jenkins
+sudo systemctl enable jenkins
+```
+
+##### Check the Jenkins running status
+```
+sudo systemctl status jenkins
+```
 
 ### Approach 2: Install Jenkins using docker
 If you have followed Approach 1 you can skip Approach 2 and continue with **Common steps for configuring Jenkins**
