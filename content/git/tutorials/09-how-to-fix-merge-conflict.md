@@ -4,11 +4,11 @@
 * [How to create repository in Github](/content/git/tutorials/01-how-to-create-github-account)
 
 ##### What is Merge Conflict ?
-When some changes are done in same line and same file of two braches, conflict will occur while merging those branches. 
+When some changes are done in same line and same file by two engineers, conflict will occur while merging.
 
 This is because git is not able to conclude which changes to take.
 
-We have to explicitly tell git, which branch changes it should take to fix the conflict.
+We have to explicitly tell git, which changes it should take to fix the conflict.
 
 ##### What is git pull?
 Git pull basically executes two commands git fetch and git merge.
