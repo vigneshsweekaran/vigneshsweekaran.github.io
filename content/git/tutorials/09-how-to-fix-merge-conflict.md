@@ -37,7 +37,7 @@ Then create a file called `cat.txt` and paste the following content
 
 Commit and push the changes to github
 
-After pushing the changes, update the `cat.txt` in line no 2, Change the `180` to `150` in your local system
+After pushing the changes, update the `cat.txt` in line no 2, Change the angle `180` to `150` in your local system
 
 Commit the changes locally and don't push your changes
 
@@ -67,7 +67,7 @@ git pull origin master
 
 Now we can see the git pull has failed, basically auto-merging failed.
 
-This is because, we have updated angle to 150 in line no 2 in cat.txt,similary one more developer has updated the angle to 200 in line no 2 in cat.txt and pushed the changes to github.
+This is because, we have updated angle to 150 in line no 2 in cat.txt, similary one more developer has updated the angle to 200 in line no 2 in cat.txt and pushed the changes to github.
 
 While we are pulling, git tries to merge the line no 2 from remote cat.txt to local cat.txt file in line 2, but it is not able to update, because local cat.txt also has new changes(150).
 
@@ -75,13 +75,12 @@ So its not able to apply the new changes and it failed
 
 Now you have to decide, which change you need, manually fix the conflict.
 
-I want to keep angle as 200, lets update the file.
-
-Lets open the file and see how it looks, now the file will have both remote and local changes
+I want to keep angle as 200. Lets open the file and see how it looks, now the file will have both remote and local changes
 
 ![git](/content/git/tutorials/images/mergeconflict/git-conflict.png)
 
 After fixing the conflict, file looks as below
+
 ![git](/content/git/tutorials/images/mergeconflict/git-conflict-fixed-file.png)
 
 Add the `cat.txt` and run `git commit`
