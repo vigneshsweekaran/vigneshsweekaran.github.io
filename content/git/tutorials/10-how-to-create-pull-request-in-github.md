@@ -9,7 +9,7 @@ Pull Request is way of merging two branches from Github UI.
 It has lot of other features like,
 * Code approval
 * Code discussion
-* File changes
+* Viewing file changes
 * Deleting the source merge once merge is Done
 * Block the Merge, till your pipeline passed in feature branch.
 * Automatic Merge, when pipeline is succeeded in feature branch.
