@@ -65,7 +65,7 @@ Scroll down and see the file changes and click on `Create pull request`
 
 Now pull request is created and it is in `open` state
 
-If you need some more changes in that file, you can add those as a command, so that devlopers will be notified and they will fix and push the new changes to `feature` branch and it will reflect in the same Pull request.
+If you need some more changes in that file, you can add those as a comment, so that devlopers will be notified and they will fix and push the new changes to `feature` branch and it will reflect in the same Pull request.
 
 Click on `Merge pull request` --> `Confirm merge`
 
