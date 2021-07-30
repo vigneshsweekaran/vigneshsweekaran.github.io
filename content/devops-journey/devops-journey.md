@@ -15,7 +15,6 @@
 * [Git basics](https://www.youtube.com/watch?v=Lr7sYCrhxE0&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=18)
 * [How to create a free account in Github and how to create repository in it](/content/git/tutorials/01-how-to-create-github-account)
 
-
 ## Build Tools
 `Maven/Gradle` : For Java programming language (Backend application)
 * [How to install Maven](/content/maven/tutorials/01-installation)
@@ -33,6 +32,10 @@
 
 `Nginx/httpd` Majorly used for deploying frontend application developed using HTML,CSS,Javascript, AngularJs and ReactJS
 
+## Docker
+* [Docker training video](https://www.youtube.com/watch?v=zJ6WbK9zFpI&t=5722s) 
+* [Docker Tutorials](https://devopspilot.com/nav/docker.html)
+
 ## Jenkins
 `Jenkins`
 * [How to install Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/common/01-how-to-install-jenkins)
@@ -49,9 +52,6 @@
 * [[Part-2] Jenkinsfile to build and deploy to Tomcat](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/04-jenkinsfile-to-build-maven-project-and-deploy-to-tomcat)
 * [[Part-3] Jenkinsfile to build docker image, push to dockerhub and deploy to same server](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/05-jenkinsfile-to-build-docker-image-push-deploy-to-same-server)
 * [[Part-4] Jenkinsfile to build docker image, push to dockerhub and deploy to different server](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/06-jenkinsfile-to-build-docker-image-push-deploy-to-different-server)
-
-## Docker
-* [Docker training video](https://www.youtube.com/watch?v=zJ6WbK9zFpI&t=5722s) 
 
 ## Kubernetes
 * [Kubernetes Concept](https://www.youtube.com/watch?v=QJ4fODH6DXI&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=3)
