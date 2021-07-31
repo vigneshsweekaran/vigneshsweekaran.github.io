@@ -31,7 +31,7 @@
 * [How to deploy the java application to Tomcat 9 webserver using maven](https://vigneshsweekaran.github.io/content/tomcat/tutorials/how-to-deploy-java-application-to-tomcat-using-maven)
 
 `Nginx/httpd` Majorly used for deploying frontend application developed using HTML,CSS,Javascript, AngularJs and ReactJS
-* [how to install Nginx webserver]()
+* [how to install Nginx webserver](https://devopspilot.com/content/nginx/tutorials/01-how-to-install-nginx)
 
 ## Docker
 * [Docker training video](https://www.youtube.com/watch?v=zJ6WbK9zFpI&t=5722s) 
