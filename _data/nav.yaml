@@ -36,7 +36,7 @@ nav-list:
 - title: Tomcat
   url: https://vigneshsweekaran.github.io/nav/tomcat.html
 
-- tile: Nginx
+- title: Nginx
   url: https://vigneshsweekaran.github.io/nav/nginx.html
 
 - title: Maven
