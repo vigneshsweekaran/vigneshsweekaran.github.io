@@ -21,7 +21,7 @@ Then create a file called `cat.txt` and paste the following content,
 
 Create a new branch called `feature` 
 
-And change the angle to `150` in second line of cat.txt in `feature` branch
+Change the angle to `150` in second line of cat.txt in `feature` branch
 
 ![git](/content/git/tutorials/images/pullrequest-conflict/git-updated-file-feature.png)
 
@@ -29,7 +29,7 @@ Assume, one more Developer has updated the angle to `200` in cat.txt raised the 
 
 Lets create this scenario, go to github, change the branch to `master` edit the `cat.txt` file and change the angle from `180` to `200` and commit the changes from Github UI
 
-![git](/content/git/tutorials/images/pullrequest-conflict/git-updated-file-master.png)
+![git](/content/git/tutorials/images/pullrequest-conflict/git-file-updated-master.png)
 
 Now create a pull request from `feature` to `master` branch and you will see merge conflict
 
@@ -102,7 +102,7 @@ git push origin feature
 ```
 ![git](/content/git/tutorials/images/pullrequest-conflict/git-push.png)
 
-Go to Github click on `Pull requests` tab. Click on created Pull request.
+Go to Github click on `Pull requests` tab. Click on created pull request.
 
 Now we can see, the lastest push to `feature` branch has been updated here and conflict has been fixed now.
 
