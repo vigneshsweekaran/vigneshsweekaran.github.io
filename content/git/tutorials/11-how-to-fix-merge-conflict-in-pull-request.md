@@ -114,7 +114,7 @@ Click on `Merge pull request` --> `Confirm merge` to merge the `feature` branch 
 
 ### How to fix pull request conflict from Github UI itself
 
-Create a pull request with merge conflict and Click on `Resolve conflicts`
+Create a new pull request with merge conflict and Click on `Resolve conflicts`
 
 ![git](/content/git/tutorials/images/pullrequest-conflict/git-ui-pr-created.png)
 
