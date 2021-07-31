@@ -111,3 +111,25 @@ Click on `Merge pull request` --> `Confirm merge` to merge the `feature` branch 
 ![git](/content/git/tutorials/images/pullrequest-conflict/git-merge-pullrequest.png)
 
 ![git](/content/git/tutorials/images/pullrequest-conflict/git-pullrequest-merged.png)
+
+### How to fix pull request conflict from Github UI itself
+
+Create a pull request with merge conflict and Click on `Resolve conflicts`
+
+![git](/content/git/tutorials/images/pullrequest-conflict/git-ui-pr-created.png)
+
+![git](/content/git/tutorials/images/pullrequest-conflict/git-ui-pr-conflict.png)
+
+Fix the conflict and click on `Mark as resolved`
+
+![git](/content/git/tutorials/images/pullrequest-conflict/git-ui-pr-conflict-fixed.png)
+
+Click on `Commit merge`
+
+![git](/content/git/tutorials/images/pullrequest-conflict/git-ui-pr-commit-merge.png)
+
+Click on `Merge pull request` --> `Confirm merge`
+
+![git](/content/git/tutorials/images/pullrequest-conflict/git-ui-pr-merge.png)
+
+![git](/content/git/tutorials/images/pullrequest-conflict/git-ui-pr-merged.png)
