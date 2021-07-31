@@ -21,9 +21,9 @@ sudo systemctl enable nginx
 
 ![git](/content/nginx/tutorials/images/installation/nginx-status.png)
 
-By default nginx webserver start on port 80. Now we can access the nginx webserver application by http://ip-address:80 in browser.
+By default nginx webserver start on port 80. Now we can access the nginx webserver application by `http://ip-address:80` in browser.
 
-You can also access the application directly by ip-address without mentioning port like this http://ip-address
+You can also access the application directly by ip-address without mentioning port like this `http://ip-address`
 
 This is because, if we are not specifying the port, by default it uses port 80 for http request and port 443 for https request.
 
