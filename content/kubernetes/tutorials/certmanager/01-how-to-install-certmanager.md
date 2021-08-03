@@ -42,6 +42,8 @@ helm install \
   --set installCRDs=true
 ```
 
+We no need to explicitly create the `cert-manager` namespace, it will be automatically created by passing this argument `--create-namespace` to helm install command.
+
 ### Verify cert-manager installation
 
 ```
