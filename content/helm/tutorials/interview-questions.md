@@ -85,7 +85,14 @@
   Output:
   Error: create: failed to create: namespaces "database" not found
   ```
+* Is it possible to create namespace using helm commands while installing the chart ?
 
+  Yes, its possible to create the namespace using helm install command by passing argument `--create-namespace`
+
+  ```
+  helm install mysql devopspilot/mysql -n database1 --create-namespace
+  ```
+  
 * What functions have you used in helm charts? Can you list down some functions ?
 
   default, lookup, eq, ne, lt, gt, and, or
