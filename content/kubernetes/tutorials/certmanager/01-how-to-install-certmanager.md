@@ -8,7 +8,7 @@ Cert-manager will not be installed by default in kubernetes cluster.
 We have to install explicitly using helm chart or using kubernetes manifest file
 
 ### How to install cert-manager
-`Using Kubernetes Manifest file`
+##### Using Kubernetes Manifest file
 
 [Official Documentation](https://cert-manager.io/docs/installation/kubectl/)
 
@@ -22,7 +22,7 @@ All required resources for cert-manager are defined in the single manifest file.
 kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.4.0/cert-manager.yaml
 ```
 
-`Using Helm chart`
+##### Using Helm chart
 
 [Official Documentation](https://cert-manager.io/docs/installation/helm/)
 
@@ -184,7 +184,7 @@ Before uninstalling cert-manager, verify whether the resources created by cert-m
 kubectl get Issuers,ClusterIssuers,Certificates,CertificateRequests,Orders,Challenges --all-namespaces
 ```
 
-`Using Manifest file`
+##### Using Manifest file
 
 Delete the installation manifests using a link to your currently running version vX.Y.Z
 
@@ -196,7 +196,7 @@ I have installed `1.4.0` lets replace `vX.Y.Z` with `v1.4.0`
 kubectl delete -f https://github.com/jetstack/cert-manager/releases/download/v1.4.0/cert-manager.yaml
 ```
 
-`Using Helm`
+##### Using Helm
 
 Uninstall the helm release and delete the `cert-manager` namespace
 ```
