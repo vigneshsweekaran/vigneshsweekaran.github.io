@@ -1,48 +1,69 @@
 # Interview Questions
 
-# Reference:
-https://www.guru99.com/jenkins-interview-questions.html
+* How will you install Jenkins ?
 
-# Questions:
-### How to copy from one server to another jenkins server
-Simply copy the jenkins home directory or use aws ebs(Any network strorage, create snapshots out of it and move to another server)
+  [Install Jenkins](https://devopspilot.com/content/jenkins/tutorials/common/01-how-to-install-jenkins)
 
-### How to restore the Deleted job
+* In what are the ways you can install Jenkins ?
 
-### How to take backup of the jenkins
-Generally just copy the JENKINS_HOME diretory for copy, we can use ThinBackup pulgin to do the backup
+  Jenkins as service in linux server
+  Jenkins as Docker Containers
+  Jenkins as Pod in Kubernetes
 
-ThinBackup: https://devopscube.com/jenkins-backup-data-configurations/
+* How you can install plugins in Jenkins ?
 
-To move the jenkins_home directory to another path and create the symlink (We can also use AWS EBS and mount)
+  [Install plugins in Jenkins](https://devopspilot.com/content/jenkins/tutorials/common/02-how-to-install-plugins)
 
-  1.Shutdown you Jenkins.
-  Move all files from /var/lib/jenkins to /app/jenkins
+* What is Global Tool Configuration in Jenkins ?
 
-  2. mv /var/lib/jenkins /app/
-  Replace /var/lib/jenkins with a symbolic link to /app/jenkins
+  Global Tool Configurations in Jenkins is used to install and configure multiple versions of tools like maven, gradle, Java, Node Js ... 
+  
+  For installing the tools, we have to install the respective plugins. Eg: To have multive versions of Node Js we have to install NodeJS plugin
 
-  3. ln -s /app/jenkins /var/lib/jenkins
-  Start Jenkins again.
+  [Configure Global Tool Configuration](https://devopspilot.com/content/jenkins/tutorials/common/03-global-tool-configurations)
 
-  That way all the files are actually stored under /app but all paths to /var/lib/jenkins stay valid due to the symbolic link.
+* How to securely store Credentials in Jenkins ?
 
-### GitHUb webhook and what is application/json in it
+  We can securely store credentials in Jenkins using Credentials section in `Manage Jenkins`
+  
+  [Store Credentials](https://devopspilot.com/content/jenkins/tutorials/common/04-how-to-store-credentials-in-jenkins)
 
-### Install jenkins in Ubuntu
-```
-Prerequisite: Java should be installed (sudo apt-get install openjdk-8-jre)
-Installing Long Term Support
-wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
-sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
-    /etc/apt/sources.list.d/jenkins.list'
-sudo apt-get update
-sudo apt-get install jenkins
-```
+* How to copy Jenkins configuration data from server to another server ?
+  
+  Simply copy the jenkins home directory or use aws ebs(Any network strorage, create snapshots out of it and move to another server)
 
-### How the tenants(multiple customers/products) are isolated in single jenkins instance
-Using Folder concept(Folder plugin needs to be installed)
+* How to restore the Deleted job ?
 
-Each tenant will be assigned with one Folder and the jobs are created under that Folder. The credentails are also created and managed in the folder itself
+  Using `Job Configuration History` plugin we can restore the deleted Job.
 
-We can restrict user to access particular Folder, so that other tenants folder will not be shown to the user
+  This plugin saves a copy of the configuration file of jobs and agents (config.xml) for every change made and of the system configuration. 
+  
+  
+
+* How to take backup of the jenkins
+
+  Generally just copy the JENKINS_HOME diretory for copy, we can use ThinBackup pulgin to do the backup
+
+  ThinBackup: https://devopscube.com/jenkins-backup-data-configurations/
+
+  To move the jenkins_home directory to another path and create the symlink (We can also use AWS EBS and mount)
+
+    1.Shutdown you Jenkins.
+    Move all files from /var/lib/jenkins to /app/jenkins
+
+    2. mv /var/lib/jenkins /app/
+    Replace /var/lib/jenkins with a symbolic link to /app/jenkins
+
+    3. ln -s /app/jenkins /var/lib/jenkins
+    Start Jenkins again.
+
+    That way all the files are actually stored under /app but all paths to /var/lib/jenkins stay valid due to the symbolic link.
+
+* GitHUb webhook and what is application/json in it
+  
+* How the tenants(multiple customers/products) are isolated in single jenkins instance
+  Using Folder concept(Folder plugin needs to be installed)
+
+  Each tenant will be assigned with one Folder and the jobs are created under that Folder. The credentails are also created and managed in the folder itself
+
+  We can restrict user to access particular Folder, so that other tenants folder will not be shown to the user

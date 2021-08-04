@@ -1,5 +1,21 @@
 # How to install plugins in Jenkins
 
+### Commonly used plugins and their uses
+
+* **Artifactory** - To interact with Jfrog Artifactory
+* **Kubernetes** -  To create jenkins agents in kubernetes cluster
+* **Kubernetes CLI** - Allows you to configure kubectl in your job to interact with Kubernetes clusters. To deploy kubernetes configurations/objects/yamls to kubernetes cluster.
+* **Deploy to container** - To deploy war file to tomcat
+* **Docker** - To build, run and  push docker images in freestyle job
+* **Docker Pipeline** - To build, run and  push docker images in Pipeline job
+* **NodeJs** - To install multiple versions of nodejs from Global tool configuration
+* **Slack Notification** - To post message to slack channel, generally we will post build status to slack channel
+* **SonarQube Scanner** - To connect to the sonarqube server and install the sonarqube scanner from global tool configuration
+* **Anchore Container Image Scanner** - To connect to Anchore engine for docker image scanning
+* **Job Configuration History** - This plugin saves a copy of the configuration file of jobs and agents (config.xml) for every change made and of the system configuration. Deleted jobs can be restored.
+
+### Install Plugin
+
 From Jenkins dashboard, click on **Manage Jenkins**
 
 ![Jenkins](/content/jenkins/tutorials/common/images/plugins/jenkins-manage-jenkins.png)
@@ -13,16 +29,3 @@ Click on **Availabe** tab and type the plugin name in search box, select the plu
 ![Jenkins](/content/jenkins/tutorials/common/images/plugins/jenkins-plugin-installation.png)
 
 ![Jenkins](/content/jenkins/tutorials/common/images/plugins/jenkins-plugin-install-success.png)
-
-### Commonly used plugins and their uses
-
-* **Artifactory** - To interact with Jfrog Artifactory
-* **Kubernetes** -  To create jenkins agents in kubernetes cluster
-* **Kubernetes CLI** - Allows you to configure kubectl in your job to interact with Kubernetes clusters. To deploy kubernetes configurations/objects/yamls to kubernetes cluster.
-* **Deploy to container** - To deploy war file to tomcat
-* **Docker** - To build, run and  push docker images in freestyle job
-* **Docker Pipeline** - To build, run and  push docker images in Pipeline job
-* **NodeJs** - To install multiple versions of nodejs from Global tool configuration
-* **Slack Notification** - To post message to slack channel, generally we will post build status to slack channel
-* **SonarQube Scanner** - To connect to the sonarqube server and install the sonarqube scanner from global tool configuration
-* **Anchore Container Image Scanner** - To connect to Anchore engine for docker image scanning
