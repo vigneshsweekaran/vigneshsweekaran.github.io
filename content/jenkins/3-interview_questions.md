@@ -38,7 +38,7 @@
 
   This plugin saves a copy of the configuration file of jobs and agents (config.xml) for every change made and of the system configuration. 
   
-  
+  [Restore deleted Jenkins Job](https://devopspilot.com/content/jenkins/tutorials/common/how-to-restore-deleted-job)
 
 * How to take backup of the jenkins
 

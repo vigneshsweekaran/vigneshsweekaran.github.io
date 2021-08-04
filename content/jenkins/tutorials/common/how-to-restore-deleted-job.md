@@ -1,7 +1,7 @@
 ## How to restore deleted job in Jenkins
 
 ### Prerequisites
-* **Job Configuration History** plugin should be installed in Jenkins.
+* `Job Configuration History` plugin should be installed in Jenkins.
 
 ### References
 * [How to install plugins in Jenkins](/content/jenkins/tutorials/common/02-how-to-install-plugins)
