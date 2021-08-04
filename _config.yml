@@ -3,6 +3,9 @@ description: Best tutorial blog for learning DevOps
 google_analytics: UA-199918385-1
 plugins:
   - jekyll-relative-links
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 relative_links:
   enabled: true
   collections: true
