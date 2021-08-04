@@ -90,7 +90,7 @@
   Yes, its possible to create the namespace using helm install command by passing argument `--create-namespace`
 
   ```
-  helm install mysql devopspilot/mysql -n database1 --create-namespace
+  helm install mysql devopspilot/mysql -n database --create-namespace
   ```
   
 * What functions have you used in helm charts? Can you list down some functions ?
@@ -212,3 +212,12 @@
 * How will you push the helm chart to Chart museum ?
 
 * How will you push the helm chart to Jfrog artifactory helm repository ?
+
+* Is it possible to skip the installation of crds while installing the chart ?
+
+  Yes, its possible to skip the installation of CRDs while installing the chart by passing argument `--skip-crds`
+  ```
+  helm install mysql devopspilot/mysql --skip-crds
+  ```
+
+
