@@ -1,4 +1,4 @@
-## How to add a DNS record in freenom domain
+## How to add a DNS record in freenom domain registrar
 
 ### Prerequisites
 * Have a server with public ip address
