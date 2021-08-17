@@ -1,8 +1,13 @@
 ## How to add a DNS record in freenom domain registrar
 
 ### Prerequisites
-* Have a server with public ip address
-* Install nginx webserver [How to install nginx webserver ](https://devopspilot.com/content/nginx/tutorials/01-how-to-install-nginx)
+* Server with public IP address
+* Nginx webserver installed in the server
+* Have access to one domain with administaration access
+
+### References
+* [How to install nginx webserver ](https://devopspilot.com/content/nginx/tutorials/01-how-to-install-nginx)
+* [How to purchase a free domain using freenom](https://devopspilot.com/content/https/freenom/how-to-purchase-a-free-domain-using-freenom)
 
 ### Types of DNS records
 * A (Host address)
@@ -24,11 +29,11 @@ It is used to translate human friendly domain names such as "www.example.com" in
 
 The IP-address should be public.
 
-Lets configure the A DNS record to forward the domain `devopspilot.tk` to public IP-address
+Lets configure the `A` DNS record to forward the domain `devopspilot.tk` to public IP-address
 
-I already have a server with nginx webserver installed on public IP-address 34.125.235.56
+I already have a server with nginx webserver installed on public IP-address `34.125.235.56`
 
-Lets see the nginx home page in browser using public IP-address 34.125.235.56
+Lets see the nginx home page in browser using public IP-address `34.125.235.56`
 
 ![freenom](/content/https/freenom/images/add-record/ipaddress.png)
 
