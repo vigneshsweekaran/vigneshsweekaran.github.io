@@ -2,7 +2,7 @@
 
 Go to website [freenom](https://www.freenom.com/en/index.html?lang=en)
 
-Signin using Google
+Sign in using Google
 
 Click on `Services` --> `Register a New Domain`
 
