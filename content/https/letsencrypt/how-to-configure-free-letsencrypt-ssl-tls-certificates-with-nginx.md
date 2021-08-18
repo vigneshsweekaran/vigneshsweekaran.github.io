@@ -96,7 +96,7 @@ Go to browser and type the domain name `devopspilot.tk`
 
 ![letsencrypt](/content/https/letsencrypt/images/generate-ssl/nginx.png)
 
-Now it will automatically redirect to httsp://www.devopspilot.tk
+Now it will automatically redirect to `httsp://www.devopspilot.tk`
 
 Now lets see how to automatically renew the certificates.
 
