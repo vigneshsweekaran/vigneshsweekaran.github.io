@@ -14,7 +14,7 @@
 Certbot is a agent for letsencrypt that runs in a server to complete the letsencrypt challenge, request a certificate and get a certificate.
 
 ### What is Letsencrypt challenge
-Letsencrypt want to verify that you own the domain. So using certbot it will host some files in /.well-known/acme-challenge/ folder and serve this files publicly using nginx webserver.
+Letsencrypt want to verify that you own the domain. So using certbot it will host some files in `/.well-known/acme-challenge/` folder and serve this files publicly using nginx webserver.
 
 Once it verifies the files, the challenge is completed and it will issue the certificate for the requested domain.
 
