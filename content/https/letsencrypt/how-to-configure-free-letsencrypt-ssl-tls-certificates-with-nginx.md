@@ -35,13 +35,13 @@ Remove the default configuration file in nginx
 sudo rm -f /etc/nginx/sites-enabled/default
 ```
 
-```
-sudo vi /etc/nginx/conf.d/devopspilot.tk.conf
-```
-
 Create new config file `devopspilot.tk.conf` in `/etc/nginx/conf.d/` folder and put the following content
 
 `Info:` Configuration file name can be anything
+
+```
+sudo vi /etc/nginx/conf.d/devopspilot.tk.conf
+```
 
 Replace `devopspilot.tk` with your domain name in config file
 
