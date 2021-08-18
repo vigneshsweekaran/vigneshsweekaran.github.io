@@ -10,7 +10,7 @@
 * [How to purchase a free domain using freenom](https://devopspilot.com/content/https/freenom/how-to-purchase-a-free-domain-using-freenom)
 * [How to add a DNS record in freenom domain registrar](https://devopspilot.com/content/https/freenom/how-to-add-a-dns-record-in-freenom-domain)
 
-### What is cerbot
+### What is certbot
 Certbot is a agent for letsencrypt that runs in a server to complete the letsencrypt challenge, request a certificate and get a certificate.
 
 ### What is Letsencrypt challenge
