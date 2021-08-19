@@ -90,7 +90,45 @@ It will ask for email address, agree the ters and conditions, certificates will 
 
 ![letsencrypt](/content/https/letsencrypt/images/generate-ssl/generate-ssl2.png)
 
-Wait for couple of minues.
+Check the nginx conf file `/etc/nginx/conf.d/devopspilot.tk.conf` which was updated by certbot
+
+Now the nginx conf file looks like below.
+
+```
+server {
+    root /var/www/html;
+    index index.html index.htm index.nginx-debian.html;
+
+    server_name www.devopspilot.tk;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/www.devopspilot.tk/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/www.devopspilot.tk/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+server {
+    if ($host = www.devopspilot.tk) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    server_name www.devopspilot.tk;
+    return 404; # managed by Certbot
+
+
+}
+```
+Wait for couple of minutes.
 
 Go to browser and type the domain name `devopspilot.tk`
 
