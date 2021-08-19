@@ -41,7 +41,9 @@ Now we created 3 docker containers which runs on port 8081,8082 and 8083
 Now open the browser and verify the applications are running. 
 
 IP-address:8081 --> Should show background color as red
+
 IP-address:8082 --> Should show background color as green
+
 IP-address:8083 --> Should show background color as blue
 
 ![letsencrypt](/content/https/letsencrypt/images/subdomains-ssl/app1.png)
@@ -52,7 +54,9 @@ IP-address:8083 --> Should show background color as blue
 
 ### Configure DNS record in Domain registrar
 app1.devopspilot.tk --> Public IP-address
+
 app2.devopspilot.tk --> Public IP-address
+
 app3.devopspilot.tk --> Public IP-address
 
 ![letsencrypt](/content/https/letsencrypt/images/subdomains-ssl/dns-record.png)
@@ -125,7 +129,9 @@ nginx -s reload
 Now open the browser and verify whether applications are mapped to subdomains.
 
 app1.devopspilot.tk --> Should show background color as red
+
 app2.devopspilot.tk --> Should show background color as green
+
 app3.devopspilot.tk --> Should show background color as blue
 
 Change the `devopspilot.tk` to your domain name and run the below command.
@@ -214,7 +220,7 @@ Go to browser and type `http://app1.devopspilot.tk`
 
 Now it will automatically redirect to `httsp://www.devopspilot.tk`
 
-![letsencrypt](/content/https/letsencrypt/images/app1-ssl/.png)
+![letsencrypt](/content/https/letsencrypt/images/generate-ssl/app1-ssl.png)
 
 Now lets see how to automatically renew the certificates.
 
