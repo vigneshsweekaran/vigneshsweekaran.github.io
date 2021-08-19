@@ -144,9 +144,9 @@ sudo certbot --nginx -d app1.devopspilot.tk -d app2.devopspilot.tk -d app3.devop
 
 It will ask for email address, agree the ters and conditions, certificates will be issued and finally enter `2` to automatically redirect `http` to `https` 
 
-![letsencrypt](/content/https/letsencrypt/images/generate-ssl/generate-ssl.png)
+![letsencrypt](/content/https/letsencrypt/images/subdomains-ssl/generate-ssl.png)
 
-![letsencrypt](/content/https/letsencrypt/images/generate-ssl/generate-ssl2.png)
+![letsencrypt](/content/https/letsencrypt/images/subdomains-ssl/generate-ssl2.png)
 
 Check the nginx conf file `/etc/nginx/conf.d/devopspilot.tk.conf` which was updated by certbot
 
@@ -220,7 +220,7 @@ Go to browser and type `http://app1.devopspilot.tk`
 
 Now it will automatically redirect to `httsp://www.devopspilot.tk`
 
-![letsencrypt](/content/https/letsencrypt/images/generate-ssl/app-ssl.png)
+![letsencrypt](/content/https/letsencrypt/images/subdomains-ssl/app-ssl.png)
 
 Now lets see how to automatically renew the certificates.
 
