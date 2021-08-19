@@ -220,7 +220,7 @@ Go to browser and type `http://app1.devopspilot.tk`
 
 Now it will automatically redirect to `httsp://www.devopspilot.tk`
 
-![letsencrypt](/content/https/letsencrypt/images/generate-ssl/app1-ssl.png)
+![letsencrypt](/content/https/letsencrypt/images/generate-ssl/app-ssl.png)
 
 Now lets see how to automatically renew the certificates.
 
