@@ -1,4 +1,4 @@
-## How to configure Free single Let’s Encrypt SSL/TLS Certificate with NGINX for multiple subdomains and autorenew certificate
+## How to configure free single Let’s Encrypt SSL/TLS Certificate with NGINX for multiple subdomains and autorenew certificate
 
 
 ### Prerequisites
@@ -142,7 +142,7 @@ It will complete the letsencrpt challenge, generate the certificate and map the 
 sudo certbot --nginx -d app1.devopspilot.tk -d app2.devopspilot.tk -d app3.devopspilot.tk
 ```
 
-It will ask for email address, agree the ters and conditions, certificates will be issued and finally enter `2` to automatically redirect `http` to `https` 
+It will ask for email address, agree the terms and conditions, certificate will be issued and finally enter `2` to automatically redirect `http` to `https` 
 
 ![letsencrypt](/content/https/letsencrypt/images/subdomains-ssl/generate-ssl.png)
 
@@ -218,7 +218,7 @@ Go to browser and type the domain name and verify whether its changed to `https`
 
 Go to browser and type `http://app1.devopspilot.tk`
 
-Now it will automatically redirect to `httsp://www.devopspilot.tk`
+Now it will automatically redirect to `https://www.devopspilot.tk`
 
 ![letsencrypt](/content/https/letsencrypt/images/subdomains-ssl/app-ssl.png)
 

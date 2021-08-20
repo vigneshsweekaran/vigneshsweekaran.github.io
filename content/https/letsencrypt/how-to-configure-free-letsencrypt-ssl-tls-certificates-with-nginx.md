@@ -1,4 +1,4 @@
-## How to configure Free Let’s Encrypt SSL/TLS Certificates with NGINX and autorenew certificates
+## How to configure free Let’s Encrypt SSL/TLS Certificates with NGINX and autorenew certificates
 
 ### Prerequisites
 * Have NGINX or NGINX Plus installed.
@@ -83,7 +83,7 @@ It will complete the letsencrpt challenge, generate the certificate and map the 
 sudo certbot --nginx -d www.devopspilot.tk
 ```
 
-It will ask for email address, agree the ters and conditions, certificates will be issued and finally enter `2` to automatically redirect `http` to `https` 
+It will ask for email address, agree the terms and conditions, certificate will be issued and finally enter `2` to automatically redirect `http` to `https` 
 
 ![letsencrypt](/content/https/letsencrypt/images/generate-ssl/generate-ssl.png)
 
@@ -133,7 +133,7 @@ Go to browser and type the domain name `devopspilot.tk`
 
 ![letsencrypt](/content/https/letsencrypt/images/generate-ssl/nginx.png)
 
-Now it will automatically redirect to `httsp://www.devopspilot.tk`
+Now it will automatically redirect to `https://www.devopspilot.tk`
 
 Now lets see how to automatically renew the certificates.
 
