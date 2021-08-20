@@ -1,4 +1,4 @@
-## How to configure free single Let’s Encrypt SSL/TLS wildcard Certificate with NGINX for multiple subdomains
+## How to configure free single Let’s Encrypt SSL/TLS wildcard Certificate with NGINX
 
 
 ### Prerequisites
