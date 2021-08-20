@@ -212,13 +212,13 @@ server {
 }
 ```
 
-Wait for couple of minues.
+Wait for couple of minutes.
 
 Go to browser and type the domain name and verify whether its changed to `https`
 
 Go to browser and type `http://app1.devopspilot.tk`
 
-Now it will automatically redirect to `https://www.devopspilot.tk`
+Now it will automatically redirect to `https://app1.devopspilot.tk`
 
 ![letsencrypt](/content/https/letsencrypt/images/subdomains-ssl/app-ssl.png)
 

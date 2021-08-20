@@ -137,11 +137,9 @@ Wait for couple of minutes.
 
 Go to browser and type `http://app1.devopspilot.tk`
 
-Now it will automatically redirect to `https://www.devopspilot.tk`
+Now it will automatically redirect to `https://app1.devopspilot.tk`
 
 ![letsencrypt](/content/https/letsencrypt/images/subdomains-ssl/app-ssl.png)
-
-Now lets see how to automatically renew the certificates.
 
 Letsencrypt certificates will expire after 3 months.
 
