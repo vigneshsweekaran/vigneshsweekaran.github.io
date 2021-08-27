@@ -13,7 +13,7 @@
 
 ## Git
 * [Git basics](https://www.youtube.com/watch?v=Lr7sYCrhxE0&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=18)
-* [How to create a free account in Github and how to create repository in it](/content/git/tutorials/01-how-to-create-github-account)
+* [Git Tutorials](/nav/git.html)
 
 ## Build Tools
 `Maven/Gradle` : For Java programming language (Backend application)
@@ -38,21 +38,7 @@
 * [Docker Tutorials](https://devopspilot.com/nav/docker.html)
 
 ## Jenkins
-`Jenkins`
-* [How to install Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/common/01-how-to-install-jenkins)
-* [How to install plugins in Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/common/02-how-to-install-plugins)
-* [Use of Global Tool Configuration in Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/common/03-global-tool-configurations)
-* [How to store credentials in Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/common/04-how-to-store-credentials-in-jenkins)
-
-`Jenkins Freestyle Job`
-
-`Jenkins Pipeline Job`
-* [How to create pipeline job in Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/01-how-to-create-pipeline-job)
-* [How to write a Jenkinsfile](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/02-how-to-write-jenkinsfile)
-* [[Part-1] Jenkinsfile to build a maven project](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/03-jenkinsfile-to-build-maven-project)
-* [[Part-2] Jenkinsfile to build and deploy to Tomcat](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/04-jenkinsfile-to-build-maven-project-and-deploy-to-tomcat)
-* [[Part-3] Jenkinsfile to build docker image, push to dockerhub and deploy to same server](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/05-jenkinsfile-to-build-docker-image-push-deploy-to-same-server)
-* [[Part-4] Jenkinsfile to build docker image, push to dockerhub and deploy to different server](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/06-jenkinsfile-to-build-docker-image-push-deploy-to-different-server)
+* [Jenkins Tutorials](https://devopspilot.com/nav/jenkins.html)
 
 ## Kubernetes
 * [Kubernetes Concept](https://www.youtube.com/watch?v=QJ4fODH6DXI&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=3)
@@ -90,4 +76,8 @@ Preferably you can start with AWS Solution Architect Associate
 ## Terraform
 
 ##### Terraform free course
-* [Terraform free course in youtube](https://www.youtube.com/watch?v=YcJ9IeukJL8&t=1s)
+* [Terraform free course in youtube by kodekloud](https://www.youtube.com/watch?v=YcJ9IeukJL8&t=1s)
+* [Terraform free course in youtube by Sandip Das](https://learn.sandipdas.in/2021/07/26/terraform-full-course-for-beginners-hashicorp-terraform-associate-certification-exam-prep-course/)
+
+## AWS DevOps
+* [AWS DevOps Free course in youtube by Sandip Das](https://www.youtube.com/playlist?list=PL7kXAf0BmEqura2P3brCGE4pIfeSh-kgw)
