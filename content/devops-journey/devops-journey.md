@@ -74,6 +74,11 @@ Preferably you can start with AWS Solution Architect Associate
 * [AWS Certified Solution Architect Associate course in Udemy](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c02/)
 * [AWS Certified Solutions Architect Associate Practice Exams](https://www.udemy.com/course/aws-certified-solutions-architect-associate-amazon-practice-exams-saa-c02/)
 
+##### AWS free course
+* [AWS Certified Cloud Practitioner Training 2020 - Full Course](https://www.youtube.com/watch?v=3hLmDS179YE)
+* [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng)
+* [Free course for AWS certifications](https://www.youtube.com/c/Freecodecamp/search?query=aws)
+
 ## Terraform
 
 ##### Terraform free course
