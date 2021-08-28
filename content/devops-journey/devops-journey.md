@@ -61,10 +61,12 @@
 * [Play with kubernetes](https://labs.play-with-k8s.com/)
 
 ##### Kubernetes Paid course
-* [Certified Kubernetes Administrator course in Udemy](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/)
+* [Certified Kubernetes Application Developer (CKAD) course in Udemy by Mumshad Mannambeth](https://www.udemy.com/course/certified-kubernetes-application-developer/)
+* [Certified Kubernetes Administrator (CKA) course in Udemy by Mumshad Mannambeth](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/)
+* [Certified Kubernetes Security Specialist (CKS) course in Kodekloud by Mumshad Mannambeth](https://kodekloud.com/courses/certified-kubernetes-security-specialist-cks/)
 
 ##### Realtime examples and kubernetes additional tools
-* [Kubernetes Realtime examples Tutorails](https://devopspilot.com/nav/kubernetes.html)
+* [Kubernetes Realtime examples Tutorials](https://devopspilot.com/nav/kubernetes.html)
 
 ## Monitoring
 
