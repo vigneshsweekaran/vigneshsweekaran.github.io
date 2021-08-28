@@ -63,6 +63,9 @@
 ##### Kubernetes Paid course
 * [Certified Kubernetes Administrator course in Udemy](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/)
 
+##### Realtime examples and kubernetes additional tools
+* [Kubernetes Realtime examples Tutorails](https://devopspilot.com/nav/kubernetes.html)
+
 ## Monitoring
 
 ## Logging
@@ -78,6 +81,10 @@ Preferably you can start with AWS Solution Architect Associate
 * [AWS Certified Cloud Practitioner Training 2020 - Full Course](https://www.youtube.com/watch?v=3hLmDS179YE)
 * [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng)
 * [Free course for AWS certifications](https://www.youtube.com/c/Freecodecamp/search?query=aws)
+
+## SSL/TLS
+How to configure SSL/TLS certificates for websites (How to make a website as secure - https)
+* [SSL/TLS Tutorials](https://devopspilot.com/nav/ssl-tls.html)
 
 ## Terraform
 
