@@ -40,6 +40,7 @@
 
 ## Jenkins
 * [Jenkins Tutorials](https://devopspilot.com/nav/jenkins.html)
+* [Jenkins advanced tutorials in youtube by CloudBeesTv channel](https://www.youtube.com/watch?v=fj_TD9pufFM&list=PLvBBnHmZuNQJeznYL2F-MpZYBUeLIXYEe)
 
 ## Kubernetes
 * [Kubernetes Concept](https://www.youtube.com/watch?v=QJ4fODH6DXI&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=3)
