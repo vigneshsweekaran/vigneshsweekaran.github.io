@@ -48,8 +48,8 @@
 * [Horizontal Pod Autoscaler](https://www.youtube.com/watch?v=3BnrXapY7zo)
 * [Namespace](https://www.youtube.com/watch?v=j_UUnlVC2Ss&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=6)
 * [service](https://www.youtube.com/watch?v=5lzUpDtmWgM&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=4)
-* [Configmap]()
-* [Secret]()
+* [Configmap](https://www.youtube.com/watch?v=upmLONFGNBs)
+* [Secret](https://www.youtube.com/watch?v=ch9YlQZ4xTc&t=361s)
 * [Taints & Tolerations](https://www.youtube.com/watch?v=mo2UrkjA7FE&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=9)
 
 ##### Reference Youtube channels for learning kubernetes
