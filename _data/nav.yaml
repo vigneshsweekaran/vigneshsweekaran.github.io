@@ -42,5 +42,8 @@ nav-list:
 - title: Maven
   url: https://vigneshsweekaran.github.io/nav/maven.html
 
+- title: Jfrog
+  url: https://vigneshsweekaran.github.io/nav/jfrog.html
+
 # - title: Services
 #   url: https://vigneshsweekaran.github.io/nav/services.html

@@ -14,6 +14,8 @@
 
 I have a sample hello-world maven project in github [hello-world](https://github.com/vigneshsweekaran/hello-world)
 
+Fork this project [hello-world](https://github.com/vigneshsweekaran/hello-world) and update the required feilds in the Jenkinsfile `05-Jenkinsfile-docker-build-push-to-artifactory`
+
 Maven is a build tool used to compile, test and package the application developed using Java programming language.
 
 Jenkinsfile
@@ -36,16 +38,16 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    docker.build("vigneshsweekaran/hello-world:${TAG}")
+                    docker.build("default-docker-local/hello-world:${TAG}")
                 }
             }
         }
-	    stage('Pushing Docker Image to Dockerhub') {
+	    stage('Pushing Docker Image to Jfrog Artifactory') {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'docker_credential') {
-                        docker.image("vigneshsweekaran/hello-world:${TAG}").push()
-                        docker.image("vigneshsweekaran/hello-world:${TAG}").push("latest")
+                    docker.withRegistry('https://vigneshsweekaran.jfrog.io', 'artifactory-credential') {
+                        docker.image("default-docker-local/hello-world:${TAG}").push()
+                        docker.image("default-docker-local/hello-world:${TAG}").push("latest")
                     }
                 }
             }
@@ -54,7 +56,7 @@ pipeline {
             steps {
                 sh "docker stop hello-world | true"
                 sh "docker rm hello-world | true"
-                sh "docker run --name hello-world -d -p 9004:8080 vigneshsweekaran/hello-world:${TAG}"
+                sh "docker run --name hello-world -d -p 9004:8080 vigneshsweekaran.jfrog.io/default-docker-local/hello-world:${TAG}"
             }
         }
     }
