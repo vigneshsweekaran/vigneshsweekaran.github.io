@@ -4,7 +4,7 @@ Go to [jfrog.com](https://jfrog.com/start-free/)
 
 Click on `Cloud`
 
-![jfrog](/content/jfrogartifactory/tutorials/images/create-account-jfrog/jfrog-cloud.png)
+![jfrog](/content/jfrogartifactory/tutorials/images/create-account-jfrog/jfrog-cloud.PNG)
 
 Enter `furstname`, `lastname`, `email`, `password`
 
@@ -16,16 +16,16 @@ Give unique name in `Name Your Environment`
 
 Then click on `Try It Now`
 
-![jfrog](/content/jfrogartifactory/tutorials/images/create-account-jfrog/jfrog-create-account.png)
+![jfrog](/content/jfrogartifactory/tutorials/images/create-account-jfrog/jfrog-create-account.PNG)
 
 
-![jfrog](/content/jfrogartifactory/tutorials/images/create-account-jfrog/jfrog-creating-account.png)
+![jfrog](/content/jfrogartifactory/tutorials/images/create-account-jfrog/jfrog-creating-account.PNG)
 
 Enter your `Username` and `Password` and click on `Login`
 
-![jfrog](/content/jfrogartifactory/tutorials/images/create-account-jfrog/jfrog-login.png)
+![jfrog](/content/jfrogartifactory/tutorials/images/create-account-jfrog/jfrog-login.PNG)
 
-![jfrog](/content/jfrogartifactory/tutorials/images/create-account-jfrog/jfrog-home.png)
+![jfrog](/content/jfrogartifactory/tutorials/images/create-account-jfrog/jfrog-home.PNG)
 
 Hurray!! we have successfully created free account in Jfrog artifactory cloud.
 
