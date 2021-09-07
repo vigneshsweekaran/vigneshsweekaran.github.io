@@ -11,6 +11,8 @@
 
 I have a sample hello-world maven project in github [hello-world](https://github.com/vigneshsweekaran/hello-world)
 
+Fork this project [hello-world](https://github.com/vigneshsweekaran/hello-world) and  update the required feilds in the Jenkinsfile `02-Jenkinsfile-maven-build`
+
 Maven is a build tool used to compile, test and package the application developed using Java programming language.
 
 Jenkinsfile
