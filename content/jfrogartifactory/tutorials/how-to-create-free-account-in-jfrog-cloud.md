@@ -6,7 +6,7 @@ Click on `Cloud`
 
 ![jfrog](/content/jfrogartifactory/tutorials/images/create-account-jfrog/jfrog-cloud.PNG)
 
-Enter `furstname`, `lastname`, `email`, `password`
+Enter `firstname`, `lastname`, `email`, `password`
 
 Select cloud provider as `aws`
 
