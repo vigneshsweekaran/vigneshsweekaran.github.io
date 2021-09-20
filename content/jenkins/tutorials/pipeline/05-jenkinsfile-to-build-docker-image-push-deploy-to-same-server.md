@@ -14,6 +14,8 @@
 
 I have a sample hello-world maven project in github [hello-world](https://github.com/vigneshsweekaran/hello-world)
 
+Fork this project [hello-world](https://github.com/vigneshsweekaran/hello-world) and update the required feilds in the Jenkinsfile `04-Jenkinsfile-docker-build-push-deploy-same-server`
+
 Maven is a build tool used to compile, test and package the application developed using Java programming language.
 
 Jenkinsfile
@@ -128,6 +130,16 @@ And we are executing the docker stop and rm command to remove the old container 
 ```
 sh "docker stop hello-world | true"
 sh "docker rm hello-world | true"
+```
+
+##### Issues
+* If you are getting error like `Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post`
+![jenkins](/content/jenkins/tutorials/pipeline/images/05-same-server/docker-error.png)
+
+Add `jenkins` user to `docker` group and restart Jenkins
+```
+sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
 ```
 
 ##### Previous Topic

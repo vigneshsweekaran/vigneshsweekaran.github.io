@@ -7,13 +7,14 @@
 * [How to install virtualbox and create ubuntu virtual machine](/content/linux/virtualbox)
 * [Linux basic commands](https://hackr.io/blog/basic-linux-commands)
 * [ssh in Linux](https://linuxize.com/post/ssh-command-in-linux/)
+* [Linux commands beginners course in youtube by Sandip Das](https://www.youtube.com/watch?v=-7SokSJb9GY&list=PL7kXAf0BmEqtjvIZQOdXY6ZmcvAEYc4yh&index=7)
 
 ##### Free Linux machine labs
 * [Ubuntu machine Lab](https://www.katacoda.com/courses/ubuntu/playground)
 
 ## Git
 * [Git basics](https://www.youtube.com/watch?v=Lr7sYCrhxE0&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=18)
-* [How to create a free account in Github and how to create repository in it](/content/git/tutorials/01-how-to-create-github-account)
+* [Git Tutorials](/nav/git.html)
 
 ## Build Tools
 `Maven/Gradle` : For Java programming language (Backend application)
@@ -38,21 +39,8 @@
 * [Docker Tutorials](https://devopspilot.com/nav/docker.html)
 
 ## Jenkins
-`Jenkins`
-* [How to install Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/common/01-how-to-install-jenkins)
-* [How to install plugins in Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/common/02-how-to-install-plugins)
-* [Use of Global Tool Configuration in Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/common/03-global-tool-configurations)
-* [How to store credentials in Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/common/04-how-to-store-credentials-in-jenkins)
-
-`Jenkins Freestyle Job`
-
-`Jenkins Pipeline Job`
-* [How to create pipeline job in Jenkins](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/01-how-to-create-pipeline-job)
-* [How to write a Jenkinsfile](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/02-how-to-write-jenkinsfile)
-* [[Part-1] Jenkinsfile to build a maven project](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/03-jenkinsfile-to-build-maven-project)
-* [[Part-2] Jenkinsfile to build and deploy to Tomcat](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/04-jenkinsfile-to-build-maven-project-and-deploy-to-tomcat)
-* [[Part-3] Jenkinsfile to build docker image, push to dockerhub and deploy to same server](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/05-jenkinsfile-to-build-docker-image-push-deploy-to-same-server)
-* [[Part-4] Jenkinsfile to build docker image, push to dockerhub and deploy to different server](https://vigneshsweekaran.github.io/content/jenkins/tutorials/pipeline/06-jenkinsfile-to-build-docker-image-push-deploy-to-different-server)
+* [Jenkins Tutorials](https://devopspilot.com/nav/jenkins.html)
+* [Jenkins advanced tutorials in youtube by CloudBeesTv channel](https://www.youtube.com/watch?v=fj_TD9pufFM&list=PLvBBnHmZuNQJeznYL2F-MpZYBUeLIXYEe)
 
 ## Kubernetes
 * [Kubernetes Concept](https://www.youtube.com/watch?v=QJ4fODH6DXI&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=3)
@@ -60,9 +48,9 @@
 * [Pod,ReplicaSet,Deployment](https://www.youtube.com/watch?v=deFfAUZpoxs&list=PL34sAs7_26wP009Cl03TZbtRFZ2DMJovl&index=2)
 * [Horizontal Pod Autoscaler](https://www.youtube.com/watch?v=3BnrXapY7zo)
 * [Namespace](https://www.youtube.com/watch?v=j_UUnlVC2Ss&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=6)
-* [service](https://www.youtube.com/watch?v=5lzUpDtmWgM&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=4)
-* [Configmap]()
-* [Secret]()
+* [Service](https://www.youtube.com/watch?v=5lzUpDtmWgM&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=4)
+* [Configmap](https://www.youtube.com/watch?v=upmLONFGNBs)
+* [Secret](https://www.youtube.com/watch?v=ch9YlQZ4xTc&t=361s)
 * [Taints & Tolerations](https://www.youtube.com/watch?v=mo2UrkjA7FE&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=9)
 
 ##### Reference Youtube channels for learning kubernetes
@@ -74,7 +62,12 @@
 * [Play with kubernetes](https://labs.play-with-k8s.com/)
 
 ##### Kubernetes Paid course
-* [Certified Kubernetes Administrator course in Udemy](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/)
+* [Certified Kubernetes Application Developer (CKAD) course in Udemy by Mumshad Mannambeth](https://www.udemy.com/course/certified-kubernetes-application-developer/)
+* [Certified Kubernetes Administrator (CKA) course in Udemy by Mumshad Mannambeth](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/)
+* [Certified Kubernetes Security Specialist (CKS) course in Kodekloud by Mumshad Mannambeth](https://kodekloud.com/courses/certified-kubernetes-security-specialist-cks/)
+
+##### Realtime examples and kubernetes additional tools
+* [Kubernetes Realtime examples Tutorials](https://devopspilot.com/nav/kubernetes.html)
 
 ## Monitoring
 
@@ -87,7 +80,20 @@ Preferably you can start with AWS Solution Architect Associate
 * [AWS Certified Solution Architect Associate course in Udemy](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c02/)
 * [AWS Certified Solutions Architect Associate Practice Exams](https://www.udemy.com/course/aws-certified-solutions-architect-associate-amazon-practice-exams-saa-c02/)
 
+##### AWS free course
+* [AWS Certified Cloud Practitioner Training 2020 - Full Course](https://www.youtube.com/watch?v=3hLmDS179YE)
+* [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng)
+* [Free course for AWS certifications](https://www.youtube.com/c/Freecodecamp/search?query=aws)
+
+## SSL/TLS
+How to configure SSL/TLS certificates for websites (How to make a website as secure - https)
+* [SSL/TLS Tutorials](https://devopspilot.com/nav/ssl-tls.html)
+
 ## Terraform
 
 ##### Terraform free course
-* [Terraform free course in youtube](https://www.youtube.com/watch?v=YcJ9IeukJL8&t=1s)
+* [Terraform free course in youtube by kodekloud](https://www.youtube.com/watch?v=YcJ9IeukJL8&t=1s)
+* [Terraform free course in youtube by Sandip Das](https://learn.sandipdas.in/2021/07/26/terraform-full-course-for-beginners-hashicorp-terraform-associate-certification-exam-prep-course/)
+
+## AWS DevOps
+* [AWS DevOps Free course in youtube by Sandip Das](https://www.youtube.com/playlist?list=PL7kXAf0BmEqura2P3brCGE4pIfeSh-kgw)

@@ -14,6 +14,7 @@
 * **Anchore Container Image Scanner** - To connect to Anchore engine for docker image scanning
 * **Job Configuration History** - This plugin saves a copy of the configuration file of jobs and agents (config.xml) for every change made and of the system configuration. Deleted jobs can be restored.
 * **Seed Jenkins** - To create Jenkins project automatically from DSL groovy script
+* **Declarative Pipeline Migration Assistant** - Generate Declarative pipeline script(Jenkinsfile) from freestyle project
 
 ### Install Plugin
 
