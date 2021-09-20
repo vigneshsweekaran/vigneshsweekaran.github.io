@@ -1,5 +1,8 @@
 ## How to install/uninstall cert-manager in kubernetes
 
+### Prerequisites
+* Kubernetes cluster up and running
+
 ### What is cert-manager in kubernetes ?
 Cert-manager is a agent/tool running on kubernetes to get/renew TLS certificates automatically from the configured CA Authority for Ingress controller and applications.
 
