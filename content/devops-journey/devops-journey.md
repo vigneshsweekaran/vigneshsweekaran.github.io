@@ -12,6 +12,9 @@
 ##### Free Linux machine labs
 * [Ubuntu machine Lab](https://www.katacoda.com/courses/ubuntu/playground)
 
+## Shell script
+* [Shell script examples](https://github.com/vigneshsweekaran/shellscript)
+
 ## Git
 * [Git basics](https://www.youtube.com/watch?v=Lr7sYCrhxE0&list=RDCMUCSWj8mqQCcrcBlXPi4ThRDQ&index=18)
 * [Git Tutorials](/nav/git.html)
@@ -69,6 +72,9 @@
 ##### Realtime examples and kubernetes additional tools
 * [Kubernetes Realtime examples Tutorials](https://devopspilot.com/nav/kubernetes.html)
 
+## Helm Chart
+* [Helm chart tutorials in youtube by Richard Chesterwood](https://www.youtube.com/playlist?list=PLSwo-wAGP1b8svO5fbAr7ko2Buz6GuH1g)
+
 ## Monitoring
 
 ## Logging
@@ -97,3 +103,6 @@ How to configure SSL/TLS certificates for websites (How to make a website as sec
 
 ## AWS DevOps
 * [AWS DevOps Free course in youtube by Sandip Das](https://www.youtube.com/playlist?list=PL7kXAf0BmEqura2P3brCGE4pIfeSh-kgw)
+
+## Devops Playground by Katakoda
+* [Learn and do handson on lots of devops tools for free](https://www.katacoda.com/learn)
