@@ -7,10 +7,13 @@
 
 ### Create IAM roles
 * `eks-cluster-role`
-  policy:
+
+Policy:
   * AmazonEKSClusterPolicy
+
 * `eks-node-role`
-  policy:
+
+Policy:
   * AmazonEKSWorkerNodePolicy
   * AmazonEC2ContainerRegistryReadOnly
   * AmazonEKS_CNI_Policy
