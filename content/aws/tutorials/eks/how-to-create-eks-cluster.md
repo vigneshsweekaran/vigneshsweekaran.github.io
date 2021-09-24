@@ -6,7 +6,7 @@
 * kubectl
 
 ### Create IAM roles
-* eks-cluster-role
+* `eks-cluster-role`
   * AmazonEKSClusterPolicy
 
 * `eks-node-role`
