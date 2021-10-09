@@ -2,7 +2,6 @@
 
 ### Install Cli Tools
 * aws cli
-* eksctl
 * kubectl
 
 ### Create IAM roles
@@ -13,3 +12,5 @@
   * AmazonEKSWorkerNodePolicy
   * AmazonEC2ContainerRegistryReadOnly
   * AmazonEKS_CNI_Policy
+
+

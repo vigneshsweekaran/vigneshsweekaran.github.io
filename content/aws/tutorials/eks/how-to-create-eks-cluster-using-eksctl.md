@@ -5,7 +5,7 @@
 * eksctl
 * kubectl
 
-### Create cluster
+### Create EKS cluster with EC2 instances as nodes
 Configure aws credentials
 
 Craete a eks-cluster.yaml file with the following content
@@ -32,7 +32,7 @@ eksctl create cluster -f eks-cluster.yaml
 Note:
 * By default, it will craete one new vpc with 2 subnets
 
-### Create cluster with ssh access to worker nodes
+### Create EKS cluster with EC2 instances as nodes with ssh access to worker nodes
 Create key-pair in aws eg: my-key
 
 Craete a eks-cluster.yaml file with the following content
@@ -56,4 +56,14 @@ nodeGroups:
 Run the following command to create cluster,
 ```
 eksctl create cluster -f eks-cluster.yaml
+```
+
+### Create EKS cluster with Fargate
+```
+eksctl create cluster --name my-cluster --region us-west-2 --fargate
+```
+
+##### To configure credentials to connect to eks using kubectl
+```
+aws eks update-kubeconfig --name my-cluster
 ```
