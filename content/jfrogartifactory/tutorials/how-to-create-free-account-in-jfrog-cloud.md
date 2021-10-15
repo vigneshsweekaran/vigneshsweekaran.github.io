@@ -1,4 +1,4 @@
-## How to create free account in Jfrog acrtifactory cloud
+## How to create free account in Jfrog artifactory cloud
 
 ### What is Jfrog Artifactory
 
