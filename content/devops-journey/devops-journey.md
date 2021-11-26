@@ -91,6 +91,9 @@ Preferably you can start with AWS Solution Architect Associate
 * [AWS Basics for Beginners full Course by Neil Davis](https://www.youtube.com/watch?v=ulprqHHWlng)
 * [Free course for AWS certifications](https://www.youtube.com/c/Freecodecamp/search?query=aws)
 
+##### Azure free course
+* [Microsoft Azure Fundamentals Certification Course (AZ-900)](https://www.youtube.com/watch?v=NKEFWyqJ5XA)
+
 ## SSL/TLS
 How to configure SSL/TLS certificates for websites (How to make a website as secure - https)
 * [SSL/TLS Tutorials](https://devopspilot.com/nav/ssl-tls.html)
