@@ -38,29 +38,44 @@ git stash apply
 ```
 git stash apply stash@{index_no}
 ```
-![git](/content/git/tutorials/images/stash/stash-apply.PNG)
+![git](/content/git/tutorials/images/stash/stash-apply-index-no.PNG)
 
 ### To stash both tracked and untracked files
 If we do some chnages in the tracked file and also in one untacked file (new file). If we run git stash now, it will only stash the tracked files, it wont stash the untracked files
 ```
 git stash -u                --> to stash both tracked and untracked files
 ```
-![git](/content/git/tutorials/images/stash/stash-apply.PNG)
+![git](/content/git/tutorials/images/stash/stash-untracked.PNG)
 
-we can add the untracked file and run "git stash" also
+**Other Option :** we can add the untracked file and run "git stash" also
 
 ### To do git stash apply and git stash drop in a single command
 ```
 git stash pop
 ```
-![git](/content/git/tutorials/images/stash/stash-apply.PNG)
+![git](/content/git/tutorials/images/stash/stash-pop.PNG)
 
 ### To know the file changes in stash
 ```
-git stash show stah@{index_no}
+git stash show stash@{index_no}
 ```
 latest stash will be assigned with index no '0'
-![git](/content/git/tutorials/images/stash/stash-apply.PNG)
+![git](/content/git/tutorials/images/stash/stash-show.PNG)
+
+### To take stash changes from one branch to another new branch
+First stash the files/changes in the current branch
+
+Then exceute the following command, it will automatically create a new branch, switch to that branch and take all the changes from the top stash to that branch and that stash will be dropped from the stash list
+```
+git stash branch new_branch_name
+```
+![git](/content/git/tutorials/images/stash/stash-branch.PNG)
+
+### To take specific stash changes from one branch to another new branch
+```
+git stash branch new_branch_name stash@{index_no}
+```
+![git](/content/git/tutorials/images/stash/stash-branch-index-no.PNG)
 
 ### To drop the latest stash from list
 ```
@@ -78,11 +93,4 @@ git stash drop stash@{0}
 ```
 git stash clear
 ```
-![git](/content/git/tutorials/images/stash/stash-apply.PNG)
-
-### To take changes from one branch to another branch
-First stash the files in the current branch then exceute the following command, it will automatically create a new branch, switch to that branch and take all the changes to that branch and that stash will be dropped from the stash list
-```
-git stash branch new_branch_name
-```
-![git](/content/git/tutorials/images/stash/stash-apply.PNG)
+![git](/content/git/tutorials/images/stash/stash-clear.PNG)
