@@ -30,7 +30,7 @@ git config --global alias.ALIAS_NAME(gitlog) "log --all --oneline --graph --deco
 create .gitignore and commit. we can put our filename, foldername or regular expression to ignore the files
 
 ### Rebase
-Create two branch master and feature. do 2 commits in each branch, you are currently in feature and not planning to merge the feature branch commits to master, but instead wants the two commits from master branch to be synced with tis feature branch.
+Create two branch master and feature. do 2 commits in each branch, you are currently in feature and not planning to merge the feature branch commits to master, but instead wants the two commits from master branch to be synced with this feature branch.
 
 git rebase master
 
