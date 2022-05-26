@@ -3,7 +3,7 @@
 `Commands`
 * 
 
-`Varibales`
+`Variables`
 * what are the ways to pass AWS credentials to AWS provider ? 
 
   * Setting the credentials in aws provider section (Not Recommended)
