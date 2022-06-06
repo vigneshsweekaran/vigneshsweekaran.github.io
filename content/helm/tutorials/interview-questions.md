@@ -25,7 +25,7 @@
   
   ```
   helm repo add devopspilot https://devopspilot.com/helm/charts/
-  helm update
+  helm repo update
   ```
 
   `devopspilot` --> alias repo name to point to the Helm chart repository.
@@ -218,6 +218,21 @@
   Yes, its possible to skip the installation of CRDs while installing the chart by passing argument `--skip-crds`
   ```
   helm install mysql devopspilot/mysql --skip-crds
+  ```
+
+* Is it possible to install the chart using helm upgrade ? If possible how to do it
+
+  Yes, its possible to install the chart using the helm upgrade by passing argument `--install`
+
+  If the chart is already installed it will upgrade or it will install the chart
+  ```
+  helm upgrade --install mysql devopspilot/mysql
+  ```
+
+* During the helm upgrade, if the helm install is failled, will it rollback to previous version ?
+  By default no, by passing argument --atomic, it can rollback automaticlaly to previous version
+  ```
+  helm upgrade --atomic --cleanup-on-fail mysql devopspilot/mysql
   ```
 
 
