@@ -7,4 +7,5 @@ CodeDeploy agent was not able to receive the lifecycle event. Check the CodeDepl
 ```
 
 Issue: Codedeploy agent is running, but not properly connected to codedeploy server
+
 Solution: Create a dummy role and attach to EC2 instance and restart the code-deploy agent, since EC2 instance needs to talk to aws services
