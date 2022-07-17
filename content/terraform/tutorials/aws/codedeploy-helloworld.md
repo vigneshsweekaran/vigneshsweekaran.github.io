@@ -8,4 +8,11 @@
 * AWS Codedeploy application
 * AWS codedeploy deployment group
 
+**Code deploy**
+** Install docker if not preset
+** Check if docker service is running or not
+** Stops the old docker container if running
+** Creates new docker container with new docker image
+** Validates if newly created docker container is running or not
+
 Codedeploy deployment has to be triggered manually once the above resources are created by terraform script
