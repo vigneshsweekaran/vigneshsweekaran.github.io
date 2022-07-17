@@ -1,4 +1,4 @@
-# Terraform script to create a AWS Codedeploy
+# Terraform script to create AWS Codedeploy
 
 **Terraform Script :** [Github](https://github.com/vigneshsweekaran/terraform/tree/main/aws/08-codedeploy/hello-world)
 

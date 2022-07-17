@@ -1,4 +1,4 @@
-# Terraform script to create a AWS Codebuild project
+# Terraform script to create AWS Codebuild project
 
 **Terraform Script :** [Github](https://github.com/vigneshsweekaran/terraform/tree/main/aws/07-codebuild/hello-world)
 
