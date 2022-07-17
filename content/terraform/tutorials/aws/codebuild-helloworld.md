@@ -1,34 +1,16 @@
-# Terraform script to craete a AWS Codebuild project
+# Terraform script to create a AWS Codebuild project
 
-`Main components`
-* What are the main components of Kubernetes architecture?
-  
-  **Master Node :** kube-apiserver, etcd, kube-scheduler and kube-controller-manager 
-  
-  **Worker Node :** kubelet, kube-proxy and container runtime
-  
-  **Official :** [Kubernetes main components](https://kubernetes.io/docs/concepts/overview/components/)
+[Github](https://github.com/vigneshsweekaran/terraform/tree/main/aws/07-codebuild/hello-world)
 
-`Pod`
-* what is 2/2 under READY, when we run kubctl get pods ?
+** Terraform script creates the following **
+* AWS Codebuild project
+* Roles
+* ECR repository for storing docker images
+* S3 bucket for storing the build artifacts
+* SSM parameter store to store the dockerhub password
 
-  2/2 means the pod has two containers and both the containers are in reday state to accept the request.
-
-* Can we have multiple containers running inside the pod? If yes, any one container fails how would you troubleshot?
-  
-  Yes, we can have more than one container inside a pod.
-  
-  Describe the pod and check the events 
-  ```
-  kubectl describe pod-name
-  ```
-  
-  If we have more than one container, we can check the logs of one container by referring the container name.
-  ```
-  kubectl logs pod-name -c container-name
-  ```
-
-*  How you can copy a file from local to inside a pod ?
-   ```
-   kubectl cp /tmp/foo_dir <pod-name>:/tmp/data
-   ```
+** Code build project **
+* Compiles the java project using maven
+* Build the docker image
+* Push the docker image to ECR repository
+* Publish the artifacts to s3 bucket

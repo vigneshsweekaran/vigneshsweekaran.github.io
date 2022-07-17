@@ -21,6 +21,9 @@ nav-list:
 - title: Kubernetes
   url: https://vigneshsweekaran.github.io/nav/kubernetes.html
 
+- title: Terraform
+  url: https://vigneshsweekaran.github.io/nav/terraform.html
+
 - title: Shell-Script
   url: https://vigneshsweekaran.github.io/nav/shell-script.html
 
