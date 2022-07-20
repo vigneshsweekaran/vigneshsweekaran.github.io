@@ -24,6 +24,9 @@ nav-list:
 - title: Terraform
   url: https://vigneshsweekaran.github.io/nav/terraform.html
 
+- title: AWS
+  url: https://vigneshsweekaran.github.io/nav/aws.html
+
 - title: Shell-Script
   url: https://vigneshsweekaran.github.io/nav/shell-script.html
 
