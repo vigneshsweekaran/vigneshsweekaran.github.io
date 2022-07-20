@@ -1,4 +1,4 @@
-# Cloudformation template for creating the ec2 nstance
+# Cloudformation template for creating the ec2 instance
 
 **Cloudformation template:** [Github](https://github.com/vigneshsweekaran/aws/tree/master/cloudformation/01-ec2-instance)
 
