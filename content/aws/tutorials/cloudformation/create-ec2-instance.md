@@ -7,7 +7,7 @@
 * Security Group
 * ElasticIP
 
-** Template
+**Template**
 * Resource - Ec2 instance, Security group, ElasticIp
 * Parameters - Choose EC2 Instance type, Enable/disable ElasticIP
 * Mappings - To get the AMI Id dynamically based on region
