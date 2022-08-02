@@ -27,6 +27,9 @@ nav-list:
 - title: AWS
   url: https://vigneshsweekaran.github.io/nav/aws.html
 
+- title: Gitlab CI/CD
+  url: https://vigneshsweekaran.github.io/nav/gitlab-cicd.html
+
 - title: Shell-Script
   url: https://vigneshsweekaran.github.io/nav/shell-script.html
 
