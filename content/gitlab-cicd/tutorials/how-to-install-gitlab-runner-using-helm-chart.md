@@ -1,4 +1,4 @@
-## how to install Gitlab runner in kubernetes using Helm chart
+## How to install Gitlab runner in kubernetes using Helm chart
 
 ##### Create a namespace
 ```
