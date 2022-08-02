@@ -1,4 +1,6 @@
-#Gitlab CI/CD
+# Gitlab CI/CD
+
+![gitlab](/content/gitlab-cicd/tutorials/images/gitlab-cicd/gitlab-cicd.png)
 
 * Gitlab ci/cd is managed platform in gitlab.com to automate the build, test and deployment workflows
 * You can compile any source code like Java, Python, AngularJs, ReactJs, Go and create the artifacts
