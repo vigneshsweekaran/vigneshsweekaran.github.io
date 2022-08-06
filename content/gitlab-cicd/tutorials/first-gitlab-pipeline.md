@@ -1,6 +1,6 @@
 # First Gitlab pipeline
 
-Gitlab pipeline scripts are written in a **.gitlab-ci.yaml** file and kept in root of the project repository
+Gitlab pipeline scripts are written and stored in **.gitlab-ci.yaml** file and kept in root of the project repository
 
 ```
 stages:
