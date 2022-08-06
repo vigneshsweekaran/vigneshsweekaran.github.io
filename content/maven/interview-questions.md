@@ -1,5 +1,12 @@
 # Maven Interview Questions
 
+### What is Super pom ?
+```
+The Super POM is Maven's default POM. All POMs extend the Super POM unless explicitly set, meaning the configuration specified in the Super POM is inherited by the POMs you created for your projects.
+
+Reference: https://maven.apache.org/ref/3.0.4/maven-model-builder/super-pom.html
+```
+
 ### What is the need of settings.xml ?
 ```
 settings.xml is used to configuring the mirror, private remote repositories and storing some common secrets
