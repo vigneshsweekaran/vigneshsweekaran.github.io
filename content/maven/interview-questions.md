@@ -20,9 +20,10 @@ Reference: https://maven.apache.org/settings.html
 
 ### Where settings.cml file is located ?
 ```
-settings.xml file is located in .m2 folder of the user's home directory
+There are two locations where a settings.xml file may live:
 
-Eg: If the username is ubuntu, then its located in /home/ubuntu/.m2/settings.xml
+The Maven install: ${maven.home}/conf/settings.xml
+A user's install: ${user.home}/.m2/settings.xml
 
 Reference: https://maven.apache.org/settings.html
 ```

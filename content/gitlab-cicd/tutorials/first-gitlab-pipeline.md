@@ -27,3 +27,6 @@ testing-code:
 * Each stage can have one or more jobs.
 * Multiple jobs in a stage can run in parallel, here the **build** stage contains two jobs **compiling-java-code** and **compiling-python-code**, which can run in parallel
 * Once all the jobs in **build** stage gets successeded, it will execute the next stage **test** which contains a job **testing-code**
+
+### Reference:
+* [Hello world Gitlab project](https://gitlab.com/vigneshsweekaran/hello-world/-/tree/first-pipeline)
