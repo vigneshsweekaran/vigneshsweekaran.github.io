@@ -17,5 +17,6 @@ The Internet Assigned Numbers Authority(IANA) established certain blocks of IPv4
 Private Ip range:
 ```
 10.0.0.0/8
-172.16.0.0/12
+172.16.0.0/12 --> AWS default vpc cidr block
+192.168.0.0/16 --> Home network
 ```
