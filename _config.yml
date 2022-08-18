@@ -18,5 +18,7 @@ include:
   - CONTRIBUTING.md
   - ISSUE_TEMPLATE.md
   - PULL_REQUEST_TEMPLATE.md
+kramdown:
+  input: Kramdown
 
 theme: jekyll-theme-cayman
