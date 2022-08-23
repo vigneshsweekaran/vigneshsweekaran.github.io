@@ -50,5 +50,7 @@ If you even want to skip that tag, we can use --skip-tags=always
 
 ### What is never tag in ansible ?
 ```
+If you assign a never tag to tasks or play, ansible will skip that task or play.
 
+If you even want to run that tag, we can use --tags=never
 ```
