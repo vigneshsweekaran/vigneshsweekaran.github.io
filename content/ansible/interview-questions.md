@@ -54,3 +54,16 @@ If you assign a never tag to tasks or play, ansible will skip that task or play.
 
 If you even want to run that tag, we can use --tags=never
 ```
+
+### What is gathering_facts in ansible ? Is it enabled by default ?
+```
+This module takes care of executing the configured facts modules, the default is to use the ansible.builtin.setup module.
+
+This module is automatically called by playbooks to gather useful variables about remote hosts that can be used in playbooks.
+
+It can also be executed directly by /usr/bin/ansible to check what variables are available to a host.
+
+Ansible provides many facts about the system, automatically.
+
+Yes its enabled by default. We can disable by setting gatherings_afcts: false in playbook
+```
