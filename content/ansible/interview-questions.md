@@ -35,3 +35,20 @@ Using ansible tags feature we can skip one task and run all othere tasks
 
 ansible-playbook playbook.yaml --skip-tags=install
 ```
+
+### What are the special tags in ansible ?
+```
+always and never
+```
+
+### What is always tag in ansible ?
+```
+If you assign a always tag to tasks or play, ansible will always run that task or play.
+
+If you even want to skip that tag, we can use --skip-tags=always
+```
+
+### What is never tag in ansible ?
+```
+
+```
