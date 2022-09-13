@@ -1,61 +1,59 @@
 nav-list:
+  - title: Home
+    url: https://vigneshsweekaran.github.io/index.html
 
-- title: Home
-  url: https://vigneshsweekaran.github.io/index.html
+  - title: Interview-Questions
+    url: https://vigneshsweekaran.github.io/nav/interview-questions.html
 
-- title: Interview-Questions
-  url: https://vigneshsweekaran.github.io/nav/interview-questions.html
+  - title: DevOps-RoadMap
+    url: https://vigneshsweekaran.github.io/content/devops-journey/devops-journey
 
-- title: DevOps-RoadMap
-  url: https://vigneshsweekaran.github.io/content/devops-journey/devops-journey
+  - title: Git
+    url: https://vigneshsweekaran.github.io/nav/git.html
 
-- title: Git
-  url: https://vigneshsweekaran.github.io/nav/git.html
+  - title: Docker
+    url: https://vigneshsweekaran.github.io/nav/docker.html
 
-- title: Jenkins
-  url: https://vigneshsweekaran.github.io/nav/jenkins.html
+  - title: Kubernetes
+    url: https://vigneshsweekaran.github.io/nav/kubernetes.html
 
-- title: Docker
-  url: https://vigneshsweekaran.github.io/nav/docker.html
+  - title: Terraform
+    url: https://vigneshsweekaran.github.io/nav/terraform.html
 
-- title: Kubernetes
-  url: https://vigneshsweekaran.github.io/nav/kubernetes.html
+  - title: AWS
+    url: https://vigneshsweekaran.github.io/nav/aws.html
 
-- title: Terraform
-  url: https://vigneshsweekaran.github.io/nav/terraform.html
+  - title: Shell-Script
+    url: https://vigneshsweekaran.github.io/nav/shell-script.html
 
-- title: AWS
-  url: https://vigneshsweekaran.github.io/nav/aws.html
+  - title: Linux
+    url: https://vigneshsweekaran.github.io/nav/linux.html
 
-- title: Gitlab CI/CD
-  url: https://vigneshsweekaran.github.io/nav/gitlab-cicd.html
+  - title: SSL/TLS
+    url: https://vigneshsweekaran.github.io/nav/ssl-tls.html
 
-- title: Shell-Script
-  url: https://vigneshsweekaran.github.io/nav/shell-script.html
+  - title: Sonarqube
+    url: https://vigneshsweekaran.github.io/nav/sonarqube.html
 
-- title: Linux
-  url: https://vigneshsweekaran.github.io/nav/linux.html
+  - title: Tomcat
+    url: https://vigneshsweekaran.github.io/nav/tomcat.html
 
-- title: SSL/TLS
-  url: https://vigneshsweekaran.github.io/nav/ssl-tls.html
+  - title: Nginx
+    url: https://vigneshsweekaran.github.io/nav/nginx.html
 
-- title: Sonarqube
-  url: https://vigneshsweekaran.github.io/nav/sonarqube.html
+  - title: Maven
+    url: https://vigneshsweekaran.github.io/nav/maven.html
 
-- title: Tomcat
-  url: https://vigneshsweekaran.github.io/nav/tomcat.html
+  - title: Jfrog
+    url: https://vigneshsweekaran.github.io/nav/jfrog.html
 
-- title: Nginx
-  url: https://vigneshsweekaran.github.io/nav/nginx.html
+  # - title: Services
+  #   url: https://vigneshsweekaran.github.io/nav/services.html
 
-- title: Maven
-  url: https://vigneshsweekaran.github.io/nav/maven.html
-
-- title: Jfrog
-  url: https://vigneshsweekaran.github.io/nav/jfrog.html
-
-- title: Azure Devops
-  url: https://vigneshsweekaran.github.io/nav/azure-devops.html
-
-# - title: Services
-#   url: https://vigneshsweekaran.github.io/nav/services.html
+cicd-nav-list:
+  - title: Jenkins
+    url: https://vigneshsweekaran.github.io/nav/jenkins.html
+  - title: Gitlab CI/CD
+    url: https://vigneshsweekaran.github.io/nav/gitlab-cicd.html
+  - title: Azure Devops
+    url: https://vigneshsweekaran.github.io/nav/azure-devops.html
