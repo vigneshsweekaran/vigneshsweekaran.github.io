@@ -213,13 +213,13 @@ server[01:20].example.com   --> will match server01.example.com and not server1.
 
 ### How to list the hosts from inventory file ?
 ```
-ansible-inventory                 --> To list the hosts from configured inventory file
-ansible-inventory -i inventory    --> To list the hosts from custom inventory file
+ansible-inventory --list              --> To list the hosts from configured inventory file
+ansible-inventory -i inventory --list --> To list the hosts from custom inventory file
 ```
 
 ### How you can convert the inventory file from INI to YAML format ?
 ```
-ansible-inventory -y --list
+ansible-inventory --list -y
 ```
 
 ### How you can encrypt a files in ansible ?
