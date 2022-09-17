@@ -279,6 +279,13 @@ roles/
       tags: typeB
 ```
 
+### How to check if the host is avilable in the inventory file ?
+```
+ansible example.com --list-hosts
+
+If with have same name for both host and group, it will print the host and ignore the group and it will show the warning
+```
+
 ## Information
 * Nearly all parameters can be overridden in ansible-playbook or with command line flags.
 
