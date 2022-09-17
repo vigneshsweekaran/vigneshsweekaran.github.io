@@ -1,10 +1,55 @@
 ## Ansible Interview Questions
 
+### Dependency for using Ansible.
+```
+Python should be installed in both ansible host and also in all target servers
+ssh agent should be up and running in all linux target servers
+```
+
+### Where the default ansible configuration file and host/inventory file is located
+```
+/etc/ansible/ansible.cfg
+/etc/ansible/hosts
+```
+
+### Executing the ansible module using command-line
+```
+ansible host_name/group_name -m ping -i inventory.txt
+
+host_name/group_name --> from inventory file (/etc/ansible/hosts)
+-m ping              --> module name (here module name ping is passed)
+-i inventory.txt     --> To pass custom inventory file (Here incentory file named inventory.txt in current dirctory is passed)
+```
+
+### How Host key checking can be disbaled/enabled in ansible ?
+```
+By default host_key_checking is enabled
+In ansible.cfg          --> host_key_checking = False
+In inventory file       --> ansible_ssh_user=vagrant ansible_ssh_port=2222 ansible_ssh_host=127.0.0.1 host_key_checking=false
+In ansible.cfg          --> ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+As environment variable --> export ANSIBLE_HOST_KEY_CHECKING=False  (This might not work on newer ansible versions)
+```
+
 ### what is the diffrence between defaults and vars folder in ansible role
 
 ### What is ansible collection ?
 ```
 Collections are a distribution format for Ansible content that can include playbooks, roles, modules, and plugins. As modules move from the core Ansible repository into collections, the module documentation will move to the collections pages.
+```
+
+### Types of Inventories
+```
+--> static inventory -- > All the Ip are defined in the staic file (/etc/ansible/hosts)
+--> Dynamic inventory --> It will fetch the Ip's dynamically using the scipts shell,python/plugins
+
+In the earlier version of ansible,  we have to write the python script and we have to pass like below for dynamic Inventory
+
+ansible-playbook -i inventory.py playbook.yaml
+
+Now this dynamic inventory scripts are already written for some cloud providers
+aws ec2, azure, openstack, gcp, space walk, jails etc..
+
+Update: use aws_ec2 plugin from amazon.aws collection
 ```
 
 ### What is Dynamic invenstory ?
@@ -67,3 +112,93 @@ Ansible provides many facts about the system, automatically.
 
 Yes its enabled by default. We can disable by setting gatherings_afcts: false in playbook
 ```
+
+### How you can check which ansible conf file used ?
+```
+By running ansible --version will show the ansible version and also the configuration file location which is used
+```
+
+### What are the default host group in inventory
+```
+"all" - includes every host in the inventory
+"ungrouped" -  includes every host in "all" group thst is not a member of another group
+```
+
+### How you can save output to a variable and printing that variable
+```
+- name: print to stdout
+  command: echo "hello"
+  register: out
+- debug: msg="{{ out.stdout }}"
+- debug: msg="{{ out.stderr }}"
+- debug: var=out.stdout_lines
+```
+
+### To install package based on distro/0s-family
+```
+[Older way]
+- name: install the latest version of Apache on CentOS
+  yum: name=httpd state=latest
+  when: ansible_os_family == "RedHat"
+
+- name: install the latest version of Apache on Debian
+  apt: pkg=apache2 state=latest 
+  when: ansible_os_family == "Debian"
+  
+[Newer way]
+- name: Install foo
+  package: name=httpd state=latest
+  
+When the package name differs across OS families, we can handle it with distribution or OS family specific vars files:
+Here th packae name "httpd" is diffrent for distros, in Redhat it is "httpd", but for Ubuntu it is "apache2"
+---
+- hosts: all
+  remote_user: root
+  vars_files:
+    - "vars/common.yml"
+    - [ "vars/{{ ansible_os_family }}.yml", "vars/os_defaults.yml" ]
+  tasks:
+    - name: Install the apache package
+      package:
+        name: "{{ apache }}"
+        state: present
+```
+
+### What is handler ?
+```
+From one handler we can notify the other handler, but the problem, it is not returning "True" it wont notify the other handlers. After ansible 2.3 version,
+
+The better way is to group the tasks inside "block" (block is also one module)
+
+In block we define the become, remote_user, when condition as common and it will be automatically applied to each task under this block
+
+By default the all the tasks inside the will be executed if the before tasks are suucess. If the last task is returning OK, still it will run the next tasks.
+
+If we want the next task to be executed only if the last task is success, then capture the task status to a varibale and use that varibale in when condition in the next task
+
+ - name: Installing apache2 on Debian(ubuntr)
+      block:
+        - name: Installing apache2 on Debian(Ubuntu)
+          apt: name=apache2 state=present
+          register: result
+
+        - name: Start apache2
+          service: name=apache2 state=started
+          register: resultStartingApache2
+          when: result is succeeded
+```
+
+* What is  Nested groups in inventory
+```
+```
+
+## Information
+* Nearly all parameters can be overridden in ansible-playbook or with command line flags.
+
+* To list all options of ansible
+ansible-config list
+
+* Group names in inventory should not include dashes, but underscore is fine
+
+* Avoid confusion, do not give a group the same name as host
+
