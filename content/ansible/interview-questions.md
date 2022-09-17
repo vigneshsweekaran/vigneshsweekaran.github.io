@@ -115,7 +115,7 @@ Yes its enabled by default. We can disable by setting gatherings_afcts: false in
 
 ### How you can check which ansible conf file used ?
 ```
-By running ansible --version will show the ansible version and also the configuration file location which is used
+By running "ansible --version" will show the ansible version and also the configuration file location which is used
 ```
 
 ### What are the default host group in inventory
@@ -188,17 +188,109 @@ If we want the next task to be executed only if the last task is success, then c
           when: result is succeeded
 ```
 
-* What is  Nested groups in inventory
+### How to define  Nested groups in inventory ?
 ```
+[mumbai]
+example1.com
+example2.com
+
+[delhi]
+example3.com
+example4.com
+
+[india:children]
+mumbai
+delhi
+```
+
+### How you use use ranges in ip-address in invemtory file ?
+```
+192.168.[4:7].[0:255]       -->  192.168.4.0 to 192.168.7.255
+server[01:20].example.com   -->  server01.example.com to server20.example.com
+[a:c].dns.example.com       --> a.dns.example.com to c.dns.example.com
+server[01:20].example.com   --> will match server01.example.com and not server1.example.com
+```
+
+### How to list the hosts from inventory file ?
+```
+ansible-inventory                 --> To list the hosts from configured inventory file
+ansible-inventory -i inventory    --> To list the hosts from custom inventory file
+```
+
+### How you can convert the inventory file from INI to YAML format ?
+```
+ansible-inventory -y --list
+```
+
+### How you can encrypt a files in ansible ?
+
+### Structure of roles ?
+```
+roles/
+    common/               # this hierarchy represents a "role"
+        tasks/            #
+            main.yml      #  <-- tasks file can include smaller files if warranted
+        handlers/         #
+            main.yml      #  <-- handlers file
+        templates/        #  <-- files for use with the template resource
+            ntp.conf.j2   #  <------- templates end in .j2
+        files/            #
+            bar.txt       #  <-- files for use with the copy resource
+            foo.sh        #  <-- script files for use with the script resource
+        vars/             #
+            main.yml      #  <-- variables associated with this role
+        defaults/         #
+            main.yml      #  <-- default lower priority variables for this role
+        meta/             #
+            main.yml      #  <-- role dependencies
+        library/          # roles can also include custom modules
+        module_utils/     # roles can also include custom module_utils
+        lookup_plugins/   # or other types of plugins, like lookup in this case
+
+    webtier/              # same kind of structure as "common" was above, done for the webtier role
+    monitoring/           # ""
+    fooapp/               # ""
+```
+
+### How you can call the role from ansible playbook ?
+```
+---
+- hosts: webservers
+  roles:
+    - common
+    - webservers
+```
+
+### How you can pass varibales to roles from playbook ?
+```
+---
+- hosts: webservers
+  roles:
+    - common
+    - role: foo_app_instance
+      vars:
+        dir: '/opt/a'
+        app_port: 5000
+      tags: typeA
+    - role: foo_app_instance
+      vars:
+        dir: '/opt/b'
+        app_port: 5001
+      tags: typeB
 ```
 
 ## Information
 * Nearly all parameters can be overridden in ansible-playbook or with command line flags.
 
 * To list all options of ansible
+```
 ansible-config list
+```
 
 * Group names in inventory should not include dashes, but underscore is fine
 
 * Avoid confusion, do not give a group the same name as host
+
+* Inventory files are also supported in yaml format. INI and YAML
+
 
