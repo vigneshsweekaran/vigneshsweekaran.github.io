@@ -67,6 +67,11 @@ ansible.cfg (in the current directory)
 Ansible will process the above list and use the first file found, all others are ignored.
 ```
 
+### What is the default ssh authentication type in ansible ?
+```
+SSH using private key
+```
+
 ### How to run only specific tasks on ansible playbook ?
 ```
 Using ansible tags feature we can run only specific tasks
