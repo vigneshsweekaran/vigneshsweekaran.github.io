@@ -72,6 +72,16 @@ Ansible will process the above list and use the first file found, all others are
 SSH using private key
 ```
 
+### What is the use of host_vars directory ?
+```
+Used for keeping different values for each host.
+For each host one dedicated file needs to be created with the host name in host_vars directory
+
+host_vars\
+    db01
+    db02
+```
+
 ### How to run only specific tasks on ansible playbook ?
 ```
 Using ansible tags feature we can run only specific tasks
@@ -289,6 +299,16 @@ roles/
 ansible example.com --list-hosts
 
 If with have same name for both host and group, it will print the host and ignore the group and it will show the warning
+```
+
+### In inventory file you have 10 hosts, but you want to execute the module on only one hostm how to do it ?
+```
+ansible all --limit server1.example.com -m ping
+```
+
+### How you can check, what are the ansible configuration, you have overritten ?
+```
+ansible-config dum --only-changed
 ```
 
 ## Information
