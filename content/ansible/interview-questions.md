@@ -311,6 +311,18 @@ ansible all --limit server1.example.com -m ping
 ansible-config dum --only-changed
 ```
 
+### How you can list all modules avialable in Ansible ?
+```
+ansible-doc -l
+```
+
+### How you can get more details of the module using ansible cli ?
+```
+To know more details about ping module
+
+ansible-doc ping
+```
+
 ## Information
 * Nearly all parameters can be overridden in ansible-playbook or with command line flags.
 
@@ -324,5 +336,7 @@ ansible-config list
 * Avoid confusion, do not give a group the same name as host
 
 * Inventory files are also supported in yaml format. INI and YAML
+
+* Most modules are idempotent, which means they only make changes if a change is needed. Idempotent modules can be run safely multiple times.
 
 
