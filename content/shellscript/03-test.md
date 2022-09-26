@@ -1,5 +1,6 @@
 test - check file types and compare values
 
+```
 ( EXPRESSION )
  	EXPRESSION is true
 ! EXPRESSION
@@ -54,5 +55,8 @@ FILE1 -ot FILE2
 -u FILE	FILE exists and its set-user-ID bit is set
 -w FILE	FILE exists and write permission is granted
 -x FILE	FILE exists and execute (or search) permission is granted
+```
+
 Except for -h and -L, all FILE-related tests dereference symbolic links. Beware that parentheses need to be escaped (e.g., by backslashes) for shells. INTEGER may also be -l STRING, which evaluates to the length of STRING.
-NOTE: your shell may have its own version of test and/or [, which usually supersedes the version described here. Please refer to your shell’s documentation for details about the options it supports.
+
+**NOTE:** your shell may have its own version of test and/or [, which usually supersedes the version described here. Please refer to your shell’s documentation for details about the options it supports.
