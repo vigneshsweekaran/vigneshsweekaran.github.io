@@ -23,9 +23,6 @@ nav-list:
   - title: AWS
     url: https://vigneshsweekaran.github.io/nav/aws.html
 
-  - title: Shell-Script
-    url: https://vigneshsweekaran.github.io/nav/shell-script.html
-
   - title: Linux
     url: https://vigneshsweekaran.github.io/nav/linux.html
 
@@ -57,3 +54,9 @@ cicd-nav-list:
     url: https://vigneshsweekaran.github.io/nav/gitlab-cicd.html
   - title: Azure Devops
     url: https://vigneshsweekaran.github.io/nav/azure-devops.html
+
+scripting-nav-list:
+  - title: Shell-Script
+    url: https://vigneshsweekaran.github.io/nav/shell-script.html
+  - title: Python
+    url: https://vigneshsweekaran.github.io/nav/python.html
