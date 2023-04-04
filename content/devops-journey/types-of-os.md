@@ -1,14 +1,15 @@
 ## Types of operating system
 
 ### Windows
+##### OS variants
 * Windows xp (old), Windows 8, 10, 11
 
-### Features
+##### Features
 * GUI and terminal(cmd , powershell)
 * Scripting - batch, powershell 
 
 ### Linux
-#### OS variants
+##### OS variants
 * Ubuntu 14, 16, 18, 20, 22 (Free)
 * Centos 7, 8 (Free)
 * Redhat Linux (Enterprise)
@@ -16,7 +17,7 @@
 * Amazon linux
 * Oracle linux
 
-#### Features
+##### Features
 * GUI (Graphical User Interface) and Terminal (CLI - Command line interface)
 * Scripting - Shell scripting
 
