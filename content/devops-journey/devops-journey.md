@@ -3,14 +3,15 @@
 ## Devops Prerequisite course:
 * [Devops prerequisite course video](https://www.youtube.com/watch?v=Wvf0mBNGjXY) This course has a handson lab also register for it and do the handson for free.
 
+## Windows vs Linux
+* [Windows vs Linux basics](/content/devops-journey/types-of-os)
+* [Basic windows and linux commands](/content/devops-journey/windows-linux-commands)
+
 ## Linux basics
 * [How to install virtualbox and create ubuntu virtual machine](/content/linux/virtualbox)
 * [Linux basic commands](https://hackr.io/blog/basic-linux-commands)
 * [ssh in Linux](https://linuxize.com/post/ssh-command-in-linux/)
 * [Linux commands beginners course in youtube by Sandip Das](https://www.youtube.com/watch?v=-7SokSJb9GY&list=PL7kXAf0BmEqtjvIZQOdXY6ZmcvAEYc4yh&index=7)
-
-##### Free Linux machine labs
-* [Ubuntu machine Lab](https://www.katacoda.com/courses/ubuntu/playground)
 
 ## Shell script
 * [Shell script examples](https://github.com/vigneshsweekaran/shellscript)
