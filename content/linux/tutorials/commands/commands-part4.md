@@ -26,6 +26,7 @@ userdel sammy
 userdel -r sammy
 
 ### File permissions
+```
 -------
 drwxrwxrwx
 
@@ -40,8 +41,10 @@ x - executable
 -      ---    ---    ---
 -/d/l  rwx    rwx    rwx
        user   group  others
+```
 
 ### chmod
+```
 r - 4
 w - 2
 x - 1
@@ -49,6 +52,9 @@ x - 1
 chmod 700 file_name
 
 chmod 777 file_name
+```
 
 ### chown
-chmod 
+```
+chmod test opc folder_name/file_name
+```
