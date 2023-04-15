@@ -1,4 +1,4 @@
-# Linux commands part-5
+# Linux commands part-6
 
 ### Shell varibales
 Shell variables means only accessible within the shell script
