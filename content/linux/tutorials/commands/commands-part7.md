@@ -503,8 +503,136 @@ drwxr-xr-x. 18 opc opc 4096 Mar 15 09:39 apache-maven-3.9.1
 ```
 
 ### How to create a zip file
-```
+zip -r ZIP_FILE_NAME.zip folder_name
 
+or
+
+zip ZIP_FILE_NAME.zip file1.ttx file2.txt
+
+-q --> Silent mode
+
+```
+[opc@new-k8s zip-file]$ pwd
+/home/opc/zip-file
+[opc@new-k8s zip-file]$ ll
+total 0
+drwxr-xr-x. 6 opc opc 99 Mar 15 09:39 apache-maven-3.9.1
+[opc@new-k8s zip-file]$ ll apache-maven-3.9.1/
+total 36
+drwxr-xr-x. 2 opc opc    97 Mar 15 09:39 bin
+drwxr-xr-x. 2 opc opc    76 Mar 15 09:39 boot
+drwxr-xr-x. 3 opc opc    63 Mar 15 09:39 conf
+drwxr-xr-x. 4 opc opc  4096 Mar 15 09:39 lib
+-rw-r--r--. 1 opc opc 18644 Mar 15 09:39 LICENSE
+-rw-r--r--. 1 opc opc  5036 Mar 15 09:39 NOTICE
+-rw-r--r--. 1 opc opc  2533 Mar 15 09:39 README.txt
+[opc@new-k8s zip-file]$ zip -r newapache-maven.zip apache-maven-3.9.1
+  adding: apache-maven-3.9.1/ (stored 0%)
+  adding: apache-maven-3.9.1/lib/ (stored 0%)
+  adding: apache-maven-3.9.1/lib/jansi-native/ (stored 0%)
+  adding: apache-maven-3.9.1/lib/jansi-native/Windows/ (stored 0%)
+  adding: apache-maven-3.9.1/lib/jansi-native/Windows/x86/ (stored 0%)
+  adding: apache-maven-3.9.1/lib/jansi-native/Windows/x86/jansi.dll (deflated 69%)
+  adding: apache-maven-3.9.1/lib/jansi-native/Windows/x86_64/ (stored 0%)
+  adding: apache-maven-3.9.1/lib/jansi-native/Windows/x86_64/jansi.dll (deflated 70%)
+  adding: apache-maven-3.9.1/lib/jansi-native/README.txt (deflated 40%)
+  adding: apache-maven-3.9.1/lib/ext/ (stored 0%)
+  adding: apache-maven-3.9.1/lib/ext/hazelcast/ (stored 0%)
+  adding: apache-maven-3.9.1/lib/ext/hazelcast/README.txt (deflated 35%)
+  adding: apache-maven-3.9.1/lib/ext/redisson/ (stored 0%)
+  adding: apache-maven-3.9.1/lib/ext/redisson/README.txt (deflated 34%)
+  adding: apache-maven-3.9.1/lib/ext/README.txt (deflated 26%)
+  adding: apache-maven-3.9.1/lib/aopalliance.license (stored 0%)
+  adding: apache-maven-3.9.1/lib/commons-cli.license (deflated 65%)
+  adding: apache-maven-3.9.1/lib/commons-codec.license (deflated 65%)
+  adding: apache-maven-3.9.1/lib/commons-lang3.license (deflated 65%)
+  adding: apache-maven-3.9.1/lib/failureaccess.license (deflated 65%)
+  adding: apache-maven-3.9.1/lib/guava.license (deflated 65%)
+  adding: apache-maven-3.9.1/lib/guice.license (deflated 65%)
+  adding: apache-maven-3.9.1/lib/httpclient.license (deflated 65%)
+  adding: apache-maven-3.9.1/lib/httpcore.license (deflated 65%)
+  adding: apache-maven-3.9.1/lib/jansi.license (deflated 65%)
+  adding: apache-maven-3.9.1/lib/javax.annotation-api.license (deflated 67%)
+  adding: apache-maven-3.9.1/lib/javax.inject.license (deflated 65%)
+  adding: apache-maven-3.9.1/lib/jcl-over-slf4j.license (deflated 65%)
+  adding: apache-maven-3.9.1/lib/org.eclipse.sisu.inject.license (deflated 63%)
+  adding: apache-maven-3.9.1/lib/org.eclipse.sisu.plexus.license (deflated 63%)
+  adding: apache-maven-3.9.1/lib/plexus-cipher.license (deflated 65%)
+  adding: apache-maven-3.9.1/lib/plexus-component-annotations.license (deflated 65%)
+  adding: apache-maven-3.9.1/lib/plexus-interpolation.license (deflated 65%)
+  adding: apache-maven-3.9.1/lib/plexus-sec-dispatcher.license (deflated 65%)
+  adding: apache-maven-3.9.1/lib/plexus-utils.license (deflated 65%)
+  adding: apache-maven-3.9.1/lib/slf4j-api.license (deflated 42%)
+  adding: apache-maven-3.9.1/lib/maven-embedder-3.9.1.jar (deflated 10%)
+  adding: apache-maven-3.9.1/lib/maven-settings-3.9.1.jar (deflated 8%)
+  adding: apache-maven-3.9.1/lib/maven-settings-builder-3.9.1.jar (deflated 17%)
+  adding: apache-maven-3.9.1/lib/maven-plugin-api-3.9.1.jar (deflated 12%)
+  adding: apache-maven-3.9.1/lib/maven-model-3.9.1.jar (deflated 5%)
+  adding: apache-maven-3.9.1/lib/maven-model-builder-3.9.1.jar (deflated 12%)
+  adding: apache-maven-3.9.1/lib/maven-builder-support-3.9.1.jar (deflated 18%)
+  adding: apache-maven-3.9.1/lib/maven-resolver-api-1.9.7.jar (deflated 14%)
+  adding: apache-maven-3.9.1/lib/maven-resolver-util-1.9.7.jar (deflated 11%)
+  adding: apache-maven-3.9.1/lib/maven-shared-utils-3.3.4.jar (deflated 9%)
+  adding: apache-maven-3.9.1/lib/guice-5.1.0.jar (deflated 9%)
+  adding: apache-maven-3.9.1/lib/aopalliance-1.0.jar (deflated 41%)
+  adding: apache-maven-3.9.1/lib/guava-30.1-jre.jar (deflated 11%)
+  adding: apache-maven-3.9.1/lib/failureaccess-1.0.1.jar (deflated 40%)
+  adding: apache-maven-3.9.1/lib/javax.inject-1.jar (deflated 28%)
+  adding: apache-maven-3.9.1/lib/javax.annotation-api-1.3.2.jar (deflated 12%)
+  adding: apache-maven-3.9.1/lib/plexus-utils-3.5.1.jar (deflated 7%)
+  adding: apache-maven-3.9.1/lib/plexus-sec-dispatcher-2.0.jar (deflated 18%)
+  adding: apache-maven-3.9.1/lib/plexus-cipher-2.0.jar (deflated 16%)
+  adding: apache-maven-3.9.1/lib/plexus-interpolation-1.26.jar (deflated 15%)
+  adding: apache-maven-3.9.1/lib/slf4j-api-1.7.36.jar (deflated 12%)
+  adding: apache-maven-3.9.1/lib/commons-lang3-3.8.1.jar (deflated 8%)
+  adding: apache-maven-3.9.1/lib/maven-core-3.9.1.jar (deflated 10%)
+  adding: apache-maven-3.9.1/lib/maven-repository-metadata-3.9.1.jar (deflated 12%)
+  adding: apache-maven-3.9.1/lib/maven-artifact-3.9.1.jar (deflated 13%)
+  adding: apache-maven-3.9.1/lib/maven-resolver-provider-3.9.1.jar (deflated 9%)
+  adding: apache-maven-3.9.1/lib/maven-resolver-impl-1.9.7.jar (deflated 10%)
+  adding: apache-maven-3.9.1/lib/maven-resolver-named-locks-1.9.7.jar (deflated 15%)
+  adding: apache-maven-3.9.1/lib/maven-resolver-spi-1.9.7.jar (deflated 23%)
+  adding: apache-maven-3.9.1/lib/org.eclipse.sisu.inject-0.3.5.jar (deflated 9%)
+  adding: apache-maven-3.9.1/lib/plexus-component-annotations-2.1.0.jar (deflated 43%)
+  adding: apache-maven-3.9.1/lib/maven-compat-3.9.1.jar (deflated 10%)
+  adding: apache-maven-3.9.1/lib/wagon-provider-api-3.5.3.jar (deflated 13%)
+  adding: apache-maven-3.9.1/lib/org.eclipse.sisu.plexus-0.3.5.jar (deflated 14%)
+  adding: apache-maven-3.9.1/lib/commons-cli-1.4.jar (deflated 8%)
+  adding: apache-maven-3.9.1/lib/wagon-http-3.5.3.jar (deflated 19%)
+  adding: apache-maven-3.9.1/lib/wagon-http-shared-3.5.3.jar (deflated 8%)
+  adding: apache-maven-3.9.1/lib/httpclient-4.5.14.jar (deflated 9%)
+  adding: apache-maven-3.9.1/lib/commons-codec-1.11.jar (deflated 16%)
+  adding: apache-maven-3.9.1/lib/wagon-file-3.5.3.jar (deflated 16%)
+  adding: apache-maven-3.9.1/lib/jcl-over-slf4j-1.7.36.jar (deflated 15%)
+  adding: apache-maven-3.9.1/lib/maven-resolver-connector-basic-1.9.7.jar (deflated 10%)
+  adding: apache-maven-3.9.1/lib/maven-resolver-transport-file-1.9.7.jar (deflated 15%)
+  adding: apache-maven-3.9.1/lib/maven-resolver-transport-http-1.9.7.jar (deflated 9%)
+  adding: apache-maven-3.9.1/lib/httpcore-4.4.15.jar (deflated 10%)
+  adding: apache-maven-3.9.1/lib/maven-resolver-transport-wagon-1.9.7.jar (deflated 15%)
+  adding: apache-maven-3.9.1/lib/maven-slf4j-provider-3.9.1.jar (deflated 11%)
+  adding: apache-maven-3.9.1/lib/jansi-2.4.0.jar (deflated 6%)
+  adding: apache-maven-3.9.1/boot/ (stored 0%)
+  adding: apache-maven-3.9.1/boot/plexus-classworlds.license (deflated 65%)
+  adding: apache-maven-3.9.1/boot/plexus-classworlds-2.6.0.jar (deflated 14%)
+  adding: apache-maven-3.9.1/bin/ (stored 0%)
+  adding: apache-maven-3.9.1/bin/m2.conf (deflated 52%)
+  adding: apache-maven-3.9.1/bin/mvn.cmd (deflated 64%)
+  adding: apache-maven-3.9.1/bin/mvnDebug.cmd (deflated 55%)
+  adding: apache-maven-3.9.1/bin/mvn (deflated 62%)
+  adding: apache-maven-3.9.1/bin/mvnDebug (deflated 51%)
+  adding: apache-maven-3.9.1/bin/mvnyjp (deflated 48%)
+  adding: apache-maven-3.9.1/conf/ (stored 0%)
+  adding: apache-maven-3.9.1/conf/logging/ (stored 0%)
+  adding: apache-maven-3.9.1/conf/logging/simplelogger.properties (deflated 52%)
+  adding: apache-maven-3.9.1/conf/settings.xml (deflated 63%)
+  adding: apache-maven-3.9.1/conf/toolchains.xml (deflated 60%)
+  adding: apache-maven-3.9.1/README.txt (deflated 57%)
+  adding: apache-maven-3.9.1/LICENSE (deflated 72%)
+  adding: apache-maven-3.9.1/NOTICE (deflated 58%)
+[opc@new-k8s zip-file]$ ll
+total 8924
+drwxr-xr-x. 6 opc opc      99 Mar 15 09:39 apache-maven-3.9.1
+-rw-rw-r--. 1 opc opc 9137892 Apr 17 14:39 newapache-maven.zip
 ```
 
 ### Sample JSON file
