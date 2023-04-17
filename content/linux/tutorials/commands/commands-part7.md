@@ -83,7 +83,7 @@ total 8932
 ```
 
 ### wget command without showing the progress bar
--q or --quiet --> quit mode, will not show any logs or progress bar
+**-q or --quiet** --> quit mode, will not show any logs or progress bar
 
 ```
 [opc@new-k8s wget-examples]$ wget -q https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.tar.gz
