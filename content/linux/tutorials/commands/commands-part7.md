@@ -1,8 +1,10 @@
 # Linux commands part-7
 
 ### Redirection
+```
 >  content override the file content, If file is already having the content
 >> Will append the content to the existing content in the file
+```
 
 In Both case, if the file is not present it will create a file and write the content to the file
 
