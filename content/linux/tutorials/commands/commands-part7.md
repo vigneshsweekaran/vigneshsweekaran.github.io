@@ -1,5 +1,14 @@
 # Linux commands part-7
 
+### Types of shell
+* sh
+* bash (Bourne Again Shell)
+* zsh
+* ksh (Korn Shell)
+* csh
+
+Reference: https://www.shiksha.com/online-courses/articles/introduction-to-types-of-shell/
+
 ### Redirection
 ```
 >  content override the file content, If file is already having the content
