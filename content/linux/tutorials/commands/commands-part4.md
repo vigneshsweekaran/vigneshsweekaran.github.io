@@ -1,5 +1,9 @@
 # Linux commands part-4
 
+### Youtube
+
+[![Tamil Linux commands part-4](/content/linux/tutorials/images/linux-basics.png)](https://www.youtube.com/watch?v=iY_J5MxQu5Y)
+
 ### sudo - getting root permissions
 ```
 ll /etc/passwd

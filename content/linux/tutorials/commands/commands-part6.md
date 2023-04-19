@@ -1,5 +1,9 @@
 # Linux commands part-6
 
+### Youtube
+
+[![Tamil Linux commands part-6](/content/linux/tutorials/images/linux-basics.png)](https://www.youtube.com/watch?v=P8ZqzNwTl9I)
+
 ### Shell varibales
 Shell variables means only accessible within the shell script
 

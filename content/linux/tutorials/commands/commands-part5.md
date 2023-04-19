@@ -1,5 +1,9 @@
 # Linux commands part-5
 
+### Youtube
+
+[![Tamil Linux commands part-5](/content/linux/tutorials/images/linux-basics.png)](https://www.youtube.com/watch?v=0FL51bq-Keo)
+
 ### head
 Prints first 10 lines of a file
 
