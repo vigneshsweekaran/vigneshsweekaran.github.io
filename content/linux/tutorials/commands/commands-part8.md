@@ -402,138 +402,48 @@ vignesh
 ### sed
 sed command can be used to replace the word
 
-sed command will replace the first match and prints the changed content to screen
+By default, the sed command replaces the first occurrence of the pattern in each line and it won’t replace the second, third…occurrence in the line.
+
+It prints the changed content to screen by default
 
 ```
-[opc@new-k8s ~]$ cat states.txt
-Andhra Pradesh
-Arunachal Pradesh
-Assam
-Bihar
-Chhattisgarh
-Goa
-Gujarat
-Haryana
-Himachal Pradesh
-Jharkhand
-Karnataka
-Kerala
-Kerala
-Maharashtra
-Madhya Pradesh
-Manipur
-Meghalaya
-Mizoram
-Nagaland
-Odisha
-Punjab
-Rajasthan
-Sikkim
-Tamil Nadu
-Tripura
-Telangana
-Uttar Pradesh
-Uttarakhand
-West Bengal
-[opc@new-k8s ~]$ sed 's/Kerala/I love Kerala/' states.txt
-Andhra Pradesh
-Arunachal Pradesh
-Assam
-Bihar
-Chhattisgarh
-Goa
-Gujarat
-Haryana
-Himachal Pradesh
-Jharkhand
-Karnataka
-I love Kerala
-Kerala
-Maharashtra
-Madhya Pradesh
-Manipur
-Meghalaya
-Mizoram
-Nagaland
-Odisha
-Punjab
-Rajasthan
-Sikkim
-Tamil Nadu
-Tripura
-Telangana
-Uttar Pradesh
-Uttarakhand
-West Bengal
+[opc@new-k8s ~]$ cat hello.txt
+hello world
+hello world world my world
+[opc@new-k8s ~]$ sed "s/world/devops/" hello.txt
+hello devops
+hello devops world my world
 ```
 
-### sed - Change all the matches
+### sed - Change all the matches in a line
+g --> replace all matches in a line
 
 ```
-[opc@new-k8s ~]$ cat states.txt
-Andhra Pradesh
-Arunachal Pradesh
-Assam
-Bihar
-Chhattisgarh
-Goa
-Gujarat
-Haryana
-Himachal Pradesh
-Jharkhand
-Karnataka
-Kerala
-Kerala
-Maharashtra
-Madhya Pradesh
-Manipur
-Meghalaya
-Mizoram
-Nagaland
-Odisha
-Punjab
-Rajasthan
-Sikkim
-Tamil Nadu
-Tripura
-Telangana
-Uttar Pradesh
-Uttarakhand
-West Bengal
-[opc@new-k8s ~]$ sed 's/Kerala/I love Kerala/g' states.txt
-Andhra Pradesh
-Arunachal Pradesh
-Assam
-Bihar
-Chhattisgarh
-Goa
-Gujarat
-Haryana
-Himachal Pradesh
-Jharkhand
-Karnataka
-I love Kerala
-I love Kerala
-Maharashtra
-Madhya Pradesh
-Manipur
-Meghalaya
-Mizoram
-Nagaland
-Odisha
-Punjab
-Rajasthan
-Sikkim
-Tamil Nadu
-Tripura
-Telangana
-Uttar Pradesh
-Uttarakhand
-West Bengal
+[opc@new-k8s ~]$ cat hello.txt
+hello world
+hello world world my world
+[opc@new-k8s ~]$ sed "s/world/devops/g" hello.txt
+hello devops
+hello devops devops my devops
 ```
 
 ### sed - save the change in original file
 -i --> argument can be used to save the chnage to actual file
 
+```
+[opc@new-k8s ~]$ cat hello.txt
+hello world
+hello world world my world
+[opc@new-k8s ~]$ sed "s/world/devops/g" hello.txt
+hello devops
+hello devops devops my devops
+[opc@new-k8s ~]$ cat hello.txt
+hello world
+hello world world my world
+[opc@new-k8s ~]$ sed -i "s/world/devops/g" hello.txt
+[opc@new-k8s ~]$ cat hello.txt
+hello devops
+hello devops devops my devops
+```
 
 
