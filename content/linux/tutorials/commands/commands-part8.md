@@ -181,6 +181,130 @@ https://api.github.com/repos/vigneshsweekaran/hello-world/releases/43010389
 ```
 
 ### How to check the status code of last executed command
+$? is a special variable, which will hold the status code of last command executed
+
 In Linux, 0 means success, any other value is failure
+
+```
+[opc@new-k8s ~]$ ll
+total 3072008
+-rw-rw-r--. 1 opc  opc         852 Apr 15 03:15 fruits.txt
+-rwxrwxr-x. 1 opc  opc          81 Apr 15 13:27 newtest
+drwxrwxr-x. 2 opc  opc          25 Nov 26  2021 prometheus
+-rw-r--r--. 1 root root 3145728000 Jan 11  2022 swapfile
+drwxrwxr-x. 4 opc  opc         100 Apr 15 13:04 test
+[opc@new-k8s ~]$ echo $?
+0
+[opc@new-k8s ~]$ ddhghg
+-bash: ddhghg: command not found
+[opc@new-k8s ~]$ echo $?
+127
+```
+
+### grep
+grep command is used to serach for a word and print those lines
+
+```
+[opc@new-k8s ~]$ cat /etc/passwd | grep bash
+root:x:0:0:root:/root:/bin/bash
+opc:x:1000:1000:Oracle Public Cloud User:/home/opc:/bin/bash
+vignesh:x:1001:1001::/home/vignesh:/bin/bash
+```
+
+### grep command - ignoring the case
+-i --> Is used to ignore the case
+
+```
+[opc@new-k8s ~]$ cat /etc/passwd | grep BASH
+[opc@new-k8s ~]$ cat /etc/passwd | grep -i BASH
+root:x:0:0:root:/root:/bin/bash
+opc:x:1000:1000:Oracle Public Cloud User:/home/opc:/bin/bash
+vignesh:x:1001:1001::/home/vignesh:/bin/bash
+```
+
+### grep - find the match and print next n number of lines
+-An --> arugument used to print the next n number of lines
+
+```
+[opc@new-k8s ~]$ cat states.txt | grep -i tamil
+Tamil Nadu
+[opc@new-k8s ~]$ cat states.txt | grep -i -A5 tamil
+Tamil Nadu
+Tripura
+Telangana
+Uttar Pradesh
+Uttarakhand
+West Bengal
+```
+
+### grep - find the match and print n number of lines before the match
+-Bn --> arugument used to print the next n number of lines
+
+```
+[opc@new-k8s ~]$ cat states.txt | grep -i tamil
+Tamil Nadu
+[opc@new-k8s ~]$ cat states.txt | grep -i -B5 tamil
+Nagaland
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+```
+
+### awk
+awk command is used to print the specific columns from the output.
+
+It has lot of features to operate on the outputs
+
+```
+[opc@new-k8s ~]$ ll
+total 3072024
+-rw-rw-r--. 1 opc  opc         852 Apr 15 03:15 fruits.txt
+-rw-rw-r--. 1 opc  opc        9943 Apr 19 11:16 india.txt
+-rwxrwxr-x. 1 opc  opc          81 Apr 15 13:27 newtest
+drwxrwxr-x. 2 opc  opc          25 Nov 26  2021 prometheus
+-rw-rw-r--. 1 opc  opc         282 Apr 19 11:22 states.txt
+-rw-r--r--. 1 root root 3145728000 Jan 11  2022 swapfile
+drwxrwxr-x. 4 opc  opc         100 Apr 15 13:04 test
+[opc@new-k8s ~]$ ll | awk '{print $9}'
+
+fruits.txt
+india.txt
+newtest
+prometheus
+states.txt
+swapfile
+test
+```
+
+### awk - customising the output
+
+```
+[opc@new-k8s ~]$ ll
+total 3072024
+-rw-rw-r--. 1 opc  opc         852 Apr 15 03:15 fruits.txt
+-rw-rw-r--. 1 opc  opc        9943 Apr 19 11:16 india.txt
+-rwxrwxr-x. 1 opc  opc          81 Apr 15 13:27 newtest
+drwxrwxr-x. 2 opc  opc          25 Nov 26  2021 prometheus
+-rw-rw-r--. 1 opc  opc         282 Apr 19 11:22 states.txt
+-rw-r--r--. 1 root root 3145728000 Jan 11  2022 swapfile
+drwxrwxr-x. 4 opc  opc         100 Apr 15 13:04 test
+[opc@new-k8s ~]$ ll | awk '{print $1 "\t" $9}'
+total
+-rw-rw-r--.     fruits.txt
+-rw-rw-r--.     india.txt
+-rwxrwxr-x.     newtest
+drwxrwxr-x.     prometheus
+-rw-rw-r--.     states.txt
+-rw-r--r--.     swapfile
+drwxrwxr-x.     test
+```
+
+### cut
+cut command can be used to print the specific column
+
+
+
 
 
