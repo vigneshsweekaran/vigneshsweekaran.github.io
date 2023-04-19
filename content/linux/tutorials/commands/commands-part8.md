@@ -1,6 +1,6 @@
 # Linux commands part-8
 
-### Youtube : Tamil Linux commands part-8
+### Youtube
 
 [![Tamil Linux commands part-8](/content/linux/tutorials/images/linux-basics.png)](https://www.youtube.com/watch?v=6GOQP9tSyCw)
 

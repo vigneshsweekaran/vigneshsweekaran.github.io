@@ -1,6 +1,6 @@
 # Linux commands part-7
 
-### Youtube : Tamil Linux commands part-7
+### Youtube
 
 [![Tamil Linux commands part-7](/content/linux/tutorials/images/linux-basics.png)](https://www.youtube.com/watch?v=x2HuhEYWEsc)
 
