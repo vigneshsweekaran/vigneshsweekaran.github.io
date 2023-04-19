@@ -303,8 +303,237 @@ drwxrwxr-x.     test
 
 ### cut
 cut command can be used to print the specific column
+-d --> delimiter
+-f --> field number
 
+```
+[opc@new-k8s ~]$ ll
+total 3072024
+-rw-rw-r--. 1 opc  opc         852 Apr 15 03:15 fruits.txt
+-rw-rw-r--. 1 opc  opc        9943 Apr 19 11:16 india.txt
+-rwxrwxr-x. 1 opc  opc          81 Apr 15 13:27 newtest
+drwxrwxr-x. 2 opc  opc          25 Nov 26  2021 prometheus
+-rw-rw-r--. 1 opc  opc         282 Apr 19 11:22 states.txt
+-rw-r--r--. 1 root root 3145728000 Jan 11  2022 swapfile
+drwxrwxr-x. 4 opc  opc         100 Apr 15 13:04 test
+[opc@new-k8s ~]$ ll | cut -d " " -f 1
+total
+-rw-rw-r--.
+-rw-rw-r--.
+-rwxrwxr-x.
+drwxrwxr-x.
+-rw-rw-r--.
+-rw-r--r--.
+drwxrwxr-x.
+```
 
+### cut command with different delimiter
+cat /etc/passwd | cut -d ":" -f 1
+
+```
+[opc@new-k8s ~]$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+polkitd:x:999:998:User for polkitd:/:/sbin/nologin
+libstoragemgmt:x:998:997:daemon account for libstoragemgmt:/var/run/lsm:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/sbin/nologin
+abrt:x:173:173::/etc/abrt:/sbin/nologin
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+chrony:x:997:994::/var/lib/chrony:/sbin/nologin
+ntp:x:38:38::/etc/ntp:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+oracle-cloud-agent:x:996:993:Oracle Cloud Agent Service User:/var/lib/oracle-cloud-agent:/usr/sbin/nologin
+oracle-cloud-agent-updater:x:995:993:Oracle Cloud Agent Updater Service User:/var/lib/oracle-cloud-agent:/usr/sbin/nologin
+ocarun:x:994:993:Oracle Cloud Agent Runcommand Service User:/var/lib/ocarun:/usr/sbin/nologin
+opc:x:1000:1000:Oracle Public Cloud User:/home/opc:/bin/bash
+jenkins:x:993:991:Jenkins Automation Server:/var/lib/jenkins:/bin/false
+vignesh:x:1001:1001::/home/vignesh:/bin/bash
+[opc@new-k8s ~]$ cat /etc/passwd | cut -d ":" -f 1
+root
+bin
+daemon
+adm
+lp
+sync
+shutdown
+halt
+mail
+operator
+games
+ftp
+nobody
+systemd-network
+dbus
+polkitd
+libstoragemgmt
+rpc
+abrt
+rpcuser
+nfsnobody
+sshd
+postfix
+chrony
+ntp
+tcpdump
+oracle-cloud-agent
+oracle-cloud-agent-updater
+ocarun
+opc
+jenkins
+vignesh
+```
+
+### sed
+sed command can be used to replace the word
+
+sed command will replace the first match and prints the changed content to screen
+
+```
+[opc@new-k8s ~]$ cat states.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jharkhand
+Karnataka
+Kerala
+Kerala
+Maharashtra
+Madhya Pradesh
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Tripura
+Telangana
+Uttar Pradesh
+Uttarakhand
+West Bengal
+[opc@new-k8s ~]$ sed 's/Kerala/I love Kerala/' states.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jharkhand
+Karnataka
+I love Kerala
+Kerala
+Maharashtra
+Madhya Pradesh
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Tripura
+Telangana
+Uttar Pradesh
+Uttarakhand
+West Bengal
+```
+
+### sed - Change all the matches
+
+```
+[opc@new-k8s ~]$ cat states.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jharkhand
+Karnataka
+Kerala
+Kerala
+Maharashtra
+Madhya Pradesh
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Tripura
+Telangana
+Uttar Pradesh
+Uttarakhand
+West Bengal
+[opc@new-k8s ~]$ sed 's/Kerala/I love Kerala/g' states.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jharkhand
+Karnataka
+I love Kerala
+I love Kerala
+Maharashtra
+Madhya Pradesh
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Tripura
+Telangana
+Uttar Pradesh
+Uttarakhand
+West Bengal
+```
+
+### sed - save the change in original file
+-i --> argument can be used to save the chnage to actual file
 
 
 
