@@ -1,5 +1,9 @@
 # Linux commands part-8
 
+### Youtube : Tamil Linux commands part-8
+
+[![Tamil Linux commands part-8](/content/linux/tutorials/images/linux-basics.png)](https://www.youtube.com/watch?v=6GOQP9tSyCw)
+
 ### |
 Pipe is used to pass the output from one command/program to the input for another command
 
@@ -445,9 +449,3 @@ hello world world my world
 hello devops
 hello devops devops my devops
 ```
-
-### Youtube Video : Tamil Linux commands part-8
-
-[![Tamil Linux commands part-8](/content/linux/tutorials/images/linux-basics.png)](https://www.youtube.com/watch?v=6GOQP9tSyCw)
-
-
