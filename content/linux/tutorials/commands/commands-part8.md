@@ -446,4 +446,6 @@ hello devops
 hello devops devops my devops
 ```
 
+[![Tamil Linux commands part-8](/content/linux/tutorials/images/linux-basics.png)](https://www.youtube.com/watch?v=6GOQP9tSyCw)
+
 
