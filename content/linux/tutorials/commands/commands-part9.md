@@ -1,4 +1,4 @@
-# Linux commands part-8
+# Linux commands part-9
 
 ### find
 
@@ -137,3 +137,134 @@ drwxrwxr-x. 4 opc  opc          86 Apr 20 11:46 test
 [opc@new-k8s ~]$ locate -e hello.txt
 /home/opc/test/hello.txt
 ```
+
+### sort
+
+```
+[opc@new-k8s ~]$ cat states.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Gujarat
+Haryana
+Tamil Nadu
+Himachal Pradesh
+Jharkhand
+Karnataka
+Kerala
+Maharashtra
+Madhya Pradesh
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tripura
+Telangana
+Uttar Pradesh
+Uttarakhand
+West Bengal
+Goa
+```
+```
+[opc@new-k8s ~]$ cat states.txt | sort
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jharkhand
+Karnataka
+Kerala
+Madhya Pradesh
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttarakhand
+Uttar Pradesh
+West Bengal
+```
+
+### uniq
+```
+[opc@new-k8s ~]$ cat names.txt
+I love devops.
+I love devops.
+I love devops.
+
+I love music.
+I love movies.
+I love movies.
+[opc@new-k8s ~]$ cat names.txt | uniq
+I love devops.
+
+I love music.
+I love movies.
+[opc@new-k8s ~]$ cat names.txt | uniq -c
+      3 I love devops.
+      1
+      1 I love music.
+      2 I love movies.
+```
+
+Lines which are repeated only
+```
+[opc@new-k8s ~]$ uniq -d names.txt
+I love devops.
+I love movies.
+```
+
+Lines which are uniq
+```
+[opc@new-k8s ~]$ uniq -u names.txt
+
+I love music.
+```
+
+### systemctl
+
+systemctl start service_name
+
+systemctl stop service_name
+
+systemctl restart service_name
+
+systemctl status service_name
+
+systemctl enable service_name 
+
+systemctl disable service_name
+
+
+### service
+systemctl service_name start
+
+systemctl service_name stop
+
+systemctl service_name restart
+
+systemctl service_name status
+
+### journactl
+journalctl -u service_name
+
+### ps -ef
+

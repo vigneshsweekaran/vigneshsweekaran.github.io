@@ -18,6 +18,7 @@
 * [Linux commands part-6](/content/linux/tutorials/commands/commands-part6)
 * [Linux commands part-7](/content/linux/tutorials/commands/commands-part7)
 * [Linux commands part-8](/content/linux/tutorials/commands/commands-part8)
+* [Linux commands part-9](/content/linux/tutorials/commands/commands-part9)
 * [How to install virtualbox and create ubuntu virtual machine](/content/linux/virtualbox)
 * [Linux basic commands](https://hackr.io/blog/basic-linux-commands)
 * [ssh in Linux](https://linuxize.com/post/ssh-command-in-linux/)
