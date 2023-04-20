@@ -1,7 +1,10 @@
 # Linux commands part-9
 
-### find
+### Youtube
 
+[![Tamil Linux commands part-8](/content/linux/tutorials/images/linux-basics.png)](https://www.youtube.com/watch?v=yUyWqj9bYeQ)
+
+### find
 find command is used to find the files or directories
 
 ```
@@ -17,6 +20,8 @@ drwxrwxr-x. 2 opc  opc          25 Nov 26  2021 prometheus
 -rw-r--r--. 1 root root 3145728000 Jan 11  2022 swapfile
 drwxrwxr-x. 4 opc  opc         100 Apr 15 13:04 test
 -rw-rw-r--. 1 opc  opc          74 Apr 19 12:11 test.json
+```
+```
 [opc@new-k8s ~]$ pwd
 /home/opc
 ```
@@ -30,6 +35,8 @@ You can also find the files in diferrent folder
 ```
 [opc@new-k8s ~]$ pwd
 /home/opc
+```
+```
 [opc@new-k8s ~]$ ll /tmp
 total 8
 -rw-------. 1 root root 1097 Apr 20 08:40 dhclient-exit-hooksPuY.log
@@ -255,16 +262,17 @@ systemctl disable service_name
 
 
 ### service
-systemctl service_name start
+service service_name start
 
-systemctl service_name stop
+service service_name stop
 
-systemctl service_name restart
+service service_name restart
 
-systemctl service_name status
+service service_name status
 
 ### journactl
 journalctl -u service_name
 
 ### ps -ef
+ps -ef | grep -i sshd
 
