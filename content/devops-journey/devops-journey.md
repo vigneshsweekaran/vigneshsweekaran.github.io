@@ -5,7 +5,7 @@
 
 ## Windows vs Linux
 * [Windows vs Linux basics](/content/devops-journey/types-of-os)
-* [Basic windows and linux commands](/content/devops-journey/windows-linux-commands)
+<!-- * [Basic windows and linux commands](/content/devops-journey/windows-linux-commands) -->
 
 ## Linux basics
 * [Linux folder structure](https://www.thegeekstuff.com/2010/09/linux-file-system-structure/)
@@ -19,9 +19,8 @@
 * [Linux commands part-7](/content/linux/tutorials/commands/commands-part7)
 * [Linux commands part-8](/content/linux/tutorials/commands/commands-part8)
 * [Linux commands part-9](/content/linux/tutorials/commands/commands-part9)
+* [On Premise vs Cloud](/content/devops-journey/on-premise-cloud)
 * [How to install virtualbox and create ubuntu virtual machine](/content/linux/virtualbox)
-* [Linux basic commands](https://hackr.io/blog/basic-linux-commands)
-* [ssh in Linux](https://linuxize.com/post/ssh-command-in-linux/)
 * [Linux commands beginners course in youtube by Sandip Das](https://www.youtube.com/watch?v=-7SokSJb9GY&list=PL7kXAf0BmEqtjvIZQOdXY6ZmcvAEYc4yh&index=7)
 
 ## Shell script
