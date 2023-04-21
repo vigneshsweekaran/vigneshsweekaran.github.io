@@ -622,7 +622,9 @@ Apr 21 00:21:58 new-k8s systemd[1]: Started The Apache HTTP Server.
 ### ps -ef
 ps command is used o list all the running background process
 
+```
 ps -ef | grep -i sshd
+```
 
 Lets see only sshd process
 
