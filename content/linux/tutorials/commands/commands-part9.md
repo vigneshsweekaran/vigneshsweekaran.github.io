@@ -388,7 +388,7 @@ systemctl enable service_name
 ```
 [opc@new-k8s ~]$ sudo systemctl status httpd
 ● httpd.service - The Apache HTTP Server
-   Loaded: loaded (/usr/lib/systemd/system/httpd.service; **disabled;** vendor preset: disabled)
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
    Active: active (running) since Fri 2023-04-21 00:06:59 GMT; 1min 35s ago
      Docs: man:httpd(8)
            man:apachectl(8)
@@ -405,18 +405,75 @@ systemctl enable service_name
            ├─25417 /usr/sbin/httpd -DFOREGROUND
            └─25418 /usr/sbin/httpd -DFOREGROUND
 ```
-```
+
+Here its mentioned the service is disabled
 
 ```
+Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+``` 
+```
+[opc@new-k8s ~]$ sudo systemctl enable httpd
+Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
+```
+```
+[opc@new-k8s ~]$ sudo systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Fri 2023-04-21 00:06:59 GMT; 4min 54s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 25413 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─25413 /usr/sbin/httpd -DFOREGROUND
+           ├─25414 /usr/sbin/httpd -DFOREGROUND
+           ├─25415 /usr/sbin/httpd -DFOREGROUND
+           ├─25416 /usr/sbin/httpd -DFOREGROUND
+           ├─25417 /usr/sbin/httpd -DFOREGROUND
+           └─25418 /usr/sbin/httpd -DFOREGROUND
+
+Apr 21 00:06:59 new-k8s systemd[1]: Stopped The Apache HTTP Server.
+Apr 21 00:06:59 new-k8s systemd[1]: Starting The Apache HTTP Server...
+Apr 21 00:06:59 new-k8s systemd[1]: Started The Apache HTTP Server.
 ```
 
+Now the service is enabled
+```
+Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
 ```
 
 ### To disable the service using systemctl
 systemctl disable service_name
 
 ```
+[opc@new-k8s ~]$ sudo systemctl disable httpd
+Removed symlink /etc/systemd/system/multi-user.target.wants/httpd.service.
+```
+```
+[opc@new-k8s ~]$ sudo systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: active (running) since Fri 2023-04-21 00:06:59 GMT; 8min ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 25413 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─25413 /usr/sbin/httpd -DFOREGROUND
+           ├─25414 /usr/sbin/httpd -DFOREGROUND
+           ├─25415 /usr/sbin/httpd -DFOREGROUND
+           ├─25416 /usr/sbin/httpd -DFOREGROUND
+           ├─25417 /usr/sbin/httpd -DFOREGROUND
+           └─25418 /usr/sbin/httpd -DFOREGROUND
 
+Apr 21 00:06:59 new-k8s systemd[1]: Stopped The Apache HTTP Server.
+Apr 21 00:06:59 new-k8s systemd[1]: Starting The Apache HTTP Server...
+Apr 21 00:06:59 new-k8s systemd[1]: Started The Apache HTTP Server.
+```
+
+Now the service is disabled
+```
+Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
 ```
 
 
@@ -426,17 +483,161 @@ service is an "high-level" command used for starting and stopping services in di
 For example, on CentOS 7 it redirects to systemctl, while on CentOS 6 it directly calls the relative /etc/init.d script. On the other hand, in older Ubuntu releases it redirects to upstart
 
 service is adequate for basic service management, while directly calling systemctl give greater control options.
-service service_name start
 
-service service_name stop
-
-service service_name restart
-
+### To check the status of a  service using service command
 service service_name status
 
+```
+[opc@new-k8s ~]$ sudo service httpd status
+Redirecting to /bin/systemctl status httpd.service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: active (running) since Fri 2023-04-21 00:06:59 GMT; 11min ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 25413 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─25413 /usr/sbin/httpd -DFOREGROUND
+           ├─25414 /usr/sbin/httpd -DFOREGROUND
+           ├─25415 /usr/sbin/httpd -DFOREGROUND
+           ├─25416 /usr/sbin/httpd -DFOREGROUND
+           ├─25417 /usr/sbin/httpd -DFOREGROUND
+           └─25418 /usr/sbin/httpd -DFOREGROUND
+
+Apr 21 00:06:59 new-k8s systemd[1]: Stopped The Apache HTTP Server.
+Apr 21 00:06:59 new-k8s systemd[1]: Starting The Apache HTTP Server...
+Apr 21 00:06:59 new-k8s systemd[1]: Started The Apache HTTP Server.
+```
+
+### To stop the service using service command
+service service_name stop
+
+```
+[opc@new-k8s ~]$ sudo service httpd stop
+Redirecting to /bin/systemctl stop httpd.service
+```
+
+```
+[opc@new-k8s ~]$ sudo service httpd status
+Redirecting to /bin/systemctl status httpd.service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+     Docs: man:httpd(8)
+           man:apachectl(8)
+```
+
+### To start the service using service command
+service service_name start
+
+```
+[opc@new-k8s ~]$ sudo service httpd start
+Redirecting to /bin/systemctl start httpd.service
+```
+```
+[opc@new-k8s ~]$ sudo service httpd status
+Redirecting to /bin/systemctl status httpd.service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: active (running) since Fri 2023-04-21 00:20:25 GMT; 3s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 2170 (httpd)
+   Status: "Processing requests..."
+    Tasks: 6
+   Memory: 25.5M
+   CGroup: /system.slice/httpd.service
+           ├─2170 /usr/sbin/httpd -DFOREGROUND
+           ├─2171 /usr/sbin/httpd -DFOREGROUND
+           ├─2172 /usr/sbin/httpd -DFOREGROUND
+           ├─2173 /usr/sbin/httpd -DFOREGROUND
+           ├─2174 /usr/sbin/httpd -DFOREGROUND
+           └─2175 /usr/sbin/httpd -DFOREGROUND
+```
+
+### To restart the service using service command
+service service_name restart
+
+```
+[opc@new-k8s ~]$ sudo service httpd restart
+Redirecting to /bin/systemctl restart httpd.service
+```
+```
+[opc@new-k8s ~]$ sudo service httpd status
+Redirecting to /bin/systemctl status httpd.service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: active (running) since Fri 2023-04-21 00:21:58 GMT; 7s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 3419 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=0/SUCCESS)
+ Main PID: 3433 (httpd)
+   Status: "Processing requests..."
+    Tasks: 6
+   Memory: 25.5M
+   CGroup: /system.slice/httpd.service
+           ├─3433 /usr/sbin/httpd -DFOREGROUND
+           ├─3434 /usr/sbin/httpd -DFOREGROUND
+           ├─3435 /usr/sbin/httpd -DFOREGROUND
+           ├─3436 /usr/sbin/httpd -DFOREGROUND
+           ├─3437 /usr/sbin/httpd -DFOREGROUND
+           └─3438 /usr/sbin/httpd -DFOREGROUND
+```
+
+**NOTE:** We cannot use service command to enable and disable the service
+
 ### journactl
+journalctl command is used to check the logs of a service
+
 journalctl -u service_name
 
+```
+[opc@new-k8s ~]$ journalctl -u httpd
+-- Logs begin at Tue 2023-04-18 15:19:48 GMT, end at Fri 2023-04-21 00:24:03 GMT. --
+Apr 21 00:02:49 new-k8s systemd[1]: Starting The Apache HTTP Server...
+Apr 21 00:02:49 new-k8s systemd[1]: Started The Apache HTTP Server.
+Apr 21 00:04:11 new-k8s systemd[1]: Stopping The Apache HTTP Server...
+Apr 21 00:04:12 new-k8s systemd[1]: Stopped The Apache HTTP Server.
+Apr 21 00:05:06 new-k8s systemd[1]: Starting The Apache HTTP Server...
+Apr 21 00:05:06 new-k8s systemd[1]: Started The Apache HTTP Server.
+Apr 21 00:06:16 new-k8s systemd[1]: Stopping The Apache HTTP Server...
+Apr 21 00:06:17 new-k8s systemd[1]: Stopped The Apache HTTP Server.
+Apr 21 00:06:17 new-k8s systemd[1]: Starting The Apache HTTP Server...
+Apr 21 00:06:17 new-k8s systemd[1]: Started The Apache HTTP Server.
+Apr 21 00:06:58 new-k8s systemd[1]: Stopping The Apache HTTP Server...
+Apr 21 00:06:59 new-k8s systemd[1]: Stopped The Apache HTTP Server.
+Apr 21 00:06:59 new-k8s systemd[1]: Starting The Apache HTTP Server...
+Apr 21 00:06:59 new-k8s systemd[1]: Started The Apache HTTP Server.
+Apr 21 00:19:45 new-k8s systemd[1]: Stopping The Apache HTTP Server...
+Apr 21 00:19:46 new-k8s systemd[1]: Stopped The Apache HTTP Server.
+Apr 21 00:20:25 new-k8s systemd[1]: Starting The Apache HTTP Server...
+Apr 21 00:20:25 new-k8s systemd[1]: Started The Apache HTTP Server.
+Apr 21 00:21:57 new-k8s systemd[1]: Stopping The Apache HTTP Server...
+Apr 21 00:21:58 new-k8s systemd[1]: Stopped The Apache HTTP Server.
+Apr 21 00:21:58 new-k8s systemd[1]: Starting The Apache HTTP Server...
+Apr 21 00:21:58 new-k8s systemd[1]: Started The Apache HTTP Server.
+```
+
 ### ps -ef
+ps command is used o list all the running background process
+
 ps -ef | grep -i sshd
 
+Lets see only sshd process
+
+```
+[opc@new-k8s ~]$ ps -ef | grep -i sshd
+opc       6009 32710  0 00:26 pts/0    00:00:00 grep --color=auto -i sshd
+root     26927     1  0 Apr20 ?        00:00:02 /usr/sbin/sshd -D
+root     32685 26927  0 Apr20 ?        00:00:00 sshd: opc [priv]
+root     32700 26927  0 Apr20 ?        00:00:00 sshd: opc [priv]
+opc      32709 32685  0 Apr20 ?        00:00:00 sshd: opc@pts/0
+opc      32755 32700  0 Apr20 ?        00:00:00 sshd: opc@notty
+```
+
+This is the running process info for sshd, it has process id 26927
+
+```
+root     26927     1  0 Apr20 ?        00:00:02 /usr/sbin/sshd -D
+``
