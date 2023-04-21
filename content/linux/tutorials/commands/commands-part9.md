@@ -247,21 +247,185 @@ I love music.
 ```
 
 ### systemctl
+Systemctl command is used to check the status, start, stop, restart, reload, enable and disable the service / background process 
 
+In Linux, we have sshd service, which is used to connect to the linux servers.
+
+### To check the status of a service using systemctl
+systemctl status service_name
+
+```
+● sshd.service - OpenSSH server daemon
+   Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2023-04-20 12:34:07 GMT; 11h ago
+     Docs: man:sshd(8)
+           man:sshd_config(5)
+ Main PID: 26927 (sshd)
+    Tasks: 3
+   Memory: 41.3M
+   CGroup: /system.slice/sshd.service
+           ├─ 2703 sshd: root [priv]
+           ├─ 2704 sshd: root [net]
+           └─26927 /usr/sbin/sshd -D
+```
+
+### To start the service using systemctl
 systemctl start service_name
 
+httpd is the most popular web server
+
+```
+[opc@new-k8s ~]$ systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+     Docs: man:httpd(8)
+           man:apachectl(8)
+```
+```
+[opc@new-k8s ~]$ sudo systemctl start httpd
+```
+```
+[opc@new-k8s ~]$ sudo systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: active (running) since Fri 2023-04-21 00:02:49 GMT; 6s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 22505 (httpd)
+   Status: "Processing requests..."
+    Tasks: 6
+   Memory: 25.6M
+   CGroup: /system.slice/httpd.service
+           ├─22505 /usr/sbin/httpd -DFOREGROUND
+           ├─22506 /usr/sbin/httpd -DFOREGROUND
+           ├─22507 /usr/sbin/httpd -DFOREGROUND
+           ├─22508 /usr/sbin/httpd -DFOREGROUND
+           ├─22509 /usr/sbin/httpd -DFOREGROUND
+           └─22510 /usr/sbin/httpd -DFOREGROUND
+
+Apr 21 00:02:49 new-k8s systemd[1]: Starting The Apache HTTP Server...
+Apr 21 00:02:49 new-k8s systemd[1]: Started The Apache HTTP Server.
+```
+
+### To stop the service using systemctl
 systemctl stop service_name
 
+```
+[opc@new-k8s ~]$ sudo systemctl stop httpd
+```
+```
+[opc@new-k8s ~]$ sudo systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+     Docs: man:httpd(8)
+           man:apachectl(8)
+
+Apr 21 00:02:49 new-k8s systemd[1]: Starting The Apache HTTP Server...
+Apr 21 00:02:49 new-k8s systemd[1]: Started The Apache HTTP Server.
+Apr 21 00:04:11 new-k8s systemd[1]: Stopping The Apache HTTP Server...
+Apr 21 00:04:12 new-k8s systemd[1]: Stopped The Apache HTTP Server.
+```
+
+### To restart the service using systemctl
 systemctl restart service_name
 
-systemctl status service_name
+```
+[opc@new-k8s ~]$ sudo systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: active (running) since Fri 2023-04-21 00:05:06 GMT; 14s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 23901 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+    Tasks: 6
+   Memory: 25.6M
+   CGroup: /system.slice/httpd.service
+           ├─23901 /usr/sbin/httpd -DFOREGROUND
+           ├─23906 /usr/sbin/httpd -DFOREGROUND
+           ├─23907 /usr/sbin/httpd -DFOREGROUND
+           ├─23908 /usr/sbin/httpd -DFOREGROUND
+           ├─23909 /usr/sbin/httpd -DFOREGROUND
+           └─23910 /usr/sbin/httpd -DFOREGROUND
+
+Apr 21 00:05:06 new-k8s systemd[1]: Starting The Apache HTTP Server...
+Apr 21 00:05:06 new-k8s systemd[1]: Started The Apache HTTP Server.
+```
+```
+[opc@new-k8s ~]$ sudo systemctl restart httpd
+```
+```
+[opc@new-k8s ~]$ sudo systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: active (running) since Fri 2023-04-21 00:06:17 GMT; 16s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 24883 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=0/SUCCESS)
+ Main PID: 24904 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+    Tasks: 6
+   Memory: 25.1M
+   CGroup: /system.slice/httpd.service
+           ├─24904 /usr/sbin/httpd -DFOREGROUND
+           ├─24905 /usr/sbin/httpd -DFOREGROUND
+           ├─24906 /usr/sbin/httpd -DFOREGROUND
+           ├─24907 /usr/sbin/httpd -DFOREGROUND
+           ├─24908 /usr/sbin/httpd -DFOREGROUND
+           └─24909 /usr/sbin/httpd -DFOREGROUND
+
+Apr 21 00:06:17 new-k8s systemd[1]: Starting The Apache HTTP Server...
+Apr 21 00:06:17 new-k8s systemd[1]: Started The Apache HTTP Server.
+```
+
+### To enable the service using systemctl
+If we restart/ stop-start our Linux system. The service will be staopped and it will not start automatically. To start the service automatically on start / restart, we need to enable the service
 
 systemctl enable service_name 
 
+```
+[opc@new-k8s ~]$ sudo systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; **disabled;** vendor preset: disabled)
+   Active: active (running) since Fri 2023-04-21 00:06:59 GMT; 1min 35s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 25405 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=0/SUCCESS)
+ Main PID: 25413 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+    Tasks: 6
+   Memory: 25.6M
+   CGroup: /system.slice/httpd.service
+           ├─25413 /usr/sbin/httpd -DFOREGROUND
+           ├─25414 /usr/sbin/httpd -DFOREGROUND
+           ├─25415 /usr/sbin/httpd -DFOREGROUND
+           ├─25416 /usr/sbin/httpd -DFOREGROUND
+           ├─25417 /usr/sbin/httpd -DFOREGROUND
+           └─25418 /usr/sbin/httpd -DFOREGROUND
+```
+```
+
+```
+```
+
+```
+
+### To disable the service using systemctl
 systemctl disable service_name
+
+```
+
+```
 
 
 ### service
+service is an "high-level" command used for starting and stopping services in different unixes and linuxes. Depending on the "lower-level" service manager, service redirects on different binaries.
+
+For example, on CentOS 7 it redirects to systemctl, while on CentOS 6 it directly calls the relative /etc/init.d script. On the other hand, in older Ubuntu releases it redirects to upstart
+
+service is adequate for basic service management, while directly calling systemctl give greater control options.
 service service_name start
 
 service service_name stop
