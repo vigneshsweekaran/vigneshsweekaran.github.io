@@ -17,6 +17,8 @@ Cloud means the Datacenter is owned by the provider and given as service to the 
 
 ![](/content/devops-journey/images/cloud.png)
 
+#### Datacenter locations of cloud providers
+
 ![](/content/devops-journey/images/aws-azure-world-map.png)
 
 ### Major Cloud Providers
