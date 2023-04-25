@@ -1,11 +1,20 @@
 # On Premises vs Cloud
 
 ### Normal computer vs Server
+![](/content/devops-journey/images/computer-server.png)
 
+### Datacenter
+
+A data center is a collection of serevrs to  provide shared access to applications and data using a complex network, compute, and storage infrastructure
+![](/content/devops-journey/images/data-center.png)
 
 ### On premises vs Cloud
 
+On premises means the Datacenter owned only by the Company/Organaization
 
+Cloud means the Datacenter is owned by the provider and given as service to the customer and the servers will be shared by multiple customers
+
+![](/content/devops-journey/images/cloud.png)
 
 ![](/content/devops-journey/images/aws-azure-world-map.png)
 
