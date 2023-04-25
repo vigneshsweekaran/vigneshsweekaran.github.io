@@ -1,5 +1,9 @@
 # On Premises vs Cloud
 
+### Youtube
+
+[![On Premises vs Cloud](/content/linux/tutorials/images/linux-basics.png)](https://www.youtube.com/watch?v=Zn7AioNYPvg)
+
 ### Normal computer vs Server
 ![](/content/devops-journey/images/computer-server.png)
 
