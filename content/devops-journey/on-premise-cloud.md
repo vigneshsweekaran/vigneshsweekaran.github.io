@@ -6,6 +6,7 @@
 ### Datacenter
 
 A data center is a collection of serevrs to  provide shared access to applications and data using a complex network, compute, and storage infrastructure
+
 ![](/content/devops-journey/images/data-center.jpg)
 
 ### On premises vs Cloud
