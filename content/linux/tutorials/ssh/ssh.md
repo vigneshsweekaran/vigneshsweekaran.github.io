@@ -141,3 +141,28 @@ ssh -i private_key user_name@ip-address
 
 ### Customizing the ssh
 All the ssh configuration can be customized in /etc/ssh/sshd_config file
+
+By defauly ssh process listens on port 22
+
+In /etc/ssh/sshd_config file, we can change the port to 8222
+
+Present
+```
+#Port 22
+```
+
+Uncomment and Update the port number to 8222
+```
+Port 8222
+```
+
+Restart the ssh service
+
+```
+sudo systemctl restart ssh
+```
+
+Try connecting to server using new port
+```
+ssh -p 8222 username@ip_address
+```
