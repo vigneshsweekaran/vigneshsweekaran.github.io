@@ -3,10 +3,10 @@
 ### Youtube
 
 #### SSH Part-1
-[![SSH part-1](/content/linux/tutorials/images/linux-basics.png)](https://www.youtube.com/watch?v=7LSDaDutEFI)
+[![SSH part-1](/content/linux/tutorials/images/linux-ssh-1.png)](https://www.youtube.com/watch?v=7LSDaDutEFI)
 
 #### SSH Part-2
-[![SSH part-2](/content/linux/tutorials/images/linux-basics.png)](https://www.youtube.com/watch?v=xHxdZEAhKJM)
+[![SSH part-2](/content/linux/tutorials/images/linux-ssh-2.png)](https://www.youtube.com/watch?v=xHxdZEAhKJM)
 
 SSH(Secure Shell) is a command line tool to connect to another linux machine and to run some commands on it.
 
