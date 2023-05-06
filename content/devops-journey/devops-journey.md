@@ -25,7 +25,7 @@
 * [Linux commands beginners course in youtube by Sandip Das](https://www.youtube.com/watch?v=-7SokSJb9GY&list=PL7kXAf0BmEqtjvIZQOdXY6ZmcvAEYc4yh&index=7)
 
 ## Shell script
-* [Part -1 Basics](/content/shellscript/tutorials/part-1)
+* [Part -1 : Basics and if condition](/content/shellscript/tutorials/part-1)
 * [Shell script examples](https://github.com/vigneshsweekaran/shellscript)
 
 ## Git

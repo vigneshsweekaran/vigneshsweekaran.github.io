@@ -1,5 +1,7 @@
 ## Shell script
 
+[![Shellscript part-1](/content/linux/tutorials/images/linux-basics.png)](https://github.com/vigneshsweekaran/shellscript)
+
 In simple term, shell script is putting the linux commands in a file and executing the file. The commands will be executed in sequential order.
 
 
@@ -253,7 +255,7 @@ We already know the **hostname** command, when we run this command, it prints th
 ```
 [opc@new-k8s part-1]$ hostname
 new-k8s
-``
+```
 
 Lets run the shell script 1-printing-hostname.sh which just prints the hostname of the server
 ```
@@ -281,7 +283,7 @@ How to check whether the command is failed or not ?
 
 * When we run any command in shell, it sets the status code after executing the command.
 
-* If the status code is 0, which means success, other than 0 is failure.
+* If the status code is `0`, which means success, other than 0 is failure.
 
 we can check the status code of last executed command by, printing the special variable $?  Eg: echo $?
 
@@ -361,7 +363,7 @@ echo "After Error"
 [opc@new-k8s part-1]$ ./3-make-shellscript-to-fail-on-error.sh 
 /home/opc/shellscript/tutorials/part-1
 0
-``
+```
 
 Here we can see, once the false command is executed the script stops and not printed the echo commands
 
@@ -445,6 +447,88 @@ fi
 count is 100
 ```
 
+### How to check whether the file is present or not ?
 
+`test` command is used to check whether file or directory is present or not
 
+```
+[opc@new-k8s part-1]$ test -f /etc/os-release 
+[opc@new-k8s part-1]$ echo $?
+0
+```
 
+`test -f /etc/os-release` checks whether /etc/os-release file present or not. The file is present, so it sets the status code to `0`
+
+```
+[opc@new-k8s part-1]$ test -f /etc/abc.txt
+[opc@new-k8s part-1]$ echo $?
+1
+```
+
+Here the abc.txt file is not present, so it sets the status code to `1`
+
+```
+[opc@new-k8s part-1]$ cat 6-check-file-present-or-not.sh 
+#!/bin/bash
+
+# File path stored in variable FILE
+FILE=/etc/os-release
+
+# test command used to check whether file is present or not
+if test -f "$FILE"; then
+    echo "$FILE exists."
+fi
+```
+
+First we are storing the file path `/etc/os-release` to a shell variable `FILE`. Its a practice to store the value to a variable, it we want to use in multiple places.
+
+Then `test -f "$FILE"` will return the status code. Here it will return status code `0`, since the file is present. `if` condition evaluates to success, since the status code is `0` and executes the `echo "$FILE exists."`
+
+If it is non-zero, the `if` condition will be failure and go to else. If `else` statement is not declared, it will not do anything
+
+```
+[opc@new-k8s part-1]$ ./6-check-file-present-or-not.sh 
+/etc/os-release exists.
+```
+
+### Test command in other syntax
+
+Using single square bracket
+[ -f /etc/os-release ]
+
+```
+[opc@new-k8s part-1]$ cat 7-check-file-single-bracket.sh 
+#!/bin/bash
+
+# File path stored in variable FILE
+FILE=/etc/os-release
+
+# test command used to check whether file is present or not
+if test -f "$FILE"; then
+    echo "$FILE exists."
+fi
+```
+
+```
+[opc@new-k8s part-1]$ ./7-check-file-single-bracket.sh 
+/etc/os-release exists.
+```
+
+Using double square bracket
+[[ -f /etc/os-release ]]
+
+```
+[opc@new-k8s part-1]$ cat 8-check-file-double-bracket.sh 
+#!/bin/bash
+
+FILE=/etc/os-release
+
+if [ -f "$FILE" ]; then
+    echo "$FILE exists."
+fi
+```
+
+```
+[opc@new-k8s part-1]$ ./8-check-file-double-bracket.sh 
+/etc/os-release exists.
+```
