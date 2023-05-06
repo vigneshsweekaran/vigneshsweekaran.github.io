@@ -494,6 +494,7 @@ If it is non-zero, the `if` condition will be failure and go to else. If `else` 
 ### Test command in other syntax
 
 Using single square bracket
+
 [ -f /etc/os-release ]
 
 ```
@@ -515,6 +516,7 @@ fi
 ```
 
 Using double square bracket
+
 [[ -f /etc/os-release ]]
 
 ```
