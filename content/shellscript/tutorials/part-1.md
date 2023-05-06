@@ -1,7 +1,7 @@
 ## Shell script
 
 ### Youtube
-[![Shellscript part-1](/content/shellscript/tutorials/images/shellscript-part-1.png)](https://github.com/vigneshsweekaran/shellscript)
+[![Shellscript part-1](/content/shellscript/tutorials/images/part-1.png)](https://github.com/vigneshsweekaran/shellscript)
 
 In simple term, shell script is putting the linux commands in a file and executing the file. The commands will be executed in sequential order.
 
