@@ -139,7 +139,7 @@ pwd
 
 In our last shell script we used bash as a interpreter , we can also use sh, zsh, python
 
-File extention dosen't matter, it can be anything or even extension is not needed
+File extension doesn't matter, it can be anything or even extension is not needed
 
 ```
 [opc@new-k8s script]$ mv test.sh test
@@ -150,7 +150,7 @@ total 4
 
 If no shebang is declared in shell script, it uses the default shell.
 
-Default shell can be cheched in Environment variable SHELL
+Default shell can be checked in Environment variable SHELL
 
 ```
 [opc@new-k8s ~]$ echo $SHELL
@@ -210,10 +210,14 @@ remote: Counting objects: 100% (78/78), done.
 remote: Compressing objects: 100% (70/70), done.
 remote: Total 78 (delta 13), reused 56 (delta 5), pack-reused 0
 Unpacking objects: 100% (78/78), done.
+```
+```
 [opc@new-k8s ~]$ ll
 total 3072000
 drwxrwxr-x. 5 opc  opc          70 May  5 12:03 shellscript
 -rw-r--r--. 1 root root 3145728000 Jan 11  2022 swapfile
+```
+```
 [opc@new-k8s ~]$ cd shellscript/
 [opc@new-k8s shellscript]$ ll
 total 8
@@ -221,6 +225,226 @@ drwxrwxr-x. 4 opc opc   94 May  5 12:03 automation
 -rw-rw-r--. 1 opc opc   13 May  5 12:03 README.md
 drwxrwxr-x. 3 opc opc 4096 May  5 12:03 tutorials
 ```
+```
+[opc@new-k8s shellscript]$ cd tutorials/
+[opc@new-k8s tutorials]$ ll
+total 8
+drwxrwxr-x. 2 opc opc 4096 May  5 12:13 part-1
+drwxrwxr-x. 2 opc opc 4096 May  5 12:06 part-2
+```
+```
+[opc@new-k8s tutorials]$ cd part-1
+[opc@new-k8s part-1]$ ll
+total 32
+-rwxrwxr-x. 1 opc opc  76 May  5 12:03 1-printing-hostname.sh
+-rwxrwxr-x. 1 opc opc  88 May  5 12:13 2-shellscript-skip-the-failure-default.sh
+-rwxrwxr-x. 1 opc opc  94 May  5 12:13 3-make-shellscript-to-fail-on-error.sh
+-rwxrwxr-x. 1 opc opc 102 May  5 12:13 4-escape-the-error.sh
+-rwxrwxr-x. 1 opc opc  96 May  5 12:03 5-if-condition.sh
+-rwxrwxr-x. 1 opc opc 184 May  5 12:13 6-check-file-present-or-not.sh
+-rwxrwxr-x. 1 opc opc 184 May  5 12:13 7-check-file-single-bracket.sh
+-rwxrwxr-x. 1 opc opc  87 May  5 12:13 8-check-file-double-bracket.sh
+```
+
+### Shell script to print the hostname of the server
+
+We already know the **hostname** command, when we run this command, it prints the name of the server
+
+```
+[opc@new-k8s part-1]$ hostname
+new-k8s
+``
+
+Lets run the shell script 1-printing-hostname.sh which just prints the hostname of the server
+```
+#!/bin/sh
+
+MY_HOSTNAME=$(hostname)
+
+echo "My system name is ${MY_HOSTNAME}"
+```
+
+The script runs the hostname command and stores the output to MY_HOSTNAME shell variable
+
+And then prints the MY_HOSTNAME variable using echo command
+
+```
+[opc@new-k8s part-1]$ ./1-printing-hostname.sh 
+My system name is new-k8s
+```
+
+### Shellscript default failure behavior
+
+By default if any error occurs while executing the shell script it ignores and executes the next command and proceeds further
+
+How to check whether the command is failed or not ?
+
+* When we run any command in shell, it sets the status code after executing the command.
+
+* If the status code is 0, which means success, other than 0 is failure.
+
+we can check the status code of last executed command by, printing the special variable $?  Eg: echo $?
+
+```
+[opc@new-k8s part-1]$ date
+Sat May  6 02:28:46 GMT 2023
+[opc@new-k8s part-1]$ echo $?
+0
+```
+
+In above, we run the `date` command, then we run the `echo $?` which shows `0` which means the date command is executed successfully
+
+```
+[opc@new-k8s part-1]$ cddd
+-bash: cddd: command not found
+[opc@new-k8s part-1]$ echo $?
+127
+```
+
+Here we run the wrong command `cddd` which clearly shows the command is failed. Even in `echo $?` shows non-zero number
+
+One more example for failure, when we run the false command, it sets the status code to `1`
+```
+[opc@new-k8s part-1]$ false
+[opc@new-k8s part-1]$ echo $?
+1
+```
+
+```
+#!/bin/bash
+
+pwd
+
+echo $?
+
+false
+
+echo $?f
+
+echo "After Error"
+echo "I am running fine"
+```
+
+In the above shell script, the false command will set the status code to `1` which is failure. But still the script will proceed further and run the echo commands
+
+```
+[opc@new-k8s part-1]$ ./2-shellscript-skip-the-failure-default.sh 
+/home/opc/shellscript/tutorials/part-1
+0
+1f
+After Error
+I am running fine
+```
+
+### How to stop the Shell script on failure ?
+
+By adding `set -e` in the shell script will make the shell script to stop, when failure happens
+
+```
+[opc@new-k8s part-1]$ cat 3-make-shellscript-to-fail-on-error.sh 
+#!/bin/bash
+
+set -e
+
+pwd
+
+echo $?
+
+false
+
+echo $?
+
+echo "After Error"
+```
+
+```
+[opc@new-k8s part-1]$ ./3-make-shellscript-to-fail-on-error.sh 
+/home/opc/shellscript/tutorials/part-1
+0
+``
+
+Here we can see, once the false command is executed the script stops and not printed the echo commands
+
+### How to bypass only some failure in script and proceeds further ?
+
+`exit 1` when we run exit command with argument `1` it sets the status status code to 1 and makes the script failure
+
+```
+[opc@new-k8s part-1]$ cat 4-escape-the-error.sh 
+#!/bin/bash
+
+set -e
+
+pwd
+
+echo $?
+
+exit 1 | true
+
+echo $?
+
+echo "After Error"
+```
+
+Here we are piping(|) the `exit 1` output and making the status code `0` by running true command. So the command is success and script proceeds further
+
+```
+echo "I am running fine"[opc@new-k8s part-1]$ ./4-escape-the-error.sh 
+/home/opc/shellscript/tutorials/part-1
+0
+0
+After Error
+I am running fine
+```
+
+### if condition
+
+`if` condition is used to run the set of commands based on the condition success/failure
+
+```
+[opc@new-k8s part-1]$ cat 5-if-condition.sh 
+count=1
+
+if [ $count -eq 100 ]
+then
+    echo "count is 100"
+else
+    echo "count is not 100"
+fi
+```
+
+In above, we are storing the number `1` to a variable `count`
+
+`if [ $count -eq 100 ]`
+
+In the above line, first `count` variable will be substituted with `0` and it evaluates whether `0` is equal to `100`.
+
+Since the condition failed, it goes to `else` and execute the `echo "count is not 100"`
+
+```
+[opc@new-k8s part-1]$ ./5-if-condition.sh 
+count is not 100
+```
+
+If we set `count=100`, then it goes to `then` and execute the `echo "count is 100"`
+
+```
+[opc@new-k8s part-1]$ cat 5-if-condition.sh 
+count=100
+
+if [ $count -eq 100 ]
+then
+    echo "count is 100"
+else
+    echo "count is not 100"
+fi
+```
+
+```
+[opc@new-k8s part-1]$ ./5-if-condition.sh 
+count is 100
+```
+
 
 
 
