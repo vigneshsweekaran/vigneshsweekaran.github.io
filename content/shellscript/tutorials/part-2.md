@@ -7,7 +7,7 @@
 
 Loop foop is used to do the repeat the task until limit is reached or iterate through the items
 
-[For loop](/content/shellscript/tutorials/images/for.png)
+![For loop](/content/shellscript/tutorials/images/for.png)
 
 In the above diagram `{1..5}` chnages to `1,2,3,4,5` which means the for loop is going to repeat the command execution 5 times.
 
@@ -92,8 +92,8 @@ Now lets run the script
 
 Array is a collection of items
 
-[array](/content/shellscript/tutorials/images/array.png)
+![array](/content/shellscript/tutorials/images/array.png)
 
 ### for loop inside another for loop
 
-[For loop inside for loop](/content/shellscript/tutorials/images/for-for.png)
+![For loop inside for loop](/content/shellscript/tutorials/images/for-for.png)
