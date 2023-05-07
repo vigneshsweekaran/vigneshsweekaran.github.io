@@ -83,3 +83,17 @@ Now lets run the script
 ```
 
 ```
+
+
+
+
+
+### Array in shellscript
+
+Array is a collection of items
+
+[array](/content/shellscript/tutorials/images/array.png)
+
+### for loop inside another for loop
+
+[For loop inside for loop](/content/shellscript/tutorials/images/for-for.png)
