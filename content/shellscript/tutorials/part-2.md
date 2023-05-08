@@ -1,7 +1,7 @@
 ## Shellscript Part - 2
 
 ### Youtube
-[![Shellscript part-1](/content/shellscript/tutorials/images/part-2.png)](https://github.com/vigneshsweekaran/shellscript)
+[![Shellscript part-1](/content/shellscript/tutorials/images/part-2.png)](https://www.youtube.com/watch?v=GIk1wW7Y-uo)
 
 ### What is for loop ?
 
@@ -233,7 +233,7 @@ Running the shellscript
 12K     /tmp/access_files
 ```
 
-### How to delete the files which are more than x days
+### How to delete the files which are more than x size
 
 In the `find` command, you can pass the argument `-size` to set the target size of the file and pass `-delete` to delete the files, if the target size is matched.
 
@@ -308,7 +308,7 @@ We had only one "*.gz" file, which is also more than 1KB, so it got deleted
 
 ![For loop inside for loop](/content/shellscript/tutorials/images/for-for.png)
 
-### How to delete multiple file extension in multiple folders
+### How to delete files in multiple folders having multiple file extensions
 
 Using `find` command you can identity the files, which are created, modified, accessed some time, days back
 
