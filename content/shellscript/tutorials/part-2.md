@@ -307,3 +307,170 @@ We had only one "*.gz" file, which is also more than 1KB, so it got deleted
 ### for loop inside another for loop
 
 ![For loop inside for loop](/content/shellscript/tutorials/images/for-for.png)
+
+### How to delete multiple file extension in multiple folders
+
+Using `find` command you can identity the files, which are created, modified, accessed some time, days back
+
+```
+-mtime --> modified time of file (in days)
+-ctime --> created time of file (in days)
+-atime --> accessed time of file (in days)
+-mmin  --> modified time of file (in minutes)
+
+```
+
+By default, `ls -l` or `ll` command shows the modified time of a file
+
+```
+[opc@new-k8s part-2]$ ll /tmp/access_files/
+total 8
+-rw-rw-r--. 1 opc opc  0 May  7 11:50 access1.txt
+-rw-rw-r--. 1 opc opc  0 May  7 11:50 access2.txt
+-rw-rw-r--. 1 opc opc 22 May  8 11:19 access.log
+-rw-rw-r--. 1 opc opc  0 May  7 11:51 access_new.log
+-rw-rw-r--. 1 opc opc 17 May  8 11:19 access.txt
+-rw-rw-r--. 1 opc opc  0 May  7 11:50 test.txt
+```
+
+```
+[opc@new-k8s part-2]$ ll /tmp/error_files/
+total 0
+-rw-rw-r--. 1 opc opc 0 May  7 11:51 access1.txt
+-rw-rw-r--. 1 opc opc 0 May  7 11:51 access2.txt
+-rw-rw-r--. 1 opc opc 0 May  7 11:51 access.log
+-rw-rw-r--. 1 opc opc 0 May  7 11:51 access_new.log
+-rw-rw-r--. 1 opc opc 0 May  7 11:51 access.txt
+-rw-rw-r--. 1 opc opc 0 May  7 11:51 test.txt
+```
+
+```
+[opc@new-k8s part-2]$ ll /tmp/log_files/
+total 4
+-rw-rw-r--. 1 opc opc  0 May  7 11:51 access1.txt
+-rw-rw-r--. 1 opc opc  0 May  7 11:51 access2.txt
+-rw-rw-r--. 1 opc opc  0 May  7 11:51 access.log
+-rw-rw-r--. 1 opc opc  0 May  7 11:51 access_new.log
+-rw-rw-r--. 1 opc opc 21 May  8 10:59 access.txt
+-rw-rw-r--. 1 opc opc  0 May  7 11:51 test.txt
+```
+
+```
+[opc@new-k8s part-2]$ cat 5-delete-files-more-than-x-days.sh 
+#!/bin/bash
+
+set -e
+
+TARGET_PATH="/tmp"
+TARGET_FOLDERS=("log_files" "error_files" "access_files")
+FILE_EXTENSIONS=(".log" ".txt")
+TARGET_TIME_IN_MINUTES="1"
+
+for folder in ${TARGET_FOLDERS[@]}
+do
+  for extension in ${FILE_EXTENSIONS[@]}
+  do
+    echo "Deleting file extension ${extension} in folder ${folder}"
+    find ${TARGET_PATH}/${folder} -type f -name "*${extension}" -mmin +${TARGET_TIME_IN_MINUTES} -delete
+  done
+done
+```
+
+The script will delete the files, which are modified 1 minute ago (It can be anytime before 1 minute)
+
+```
+[opc@new-k8s part-2]$ ./5-delete-files-more-than-x-days.sh 
+Deleting file extension .log in folder log_files
+Deleting file extension .txt in folder log_files
+Deleting file extension .log in folder error_files
+Deleting file extension .txt in folder error_files
+Deleting file extension .log in folder access_files
+Deleting file extension .txt in folder access_files
+```
+
+```
+[opc@new-k8s part-2]$ ll /tmp/access_files/
+total 0
+[opc@new-k8s part-2]$ ll /tmp/error_files/
+total 0
+[opc@new-k8s part-2]$ ll /tmp/log_files/
+total 0
+```
+
+Since the files are modified sometime long back, all the files with extension "*.log and *.txt are deleted"
+
+### How to get the version of the tools and store in json file
+
+Lets get the version of two tools `git` and `maven`
+
+To check the version of `git`
+
+```
+[opc@new-k8s part-2]$ git --version
+git version 1.8.3.1
+```
+
+But it gives, some additional words right, you can use `awk` command to get only the 3rd column, which returns the version
+
+```
+[opc@new-k8s part-2]$ git --version | awk '{ print $3 }'
+1.8.3.1
+```
+
+Similarly you can get the version of maven using `mvn --version` command
+
+```
+[opc@new-k8s part-2]$ mvn --version
+Apache Maven 3.0.5 (Red Hat 3.0.5-17)
+Maven home: /usr/share/maven
+Java version: 1.8.0_362, vendor: Red Hat, Inc.
+Java home: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.362.b08-1.el7_9.aarch64/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.4.17-2102.202.5.el7uek.aarch64", arch: "aarch64", family: "unix"
+```
+
+Interesting, it returns 6 lines. But you want only version, which is in first line
+
+You can use `grep` or `head` command to get only the first line
+
+```
+[opc@new-k8s part-2]$ mvn --version | grep "Apache Maven"
+Apache Maven 3.0.5 (Red Hat 3.0.5-17)
+```
+
+Now, you can use the `awk` command to get the version
+
+```
+[opc@new-k8s part-2]$ mvn --version | grep "Apache Maven" | awk '{ print $3 }'
+3.0.5
+```
+
+Awesome, lets run the shellscript to get the version and write to version.json file
+
+```
+#!/bin/bash
+
+set -e
+
+GIT_VERSION=$(git --version | awk '{print $3}')
+MAVEN_VERSION=$(mvn --version | grep "Apache Maven" | awk '{print $3}')
+FILE_NAME="version.json"
+
+echo "{}" > $FILE_NAME
+echo "$(jq --arg git_version "$GIT_VERSION" '. += {"git": $git_version}' $FILE_NAME)" > $FILE_NAME
+echo "$(jq --arg maven_version "$MAVEN_VERSION" '. += {"maven": $maven_version}' $FILE_NAME)" > $FILE_NAME
+```
+
+
+```
+[opc@new-k8s part-2]$ ./6-store-cli-version-in-json-file.sh
+```
+
+
+```
+[opc@new-k8s part-2]$ cat version.json 
+{
+  "git": "1.8.3.1",
+  "maven": "3.0.5"
+}
+```
