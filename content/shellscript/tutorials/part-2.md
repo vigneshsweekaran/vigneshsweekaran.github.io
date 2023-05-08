@@ -5,7 +5,7 @@
 
 ### What is for loop ?
 
-Loop foop is used to do the repeat the task until the limit is reached or iterate through the items
+for loop is used to repeat the task until the limit is reached or iterate through the items
 
 ![For loop](/content/shellscript/tutorials/images/for.png)
 
@@ -72,7 +72,7 @@ Lets format the `date` command to get the details in this format MMDDYY-HHMMSS
 
 ```
 %m --> Month
-%d --> Date
+%d --> Day
 %y --> Year (Last two digit)
 %H --> Hour
 %M --> Minutes
