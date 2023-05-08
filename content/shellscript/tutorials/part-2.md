@@ -126,7 +126,7 @@ total 44
 -rw-rw-r--. 1 opc opc  45 May  7 23:28 app-050723-232815-5.log
 ```
 
-After running the shellscript it has created the 5 files, the name includes the version created from the date command
+After running the shellscript it has created the 5 new files, the name includes the version created from the date command
 
 ```
 [opc@new-k8s part-2]$ cat app-050723-232815-1.log 
@@ -135,19 +135,174 @@ File created on Sun May  7 23:28:15 GMT 2023
 
 When we `cat` the first file, it has the timestamp, which we have written to the file
 
-###
-
-
-
-
-
-
 
 ### Array in shellscript
 
 Array is a collection of items
 
 ![array](/content/shellscript/tutorials/images/array.png)
+
+### Check the size of multiple directory using for loop
+
+`du` command is used to check the size of file or directory
+
+TO check the size of file
+
+```
+[opc@new-k8s part-2]$ du -sh /tmp/files/apache-maven-3.9.1-bin.tar.gz 
+8.7M    /tmp/files/apache-maven-3.9.1-bin.tar.gz
+```
+
+To check the size of directory
+
+```
+[opc@new-k8s part-2]$ ll -sh /tmp/files
+total 82M
+8.7M -rw-rw-r--. 1 opc opc 8.7M May  7 11:49 access.log
+8.7M -rw-rw-r--. 1 opc opc 8.7M May  7 11:49 apache.log
+8.7M -rw-rw-r--. 1 opc opc 8.7M May  7 11:49 apache-maven-3.9.1-bin.tar.gz
+4.0K -rw-rw-r--. 1 opc opc   11 May  7 11:49 error.log
+8.7M -rw-rw-r--. 1 opc opc 8.7M May  7 11:49 hello.txt
+ 47M -rw-rw-r--. 1 opc opc  47M May  7 11:49 kubectl
+```
+
+```
+[opc@new-k8s part-2]$ du -sh /tmp/files
+82M     /tmp/files
+```
+
+```
+[opc@new-k8s part-2]$ cat 3-iterate-through-items.sh 
+#!/bin/bash
+
+set -e
+
+TARGET_FOLDERS=("log_files" "error_files" "access_files")
+
+for folder in ${TARGET_FOLDERS[@]}
+do
+    du -sh "/tmp/${folder}"
+done
+```
+
+In the above script, we created a variable `TARGET_FOLDERS` of type array and stored some folder names
+
+Using for loop we can check the size of all the folders in the array `TARGET_FOLDERS` using `du` command
+
+Lets check the files in access_files, error_files, log_files folders
+
+```
+[opc@new-k8s part-2]$ ll /tmp/access_files/
+total 8
+-rw-rw-r--. 1 opc opc  0 May  7 11:50 access1.txt
+-rw-rw-r--. 1 opc opc  0 May  7 11:50 access2.txt
+-rw-rw-r--. 1 opc opc 22 May  8 11:19 access.log
+-rw-rw-r--. 1 opc opc  0 May  7 11:51 access_new.log
+-rw-rw-r--. 1 opc opc 17 May  8 11:19 access.txt
+-rw-rw-r--. 1 opc opc  0 May  7 11:50 test.txt
+```
+
+```
+[opc@new-k8s part-2]$ ll /tmp/error_files/
+total 0
+-rw-rw-r--. 1 opc opc 0 May  7 11:51 access1.txt
+-rw-rw-r--. 1 opc opc 0 May  7 11:51 access2.txt
+-rw-rw-r--. 1 opc opc 0 May  7 11:51 access.log
+-rw-rw-r--. 1 opc opc 0 May  7 11:51 access_new.log
+-rw-rw-r--. 1 opc opc 0 May  7 11:51 access.txt
+-rw-rw-r--. 1 opc opc 0 May  7 11:51 test.txt
+```
+
+```
+[opc@new-k8s part-2]$ ll /tmp/log_files/
+total 4
+-rw-rw-r--. 1 opc opc  0 May  7 11:51 access1.txt
+-rw-rw-r--. 1 opc opc  0 May  7 11:51 access2.txt
+-rw-rw-r--. 1 opc opc  0 May  7 11:51 access.log
+-rw-rw-r--. 1 opc opc  0 May  7 11:51 access_new.log
+-rw-rw-r--. 1 opc opc 21 May  8 10:59 access.txt
+-rw-rw-r--. 1 opc opc  0 May  7 11:51 test.txt
+```
+
+Running the shellscript
+
+```
+[opc@new-k8s part-2]$ ./3-iterate-through-items.sh 
+8.0K    /tmp/log_files
+4.0K    /tmp/error_files
+12K     /tmp/access_files
+```
+
+### How to delete the files which are more than x days
+
+In the `find` command, you can pass the argument `-size` to set the target size of the file and pass `-delete` to delete the files, if the target size is matched.
+
+```
+[opc@new-k8s files]$ pwd
+/tmp/files
+```
+
+```
+[opc@new-k8s files]$ ll -h
+total 82M
+-rw-rw-r--. 1 opc opc 8.7M May  7 11:49 access.log
+-rw-rw-r--. 1 opc opc 8.7M May  7 11:49 apache.log
+-rw-rw-r--. 1 opc opc 8.7M May  7 11:49 apache-maven-3.9.1-bin.tar.gz
+-rw-rw-r--. 1 opc opc   11 May  7 11:49 error.log
+-rw-rw-r--. 1 opc opc 8.7M May  7 11:49 hello.txt
+-rw-rw-r--. 1 opc opc  47M May  7 11:49 kubectl
+```
+
+Here, you can see, the `*.log` files size are 8.7 MB, you can run the below command to delete the files, which matches the file extension and size
+
+```
+find ./ -type f -name "*.log" -size +8M -delete
+```
+
+```
+[opc@new-k8s files]$ find ./ -type f -name "*.log" -size +8M -delete
+```
+
+```
+[opc@new-k8s files]$ ll -h
+total 65M
+-rw-rw-r--. 1 opc opc 8.7M May  7 11:49 apache-maven-3.9.1-bin.tar.gz
+-rw-rw-r--. 1 opc opc   11 May  7 11:49 error.log
+-rw-rw-r--. 1 opc opc 8.7M May  7 11:49 hello.txt
+-rw-rw-r--. 1 opc opc  47M May  7 11:49 kubectl
+```
+
+Only the files, which matches "*.log" extension and size more than 8MB are deleted
+
+Lets run the shellscript to delete the files in folder
+
+```
+[opc@new-k8s part-2]$ cat 4-delete-files-more-than-x-size.sh 
+#!/bin/bash
+
+set -e
+
+TARGET_PATH="/tmp/files"
+FILE_EXTENSION=".log"
+TARGET_FILE_SIZE="1k" #Eg: 10K, 100M, 1GB
+
+find ${TARGET_PATH} -type f -name "*${FILE_EXTENSION}" -size +${TARGET_FILE_SIZE} -delete
+```
+
+Now lets delete the "*.gz" file, which has size more than 1KB
+```
+[opc@new-k8s part-2]$ ./4-delete-files-more-than-x-size.sh
+```
+
+```
+[opc@new-k8s part-2]$ ll -h /tmp/files
+total 56M
+-rw-rw-r--. 1 opc opc   11 May  8 11:44 error.log
+-rw-rw-r--. 1 opc opc 8.7M May  8 11:44 hello.txt
+-rw-rw-r--. 1 opc opc  47M May  8 11:44 kubectl
+```
+
+We had only one "*.gz" file, which is also more than 1KB, so it got deleted
 
 ### for loop inside another for loop
 
