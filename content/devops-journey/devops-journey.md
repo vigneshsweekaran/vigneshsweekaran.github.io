@@ -22,7 +22,6 @@
 * [On Premise vs Cloud](/content/devops-journey/on-premise-cloud)
 * [Linux - ssh](/content/linux/tutorials/ssh/ssh)
 * [How to install virtualbox and create ubuntu virtual machine](/content/linux/virtualbox)
-* [Linux commands beginners course in youtube by Sandip Das](https://www.youtube.com/watch?v=-7SokSJb9GY&list=PL7kXAf0BmEqtjvIZQOdXY6ZmcvAEYc4yh&index=7)
 
 ## Shell script
 * [Part - 1 : Basics and if condition](/content/shellscript/tutorials/part-1)
