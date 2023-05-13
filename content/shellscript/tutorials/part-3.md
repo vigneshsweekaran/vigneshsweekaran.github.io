@@ -248,6 +248,8 @@ total 12
 
 when we set the condition to true, the while loop continuously runs and it will not stop
 
+![While loop](/content/shellscript/tutorials/images/while-infinite-loop.png)
+
 To come out of the while loop, you have to run `break` command inside the while loop based on requirement to break the loop
 
 ### Breaking the infinite loop
