@@ -111,6 +111,8 @@ do
 done
 ```
 
+Here, the condition in while loop will be true for 4 times, on 5th time, the 5th time the condition becomes false and comes out of the while loop
+
 ```
 [opc@new-k8s part-3]$ ./1-while.sh 
 The count value is 1
@@ -150,6 +152,14 @@ do
 done < $FILE_NAME
 ```
 
+Here, you have pass the filename at the end of while syntax `done < /etc/os-release`
+
+When the while loop starts, using the `read` command it reads the first line and stores to `line` variable and it prints the line using `echo` command
+
+It continues and prints the line one by one
+
+Once it reaches the end of the file, it stops
+
 ```
 [opc@new-k8s part-3]$ ./3-read-a-file.sh 
 NAME="Oracle Linux Server"
@@ -173,6 +183,19 @@ ORACLE_SUPPORT_PRODUCT_VERSION=7.9
 
 ### How to filter the lines and write to different files
 
+Here, "/var/log/httpd/access_log" is the log file of httpd web server which contains the full log from where they tried to access this httpd web server
+
+From this log file, we want to filter and the details, how many requests came from android mobile, windows os and store to them in separate files android.log, windows.log
+
+All other logs will be stored to others.log
+
+Prerequisite for testing this script
+1. http web server should be installed
+   Redhat based --> sudo apt yum install httpd
+   Debian based --> sudo apt apt install apache2
+
+2. And verify log file "/var/log/httpd/access_log" is created
+
 ```
 [opc@new-k8s part-3]$ cat 4-read-and-write-to-different-file.sh 
 #!/bin/bash
@@ -194,6 +217,17 @@ do
   fi
 done < ${SOURCE_FILE_NAME}
 ```
+First to store this files in separate folder, we create a folder with the name contains timestamp Eg: 051323-111006
+
+using while loop we already getting the line one by one.
+
+When you receive the singe line from while loop, you can put the if condition to check whether the line contains the word "Android", "android" and "Windows"
+
+If "Android" or "android" word is found in the line, it writes the line to android.log
+
+If the line doesn't contains the "Android" or "android" keyword, it goes to the elseif case and check for "Windows" keyword, if it matches it writes to windows.log file
+
+Even if it doesn't match, then it goes to else case and write the line to others.log file 
 
 ```
 [opc@new-k8s part-3]$ ./4-read-and-write-to-different-file.sh 
@@ -246,13 +280,21 @@ total 12
 
 ### How to create infinite loop using while
 
-when we set the condition to true, the while loop continuously runs and it will not stop
+when we set/hardcode the condition to true, the while loop continuously runs and it will not stop
 
 ![While loop](/content/shellscript/tutorials/images/while-infinite-loop.png)
 
 To come out of the while loop, you have to run `break` command inside the while loop based on requirement to break the loop
 
 ### Breaking the infinite loop
+
+This script checks whether httpd web server is running or not.
+
+If the httpd service is running, it just prints the status code and continues the while loop
+
+But if the httpd service is stopped, it enters the `if` condition and run he break command to stop the loop.
+
+Before running the break, based on the requirement you can send a mail or notify to any notification tools.
 
 ```
 #!/bin/bash
@@ -295,6 +337,13 @@ done
 
 ![While loop](/content/shellscript/tutorials/images/breaking-while-loop.png)
 
+Here i have opened 2 terminals, in the first terminal, I execute the script.
+
+Since the httpd service is running fine, it script continues to run and printing the status code
+
+In the 2 terminal, I stopped the httpd service, then the scripts stops immediately.
+
+Since the status code changes to 3, it enter the if condition and runs the break command
 ```
 [opc@new-k8s part-3]$ systemctl status httpd
 ● httpd.service - The Apache HTTP Server
