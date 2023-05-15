@@ -27,6 +27,7 @@
 * [Part - 1 : Basics and if condition](/content/shellscript/tutorials/part-1)
 * [Part - 2 : for loop](/content/shellscript/tutorials/part-2)
 * [Part - 3 : while loop](/content/shellscript/tutorials/part-3)
+* [Part - 4 : function](/content/shellscript/tutorials/part-4)
 * [Shell script examples](https://github.com/vigneshsweekaran/shellscript)
 
 ## Git

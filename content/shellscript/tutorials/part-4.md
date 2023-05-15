@@ -188,22 +188,14 @@ done
 ```
 
 ```
-ubuntu@test:~/shellscript/tutorials/part-4$ ./4-user-management.sh 
+ubuntu@test:~/shellscript/tutorials/part-4$ sudo ./4-user-management.sh 
 Creating Users ...
 id: ‘raghav’: no such user
-useradd: Permission denied.
-useradd: cannot lock /etc/passwd; try again later.
 Created user raghav successfully !!!
 id: ‘mani’: no such user
-useradd: Permission denied.
-useradd: cannot lock /etc/passwd; try again later.
 Created user mani successfully !!!
 id: ‘manoj’: no such user
-useradd: Permission denied.
-useradd: cannot lock /etc/passwd; try again later.
 Created user manoj successfully !!!
 id: ‘devops’: no such user
-useradd: Permission denied.
-useradd: cannot lock /etc/passwd; try again later.
 Created user devops successfully !!!
 ```
