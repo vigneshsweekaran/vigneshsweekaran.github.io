@@ -1,7 +1,7 @@
 ## Shellscript Part - 3
 
 ### Youtube
-[![Shellscript part-1](/content/shellscript/tutorials/images/part-3.png)](https://www.youtube.com/watch?v=DipqrRNJX1c)
+[![Shellscript part-3](/content/shellscript/tutorials/images/part-3.png)](https://www.youtube.com/watch?v=DipqrRNJX1c)
 
 ### What is while loop ?
 

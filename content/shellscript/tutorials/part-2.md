@@ -1,7 +1,7 @@
 ## Shellscript Part - 2
 
 ### Youtube
-[![Shellscript part-1](/content/shellscript/tutorials/images/part-2.png)](https://www.youtube.com/watch?v=GIk1wW7Y-uo)
+[![Shellscript part-2](/content/shellscript/tutorials/images/part-2.png)](https://www.youtube.com/watch?v=GIk1wW7Y-uo)
 
 ### What is for loop ?
 
