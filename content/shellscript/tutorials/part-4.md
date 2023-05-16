@@ -51,12 +51,22 @@ greeting "Vignesh"
 greeting "Shellscript"
 ```
 
+Here we created a function named `greeting` This will not be executed by itself. You have to call the function by its name, then only it will be executed
+
+You can pass the arguments to the function, if it is expected.
+
+In the above, we are calling the function `greeting` and passing the argument `Vignesh` Eg: greeting "vignesh"
+
+You can call the function many number of times with different arguments based on requirement
+
 ```
 ubuntu@test:~/shellscript/tutorials/part-4$ ./1-function.sh 
 Hello DevopsPilot
 Hello Vignesh
 Hello Shellscript
 ```
+
+In the above output, you have seen three times the `echo` command was executed with different outputs since we called the function 3 times with different arguments
 
 ### How to return some data from function
 
@@ -81,6 +91,18 @@ result=$?
 
 echo "The output is $result"
 ```
+
+In some scenarios you want to return the output data from the function to the caller.
+
+You have use the `return` keyword to return the data from the function Eg: return $output
+
+`$output` is the data you want to return
+
+To capture the returned data. After the function call, you have to use `$?` EG: result=$?
+
+So the returned data is captured and stored to a variable
+
+NOTE: A function can return only a number or string
 
 ```
 ubuntu@test:~/shellscript/tutorials/part-4$ ./2-function-return.sh 
@@ -112,15 +134,25 @@ calculate() {
 calculate 20 5
 
 echo "The addition result is ${output[0]}"
-echo "The subraction result is ${output[1]}"
+echo "The subtraction result is ${output[1]}"
 echo "The multiplication result is ${output[2]}"
 echo "The division result is ${output[3]}"
 ```
 
+Since you can return only number or string, array cannot be returned directly from the function.
+
+In this case, you have to declare the empty array outside the function Eg: output=() 
+
+And the update the array inside the function once the data is ready
+
+So you can directly access the array, once the function is executed. No need to return the data from function here
+
+Once the function `calculate` is executed. We can directly access the `${output[0]}` to get the first data from the array
+
 ```
 ubuntu@test:~/shellscript/tutorials/part-4$ ./3-function-return-array.sh 
 The addition result is 25
-The subraction result is 15
+The subtraction result is 15
 The multiplication result is 100
 The division result is 4
 ```
