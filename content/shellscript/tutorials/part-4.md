@@ -194,7 +194,7 @@ delete_users(){
     then
       userdel -r $user
     else
-      echo "The user ${user} dosen't exist !!!"
+      echo "The user ${user} doesn't exist !!!"
     fi
   done
 }
@@ -218,6 +218,50 @@ done
 # Deleting Users
 # delete_users
 ```
+
+First we create two array's `users_list` to store the list of news users to create and `delete_users_list` to store the list of existing users you want to delete
+
+And we create 3 functions,
+
+check_user --> To check whether user is already existing or not
+
+create_user --> To create a new user
+
+delete_users --> To delete the users listed in `delete_users_list` array
+
+The execution starts at the `echo "Creating Users ..."` and then `for user in ${users_list[@]};`
+
+For gets the first user from `users_list` array and stores to `user` variable.
+
+Then we call the `check_user` with argument as `user` to check whether user is present or not.
+
+The `check_user` function runs the `id $users` command to check whether user is present or not.
+
+If the user is present `$?` will give `0` if not it returns non-zero number
+
+Then we passes the result from function to who called the function.
+
+Next to the function call, you can use `$?` to capture the data returned from the function.
+
+`$?` is used for many purposes, when we check `$?` after command execution it gives the status_code of the command
+
+If we check after the function call, it gives the function return data.
+
+Here the function may return `0` or non-zero number and storing the data to `user_status` variable
+
+If `user_status` is `0` the user is already present, then the `if` condition just prints `echo "The user ${user} already exist !!!"` 
+
+If `user_status` is non-zero number, it enters `if` condition and call the `create_user` function with argument `user` to create the new linux user.
+
+The for loop continues and creates all users listed in `users_list` array
+
+Next `# delete_users` function call line is commented, it will not call the `delete_users()` function
+
+If you want to delete the users listed in `delete_users_list` array. Uncomment the function call line `delete_users`
+
+So the `delete_users()` function will be called and it checks whether the user is present or not using `check_user()` function and deletes the user using `userdel` command
+
+The for loop inside `delete_users()` function continues and delete all user listed in `delete_users_list` array
 
 ```
 ubuntu@test:~/shellscript/tutorials/part-4$ sudo ./4-user-management.sh 
