@@ -3,6 +3,15 @@
 ### Youtube
 [![Git part-1](/content/git/tutorials/images/part-1.png)](https://www.youtube.com/watch?v=kvqHSStbgfU)
 
+### Topics
+* What is git
+* How to create Github account
+* How to create Github public repository
+* How to install git in linux operating system(Ubuntu)
+* How to clone(download) the repository from Github to local computer
+
+### What is git
+
 GIT stands for Global Information Tracker
 
 It is a powerful and widely-used version control system commonly used for software development and other collaborative projects
