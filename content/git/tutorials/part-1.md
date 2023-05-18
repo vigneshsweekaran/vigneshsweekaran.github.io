@@ -1,5 +1,8 @@
 ## GIT
 
+### Youtube
+[![Git part-1](/content/git/tutorials/images/part-1.png)](https://www.youtube.com/watch?v=kvqHSStbgfU)
+
 GIT stands for Global Information Tracker
 
 It is a powerful and widely-used version control system commonly used for software development and other collaborative projects
