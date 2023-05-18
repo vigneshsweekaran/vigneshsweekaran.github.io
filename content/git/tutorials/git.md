@@ -1,6 +1,6 @@
 ## GIT
 
-GIT, which stands for Global Information Tracker
+GIT stands for Global Information Tracker
 
 It is a powerful and widely-used version control system commonly used for software development and other collaborative projects
 
