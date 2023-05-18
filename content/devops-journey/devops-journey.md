@@ -31,8 +31,7 @@
 * [Shell script examples](https://github.com/vigneshsweekaran/shellscript)
 
 ## Git
-* [What is Git ?](/content/git/tutorials/git)
-* [How to create a Github account](/content/git/tutorials/01-how-to-create-github-account)
+* [Part - 1 : How to create Github account and repositories](/content/git/tutorials/part-1)
 
 ## Build Tools
 `Maven/Gradle` : For Java programming language (Backend application)
