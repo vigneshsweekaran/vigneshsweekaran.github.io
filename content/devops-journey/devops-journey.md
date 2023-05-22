@@ -32,6 +32,7 @@
 
 ## Git
 * [Part - 1 : How to create Github account and repositories](/content/git/tutorials/part-1)
+* [Part - 2 : How to create private repositories and types of authentication](/content/git/tutorials/part-2)
 
 ## Build Tools
 `Maven/Gradle` : For Java programming language (Backend application)
