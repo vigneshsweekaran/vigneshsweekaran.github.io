@@ -127,7 +127,7 @@ total 4
 -rw-rw-r-- 1 ubuntu ubuntu 14 Jun  2 23:41 README.md
 ```
 
-In this "firstproject" repository we have only README.md file
+In this `firstproject` repository we have only README.md file
 
 Lets create new file `hello.txt`
 ```
@@ -294,3 +294,14 @@ To https://github.com/devopspilot2/firstproject.git
 The `hello.txt` is now pushed to Github
 
 ![git](/content/git/tutorials/images/part-1/pushed-hello-file.png)
+
+### How to see the commits in Github
+
+Goto Github `firstproject` repository and click on `commits`
+![git](/content/git/tutorials/images/part-1/commits.png)
+
+Here you can see all the commits pushed
+![git](/content/git/tutorials/images/part-1/commits-list.png)
+
+After clicking on one commit, you can see the changes made in the commit
+![git](/content/git/tutorials/images/part-1/commit-diff.png)
