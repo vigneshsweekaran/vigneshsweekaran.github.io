@@ -41,7 +41,9 @@
 * [How to generate a sample java application using Maven](/content/maven/tutorials/02-generate-a-sample-java-application-using-maven)
 * [Building Java Projects with Maven](https://spring.io/guides/gs/maven/#initial)
 
-`Nodejs` : For AngularJs (Frontend application)
+`Npm` : Build / Package Manager for AngularJs, NodeJs, ReactJs (Frontend application)
+
+`Pip` : Package manager for Python
 
 ## Web servers
 `Tomcat` Majorly used for deploying Java based application
@@ -50,7 +52,7 @@
 * [How to deploy the java application to Tomcat 9 webserver using maven](https://vigneshsweekaran.github.io/content/tomcat/tutorials/how-to-deploy-java-application-to-tomcat-using-maven)
 
 `Nginx/httpd` Majorly used for deploying frontend application developed using HTML,CSS,Javascript, AngularJs and ReactJS
-* [how to install Nginx webserver](https://devopspilot.com/content/nginx/tutorials/01-how-to-install-nginx)
+* [How to install Nginx webserver](https://devopspilot.com/content/nginx/tutorials/01-how-to-install-nginx)
 
 ## Docker
 * [Docker training video](https://www.youtube.com/watch?v=zJ6WbK9zFpI&t=5722s) 
