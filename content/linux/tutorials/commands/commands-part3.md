@@ -4,20 +4,25 @@
 
 [![Tamil Linux commands part-3](/content/linux/tutorials/images/linux-basics.png)](https://www.youtube.com/watch?v=i89LcsPcz88)
 
-mkdir
+### mkdir
 
-mkdir -p
+### mkdir -p
 
-rmdir
+### rmdir
 
-rm -rf
+### rm -rf
 
-touch
+### touch
 
-vi
+### vi
 
-tree
+### cat
+To print/read the content of a file
 
-cp
+cat file_name
 
-mv
+### tree
+
+### cp
+
+### mv

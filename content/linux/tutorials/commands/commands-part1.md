@@ -1,17 +1,49 @@
 # Linux commands part-1
 
-pwd
+### pwd
+To check the current working directory
 
-ls
+NOTE: In linux operating system, folder is also called as directory
 
-ls -l
+### ls
+To show the files and folders in current working directory in horizontal view
 
-ls -lart
+### ls -l
+To show the files and folders in current working directory in vertical view
 
-cd
+And also shows the details of each file and folder
 
-cat
+### ls -la
+To show the normal files, folders and also hidden files, folders in current working directory in vertical view
 
-relative path, from current directory
+In a linux hidden file or folder starts with `.`
 
-absolute path - from /
+.file_name --> hidden file
+
+.folder_name --> hidden folder
+
+### cd
+To go to another folder
+
+cd folder_name
+
+### relative path, from current directory
+
+### absolute path - from /
+
+## Abbreviation
+
+pwd --> print working directory
+
+cd --> change directory
+
+cat --> concatenate
+
+## Tasks
+1. Check the current folder name
+
+2. Print the files and folders in current directory
+
+3. Print the normal files, folders and also hidden files
+
+4. Go to `/etc` folder and check the current working directory and check the files present in the folder.
