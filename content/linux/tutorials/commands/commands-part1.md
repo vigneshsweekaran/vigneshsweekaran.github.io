@@ -2,16 +2,32 @@
 
 ### pwd
 To check the current working directory
+```
+[opc@new-k8s ~]$ pwd
+/home/opc
+```
 
 NOTE: In linux operating system, folder is also called as directory
 
 ### ls
 To show the files and folders in current working directory in horizontal view
+```
+[opc@new-k8s ~]$ ls
+first-project  hello.txt  shellscript  swapfile
+```
 
 ### ls -l
 To show the files and folders in current working directory in vertical view
 
 And also shows the details of each file and folder
+```
+[opc@new-k8s ~]$ ls -l
+total 3072004
+drwxrwxr-x. 3 opc  opc          65 May 18 12:50 first-project
+-rw-rw-r--. 1 opc  opc          14 Jun 18 03:53 hello.txt
+drwxrwxr-x. 5 opc  opc          70 May 13 12:56 shellscript
+-rw-r--r--. 1 root root 3145728000 Jan 11  2022 swapfile
+```
 
 ### ls -la
 To show the normal files, folders and also hidden files, folders in current working directory in vertical view
@@ -22,14 +38,101 @@ In a linux hidden file or folder starts with `.`
 
 .folder_name --> hidden folder
 
+```
+[opc@new-k8s ~]$ ls -la
+total 3072060
+drwxr-x---. 12 opc  opc          4096 Jun 18 03:54 .
+drwxr-xr-x.  4 root root           32 Apr 13 12:25 ..
+-rw-------.  1 opc  opc         18412 Jun 15 12:46 .bash_history
+-rw-r--r--.  1 opc  opc            18 Nov 22  2019 .bash_logout
+-rw-r--r--.  1 opc  opc           193 Nov 22  2019 .bash_profile
+-rw-r--r--.  1 opc  opc           232 Apr 15 13:02 .bashrc
+drwxrwxr-x.  4 opc  opc            30 Nov 26  2021 .cache
+drwxrwxr-x.  4 opc  opc            30 Nov 26  2021 .config
+drwxrwxr-x.  4 opc  opc            82 Jan 11  2022 .docker
+drwxrwxr-x.  3 opc  opc            65 May 18 12:50 first-project
+-rw-rw-r--.  1 opc  opc            57 May 18 12:42 .gitconfig
+-rw-rw-r--.  1 opc  opc            14 Jun 18 03:53 hello.txt
+-rw-r--r--.  1 opc  opc           172 Apr  2  2020 .kshrc
+drwxr-xr-x.  3 opc  docker         33 Jul  4  2021 .kube
+drwxrwxr-x.  3 opc  opc            24 May  7 03:40 .m2
+drwxrw----.  3 opc  opc            19 Jul  4  2021 .pki
+drwxrwxr-x.  5 opc  opc            70 May 13 12:56 shellscript
+drwx------.  2 opc  opc            80 May 26  2022 .ssh
+-rw-r--r--.  1 root root   3145728000 Jan 11  2022 swapfile
+drwxr-xr-x.  2 opc  opc            24 May  8 12:30 .vim
+-rw-------.  1 opc  opc          9145 May 18 12:41 .viminfo
+```
+
 ### cd
 To go to another folder
 
 cd folder_name
 
-### relative path, from current directory
+```
+[opc@new-k8s ~]$ pwd
+/home/opc
+```
 
-### absolute path - from /
+```
+[opc@new-k8s ~]$ ls -l
+total 3072004
+drwxrwxr-x. 3 opc  opc          65 May 18 12:50 first-project
+-rw-rw-r--. 1 opc  opc          14 Jun 18 03:53 hello.txt
+drwxrwxr-x. 5 opc  opc          70 May 13 12:56 shellscript
+-rw-r--r--. 1 root root 3145728000 Jan 11  2022 swapfile
+```
+
+```
+[opc@new-k8s ~]$ cd first-project/
+```
+
+```
+[opc@new-k8s first-project]$ pwd
+/home/opc/first-project
+```
+
+```
+[opc@new-k8s first-project]$ ll
+total 12
+-rw-rw-r--. 1 opc opc 31 May 18 12:50 2.txt
+-rw-rw-r--. 1 opc opc 21 May 18 12:40 hello.txt
+-rw-rw-r--. 1 opc opc 30 May 18 12:40 README.md
+```
+
+### Relative path
+Need to tell the path/folder name only from the current directory. No need to tell from starting point
+
+We are currently in `/home/opc`
+```
+[opc@new-k8s ~]$ pwd
+/home/opc
+```
+
+If you want to go to `/home/opc/first-project` you can just pass only the `first-project` folder name to `cd` command to go to that folder
+
+```
+[opc@new-k8s ~]$ cd first-project
+[opc@new-k8s first-project]$ pwd
+/home/opc/first-project
+```
+
+### Absolute path
+Absolute path means you need to give the full path from starting point
+
+We are currently in `/home/opc`
+```
+[opc@new-k8s ~]$ pwd
+/home/opc
+```
+
+If you want to go to `/home/opc/first-project` you have to pass the full path `/home/opc/first-project` to the `cd` command to go to that folder
+
+```
+[opc@new-k8s ~]$ cd /home/opc/first-project
+[opc@new-k8s first-project]$ pwd
+/home/opc/first-project
+```
 
 ## Abbreviation
 
@@ -46,4 +149,4 @@ cat --> concatenate
 
 3. Print the normal files, folders and also hidden files
 
-4. Go to `/etc` folder and check the current working directory and check the files present in the folder.
+4. Go to `/etc/ssh` folder and check the current working directory and check the files present in the folder.
