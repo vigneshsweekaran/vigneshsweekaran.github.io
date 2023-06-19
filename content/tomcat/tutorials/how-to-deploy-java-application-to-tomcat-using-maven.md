@@ -129,5 +129,10 @@ mvn cargo:undeploy
 
 Hurray!! we have succesfully deployed and undeployed the java web application to Tomcat 9 using Maven
 
+### Pass the tomcat url, username, password as mvn arguments
+```
+mvn cargo:deploy -Dcargo.tomcat.manager.url="http://152.70.71.239:8080/manager/text" -Dcargo.remote.username="deployer" -Dcargo.remote.password="deployer"
+```
+
 ### Previous Topic
 * [How to manually deploy the java application to Tomcat 9 webserver](/content/tomcat/tutorials/how-to-manually-deploy-java-application-to-tomcat)
