@@ -51,3 +51,8 @@ Application dependencies are packaged within the docker container, no need to in
 In virtual machine, only docker needs to be installed
 
 ![cicd-server](/content/docker/tutorials/images/docker.png)
+
+We can multiple containers until the capacity of the virtual machine fully utilized
+
+![cicd-server](/content/docker/tutorials/images/docker.png)
+
