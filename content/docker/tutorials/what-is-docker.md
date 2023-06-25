@@ -54,5 +54,5 @@ In virtual machine, only docker needs to be installed
 
 We can multiple containers until the capacity of the virtual machine fully utilized
 
-![cicd-server](/content/docker/tutorials/images/docker.png)
+![cicd-server](/content/docker/tutorials/images/docker-containers.png)
 
