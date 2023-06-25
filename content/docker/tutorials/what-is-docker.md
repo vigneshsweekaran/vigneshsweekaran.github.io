@@ -52,7 +52,9 @@ In virtual machine, only docker needs to be installed
 
 ![cicd-server](/content/docker/tutorials/images/docker.png)
 
-We can multiple containers until the capacity of the virtual machine fully utilized
+We can create multiple containers until the capacity of the virtual machine fully utilized
+
+Resources(Memory/cpu) in the virtual machine is shared across all containers
 
 ![cicd-server](/content/docker/tutorials/images/docker-containers.png)
 
