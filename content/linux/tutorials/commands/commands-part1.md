@@ -168,13 +168,17 @@ cd     --> To change the directory
 3. Check the normal files, folders and also hidden files in current directory
 
 4. Go to `/etc/ssh` folder and verify you are in `/etc/ssh` folder
+   
    Check the files present in the folder.
 
 5. Go to `/tmp` folder and verify you are in `/tmp` folder
+   
    Check whether hidden files, folders are present or not
 
 5. Go to `/etc` folder and verify you are in `/etc` folder
+   
    Check `os-release` file is present or not
+   
    Print the content of `os-release` file
 
 ## Solution
