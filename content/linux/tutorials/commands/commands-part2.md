@@ -1,7 +1,5 @@
 # Linux commands part-2
 
-cat /os-release	
-
 free -h
 
 df -h
