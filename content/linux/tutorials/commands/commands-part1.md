@@ -134,6 +134,11 @@ If you want to go to `/home/opc/first-project` you have to pass the full path `/
 /home/opc/first-project
 ```
 
+### To print/read the file
+```
+cat /etc/os-release
+```
+
 ## Abbreviation
 
 pwd --> print working directory
@@ -142,11 +147,34 @@ cd --> change directory
 
 cat --> concatenate
 
+## Commands
+pwd    --> To check current working directory
+
+ls     --> To check the files and folders present in current directory in horizontal view
+
+ls -l  --> To check the files and folders present in current directory in vertical view
+
+ls -la --> To check the files, folders and also hidden files, folders present in current directory in vertical view
+
+ll     --> To check the files, folders and also hidden files, folders present in current directory in vertical view (Alias of ls -la)
+
+cd     --> To change the directory
+
 ## Tasks
 1. Check the current folder name
 
-2. Print the files and folders in current directory
+2. Check the files and folders present in current directory
 
-3. Print the normal files, folders and also hidden files
+3. Check the normal files, folders and also hidden files in current directory
 
-4. Go to `/etc/ssh` folder and check the current working directory and check the files present in the folder.
+4. Go to `/etc/ssh` folder and verify you are in `/etc/ssh` folder
+   Check the files present in the folder.
+
+5. Go to `/tmp` folder and verify you are in `/tmp` folder
+   Check whether hidden files, folders are present or not
+
+5. Go to `/etc` folder and verify you are in `/etc` folder
+   Check `os-release` file is present or not
+   Print the content of `os-release` file
+
+## Solution
