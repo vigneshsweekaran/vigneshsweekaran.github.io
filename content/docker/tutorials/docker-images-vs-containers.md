@@ -12,11 +12,6 @@ Similar like downloading the ubuntu iso file from official ubuntu website.
 
 All the docker images are stored in docker registry `Docker Hub` https://hub.docker.com
 
-### To install docker in Ubuntu OS
-```
-sudo apt install docker.io
-```
-
 ### Pulling the docker image from Docker hub
 
 Lets check what are the images present in the server.
