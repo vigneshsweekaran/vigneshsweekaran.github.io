@@ -134,9 +134,21 @@ If you want to go to `/home/opc/first-project` you have to pass the full path `/
 /home/opc/first-project
 ```
 
-### To print/read the file
+### To print/read content of a  file
 ```
-cat /etc/os-release
+ubuntu@manikandan:~$ cat /etc/os-release 
+PRETTY_NAME="Ubuntu 22.04.2 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.2 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
 ```
 
 ## Abbreviation
@@ -160,6 +172,8 @@ ll     --> To check the files, folders and also hidden files, folders present in
 
 cd     --> To change the directory
 
+cat    --> To print the content of a file
+
 ## Tasks
 1. Check the current folder name
 
@@ -180,5 +194,3 @@ cd     --> To change the directory
    Check `os-release` file is present or not
    
    Print the content of `os-release` file
-
-## Solution
