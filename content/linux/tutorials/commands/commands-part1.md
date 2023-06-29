@@ -134,7 +134,7 @@ If you want to go to `/home/opc/first-project` you have to pass the full path `/
 /home/opc/first-project
 ```
 
-### To print/read content of a  file
+### To print/read content of a file
 ```
 ubuntu@manikandan:~$ cat /etc/os-release 
 PRETTY_NAME="Ubuntu 22.04.2 LTS"

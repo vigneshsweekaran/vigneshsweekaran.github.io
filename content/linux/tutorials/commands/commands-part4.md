@@ -26,8 +26,20 @@ su vignesh
 
 su - vignesh
 
-### Create user
+### Creating user
+#### For Ubuntu Operating system
+
+By default `useradd` command will create a user but will not create home directory
+
+```
 useradd test
+```
+
+To create home directory pass `-s` or `--create-home` argument to `useradd` command
+
+```
+useradd -s test1
+```
 
 ### Set password for user
 passwd test
@@ -39,9 +51,24 @@ cat /etc/passwd
 sudo yum install tree    - will not work, because test user dosen't have sudo privileges
 
 ### Granting Sudo Privileges to a User
+
 usermod -aG group_name user_name
 
+#### For Centos, oracle Linux os 
+```
 usermod -aG wheel test
+```
+
+#### For Ubuntu os 
+```
+usermod -aG sudo test
+```
+
+### To verify whether user is added to the group
+
+```
+id test
+```
 
 ### Test user trying to install tree package 
 sudo yum install tree    - will work, because test user now have sudo privileges
