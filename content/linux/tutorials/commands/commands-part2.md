@@ -1,5 +1,9 @@
 # Linux commands part-2
 
+### Youtube
+
+[![Tamil Linux commands part-3](/content/linux/tutorials/images/linux-basics.png)](https://www.youtube.com/watch?v=MbFVZpzKl_E)
+
 ### free -h
 To check ram/memory usage in server
 
