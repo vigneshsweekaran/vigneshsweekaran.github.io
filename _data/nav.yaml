@@ -20,9 +20,6 @@ nav-list:
   - title: Terraform
     url: https://vigneshsweekaran.github.io/nav/terraform.html
 
-  - title: AWS
-    url: https://vigneshsweekaran.github.io/nav/aws.html
-
   - title: Linux
     url: https://vigneshsweekaran.github.io/nav/linux.html
 
@@ -54,6 +51,12 @@ cicd-nav-list:
     url: https://vigneshsweekaran.github.io/nav/gitlab-cicd.html
   - title: Azure Devops
     url: https://vigneshsweekaran.github.io/nav/azure-devops.html
+
+cloud-nav-list:
+  - title: AWS
+    url: https://vigneshsweekaran.github.io/nav/aws.html
+  - title: Azure
+    url: https://vigneshsweekaran.github.io/nav/azure.html
 
 scripting-nav-list:
   - title: Shell-Script

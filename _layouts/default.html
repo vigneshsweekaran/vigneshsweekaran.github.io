@@ -81,6 +81,16 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            CI/CD Tools
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {% for item in site.data.nav.cloud-nav-list %}
+            <a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a>
+            {% endfor %}
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Scripting
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
