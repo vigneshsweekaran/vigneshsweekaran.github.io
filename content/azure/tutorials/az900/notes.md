@@ -17,7 +17,6 @@ Azure Disks: Block-level storage volumes for Azure VMs.
 Locally redundant storage:
 Locally redundant storage (LRS) replicates your data three times within a single data center in the primary region((99.999999999%))
 
-
 Zone-redundant storage:
 For Availability Zone-enabled Regions, zone-redundant storage (ZRS) replicates your Azure Storage data synchronously across three Azure availability zones in the primary region. ZRS offers durability for Azure Storage data objects of at least 12 nines (99.9999999999%) over a given year
 
@@ -33,6 +32,8 @@ Data in a GZRS storage account is copied across three Azure availability zones i
 [Reference - Azure storage redundancy](https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/3-redundancy)
 
 ### Azure storage tiers
-* hot - frequently accessed 
-* cool - infrequently accessed
-* archive - Accessed more than 180 days
+```
+Hot access tier: Optimized for storing data that is accessed frequently (for example, images for your website).
+Cool access tier: Optimized for data that is infrequently accessed and stored for at least 30 days (for example, invoices for your customers).
+Archive access tier: Appropriate for data that is rarely accessed and stored for at least 180 days, with flexible latency requirements (for example, long-term backups).
+```
