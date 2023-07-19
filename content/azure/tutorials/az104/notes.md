@@ -19,3 +19,5 @@ organization tenant
 own organization tenant
 * User provisioning is done by the invited party; you are in control
 to invite the other side's users
+
+### Azure AD users
