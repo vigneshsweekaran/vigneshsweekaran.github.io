@@ -6,25 +6,43 @@
 * Provides application management, authentication, device management, and hybrid identity
 
 |Windows Server Active Directory|Azure Active Directory|
+|Directory Service |Identity Solution|
 |Kerberos, NTLM|http, https|
 |LDAP|SAML, OAUTH, Open ID, WS-Federation|
+|Manage many other tasks, including deployment, configuration, virtual machines, patching, and other backend processes|Managed service to manage only users, groups, and policies|
+
+### Azure Active Directory editions
+1.	Free
+2.	Microsoft 365 Apps
+3.	Premium P1
+4.	Premium P2
 
 ### Azure AD users and groups
 #### User - Identity Sources
-* Cloud
+* Cloud 
+    User that exists only in Azure AD of your organization (cloud-borne users) or external azure AD instance.
+    Example – IT Administrators and the users you manage in the cloud
+
 * Directory-synchronized
+   User that exists in On-premises AD.
+   Azure connect is the service used for synchronizing these users to Azure.
+
 * Guest
+  User exists outside Azure such as contractors or vendors using your AD resources
+  Example - Accounts from other cloud or Microsoft account such as Xbox line.
 
 #### Bulk User Accounts
-* Create the comma-separated values (CSV) file with the list of all the users and their properties
-* Loop through the file processing each user
+* In order to bulk create users in the administration portal, you must be signed in as a Global administrator or User administrator.
+* Download the comma-separated values (CSV) file, fill the list of all the users and their properties ,upload it to create user accounts.
+* First row can be updated(version number)  and second row cannot be modified. Add users from third row, fill mandatory fields.
+* Each bulk activity to create users can run for up to one hour. This enables bulk creation of at least 50,000 users.
 * Consider error handling, duplicate users, initial password settings, empty properties, and when the account is enabled
-
+  
 ### Group Accounts
 #### Group Types
-* Security groups
-* Office 365 groups
-
+1. Security groups - manage member and computer access to shared resources for a group of users. You can create a security group for a specific security policy and apply the same permissions to all members of a group. 
+2. Microsoft 365 groups- provide collaboration opportunities. Group members have access to a shared mailbox, calendar, files, SharePoint site, and more.
+   
 #### Assignment Types
 * Assigned
 * Dynamic User
