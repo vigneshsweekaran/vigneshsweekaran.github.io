@@ -3,10 +3,6 @@
 * Azure Policy is a service in Azure that you use to create, assign and, manage policies
 * Azure Policy runs evaluations and scans for non-compliant resources
 
-### Definition type
-* Policy
-* Initiate --> Collection of Policy
-
 ### Usage Cases
 * Allowed resource types
 * Allowed virtual machine
@@ -18,3 +14,17 @@
 * Enforcement and compliance
 * Apply policies at scale
 * Remediation - what action to take if the policy is violated Eg: If required tags is not present add that tag automatically
+
+### Implementing Azure Policy
+* Browse Policy Definitions
+* Create Initiative Definitions
+* Scope the Initiative Definition
+* View Policy evaluation results
+
+### Definition type
+* Policy
+* Initiate --> Collection of Policy
+
+### Key Points
+* Azure Policy can be applied to Management group, Subscription and Resource group
+* Policy will effect on new resources
