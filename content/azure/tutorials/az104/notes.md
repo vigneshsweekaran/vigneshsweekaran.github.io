@@ -50,6 +50,7 @@ to invite the other side's users
 * Logical unit of Azure services that is linked to an Azure account
 * Security and billing boundary
 * Includes accounts - identities in Azure Active Directory (Azure AD) or in a directory that is trusted by Azure AD, such as a work or school organization
+* Subscription cannot have child Subscription
 
 ### Getting a Subscription
 * Enterprise Agreement customers make an upfront monetary commitment and consume services throughout the year
@@ -83,11 +84,8 @@ to invite the other side's users
 * Consists of a name-value pair
 * Very useful for rolling up billing information
 
-## Azure Policy (Service)
-
-### Policy Definition
-A Policy Definition expresses what to evaluate and what actions to take.
-
-### Definition type
-* Policy
-* Initiate --> Collection of Policy
+## Management groups
+* Provides a level of scope above subscriptions
+* Targeting of policies and spend budgets across subscriptions and inheritance down the hierarchies
+* Compliance and cost reporting by organization (business/teams)
+* Management group can have multiple child management group
