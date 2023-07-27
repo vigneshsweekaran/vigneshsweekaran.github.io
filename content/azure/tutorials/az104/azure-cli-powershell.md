@@ -86,12 +86,20 @@ az group create --name vignesh-test-cli --location eastus
 
 #### To create a virtual machine
 ```
-New-AzVm -ResourceGroupName "vignesh-test-ps" -Name "ubuntu-test" -Image "UbuntuLTs" -Location "East US" -Size "Standard_B2s"
+az vm create \
+    --resource-group vignesh-test-cli \
+    --name windows-test \
+    --image Win2022AzureEditionCore \
+    --public-ip-sku Standard \
+    --admin-username azureuser
 ```
 
 #### To delete virtual machine
 ```
-
+az vm delete \
+    --resource-group vignesh-test-cli \
+    --name windows-test \
+    --force-deletion none
 ```
 
 #### To delete resource group
