@@ -74,7 +74,7 @@ FROM nginx:latest
 COPY index.html /usr/share/nginx/html
 ```
 
-In the Dockerfile you are using "nginx:latest" as the base docker image and copying the index.hml file to `/usr/share/nginx/html` folder during docker build
+In the Dockerfile you are using `nginx:latest` as the base docker image and copying the `index.hml` file to `/usr/share/nginx/html` folder during docker build
 
 ### Build the docker image
 ```
@@ -114,7 +114,7 @@ Type localhost:80 or ip-address:80 in browser
 
 ![html-app](/content/docker/tutorials/images/tasks/html-app.png)
 
-### Push the html-app docker image to dockerhub
+### Push the html-app docker image tag v1.0 to dockerhub
 ```
 azureuser@raghav:~/docker-html$ docker push devopspilot1/html-app:v1.0
 The push refers to repository [docker.io/devopspilot1/html-app]
