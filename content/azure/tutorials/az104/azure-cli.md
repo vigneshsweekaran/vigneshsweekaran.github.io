@@ -61,3 +61,8 @@ az group delete --name vignesh-test-cli
 az aks create -g RESOURCE_GROUP_NAME -n CLUSTER_NAME --generate-ssh-keys --node-count WORKER_NODES_COUNT
 eg: az aks create -g RG1 -n AKS1 --generate-ssh-keys --node-count 3
 ```
+
+### To deallocate and remove the VMs within a VMSS (Virtual machine scale set)
+```
+az vmss deallocate --instance-ids 5 --name myScaleSet --resource-group testgroup
+```
