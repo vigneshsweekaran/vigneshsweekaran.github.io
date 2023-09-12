@@ -11,3 +11,7 @@
 * NSGs are evaluated independently for the subnet and NIC
 * An "allow" rule must exist at both levels for traffic to be admitted
 * Use the Effective Rules link if you are not sure which security rules are being applied
+
+### Notes
+* In order for you to associate a network security group to a subnet, both the virtual network and the network security group must be in the same region
+* Removing the NSG from the network interface would allow the VM to use the NSG associated with the subnet, which is best practice

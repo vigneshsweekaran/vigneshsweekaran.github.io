@@ -66,3 +66,8 @@ eg: az aks create -g RG1 -n AKS1 --generate-ssh-keys --node-count 3
 ```
 az vmss deallocate --instance-ids 5 --name myScaleSet --resource-group testgroup
 ```
+
+### Retrieve the access credentials for AKS
+az aks get-credentials --name AKS1 --resource-group RG1
+```
+The kubeconfig is required in order to access the Kubernetes API. You can retrieve the kubeconfig using the az aks get-credentials command.
