@@ -53,3 +53,19 @@ Remove-AzResourceGroup -Name "vignesh-test-ps"
 ```
 Get-AzStorageAccountKey
 ```
+
+### Notes
+### In Az PowerShell 3.7.0, 'Get-AzContext' gets the metadata used to authenticate Azure Resource Manager requests.
+```
+Get-AzContext
+```
+
+### In Az PowerShell 3.7.0, Set-AzContext sets the tenant, subscription, and environment for cmdlets to use in the current session.
+```
+Set-AzContext -SubscriptionName
+```
+
+### In Az PowerShell 3.7.0, Select-AzContext is a valid cmdlet, but this will change the context beyond the current session
+```
+Select-AzContext
+```
