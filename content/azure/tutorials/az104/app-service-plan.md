@@ -15,3 +15,9 @@ The Isolated and IsolatedV2 tiers run dedicated Azure VMs on dedicated Azure Vir
 * Deploying to stating environment
   * Add a new deployment slot to App1 to release the test version of App1 - Deployment slots allow greater flexibility within app services, providing a built-in staging environment for your app and access to your application without deploying it to production
   * Create a build server with the master branch of Git1 as the trigger - You have the option of creating a build server natively in App Services by selecting Deployment Center in the App1 blade. This will trigger a build every time a commit is made to the master branch of Git1
+* The app must be running in the Standard, Premium, or Isolated tier in order for you to enable multiple
+deployment slots.
+* Scale up: Get more CPU, memory, disk space, and extra features like dedicated virtual machines (VMs),
+custom domains and certificates, staging slots, autoscaling, and more.
+* Scale out: Increase the number of VM instances that run your app. You can scale out to as many as 30
+instances
