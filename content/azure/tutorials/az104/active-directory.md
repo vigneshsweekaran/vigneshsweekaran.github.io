@@ -43,3 +43,7 @@ to invite the other side's users
 * Monitor and gain insights into AD FS servers, Azure AD Connect, and AD domain controllers
 * Monitor and gain insights into the synchronizations that occur between your on-premises AD DS and Azure AD
 * Monitor and gain insights into your on-premises identity infrastructure that is used to access Office 365 or other Azure AD applications
+* Azure AD Join enables users to join their devices to Active Directory from anywhere as long as they have
+connectivity with the Internet.
+* The Users may join devices to Azure AD setting enables you to select the users who can join devices to
+Azure AD. Options are All, Selected and None. The default is All.
