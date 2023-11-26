@@ -1,12 +1,37 @@
 ## Load balancer
+* Azure Load Balancer
+* Public Load Balancer
+* Internal Load Balancer
+* Load Balancer SKUs
+* Backend Pools
+* Load Balancer Rules
+* Session Persistence
+* Health Probes
+* It works on OSI layer 4
 
-### Notes
-* The pricing for a Standard load balancer is based on the number of rules configured (load balancer rules and NAT rules) and data processed. However, there is no hourly charge for the Standard load balancer itself when no rules are configured. Since this load balancer contains rules, it should be removed to save money
-* Application Gateway - Application Gateway is used to balance traffic between backend pools, and it provides multisite load balancing capabilities.
-* You need to direct all incoming TCP traffic on port 5000 to port 22 internally for connecting to Linux VMs
-  * A Network Address Translation (NAT) rule - NAT rules work alongside NSG rules to provide a connection to a VM that's behind a load balancer.
-  * A network security group (NSG) - The NSG rules work alongside the NAT rules to provide a connection to a VM that's behind a load balancer.
-* To check the availability of virtual machines in the backend pool of a Basic Load Balancer
-  * Health probe - A health probe is utilized to check the availability of VMs in the backend pool to ensure they are healthy and can serve traffic distributed from the load balancer
-* which load balancing solution in Azure that provides a 99.99% SLA, but it also wants to minimize costs
-  * tandard Load Balancer - Standard Load Balancers provide a 99.99% SLA, whereas Basic Load Balancers do not
+### Public load balancer
+* Maps public IP addresses and port number of incoming traffic to the VM's private IP address and port number, and vice versa.
+* Apply load balancing rules to distribute traffic across VMs or services.
+
+### Internal load balancer
+* Directs traffic only to resources inside a virtual network or that use a VPN to access Azure infrastructure.
+* Frontend IP addresses and virtual networks are never directly exposed to an internet endpoint.
+* Enables load balancing within a virtual network, for cross-premises virtual networks, for multi-tier applications, and for line-of-business applications.
+
+#### Types of Internal load balancer
+* Within a Virtual network
+* For a cross-premises virtual networks
+* For multi-tier applications
+* For line-of-business applications
+
+### Session Persistence
+* Session persistence specifies how client traffic is handled
+* None (default) requests can be handled by any virtual machine
+* Client IP requests will be handled by the same virtual machine
+* Client IP and protocol specifies that successive requests from the same address and protocol will be handled by the same virtual machine
+
+### Health Probes
+* Allows the load balancer to monitor the status of an app
+* Dynamically adds or removes VMs from the load balancer rotation based on their response to health checks
+* HTTP custom probe (preferred) pings every 15 seconds
+* TCP custom probe tries to establish a successful TCP session
