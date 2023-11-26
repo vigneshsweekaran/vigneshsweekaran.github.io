@@ -2,7 +2,24 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <script data-ad-client="ca-pub-6402710159572056" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1916321769007566" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/devops.ico">
+    <title>Devops Tutorial</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Best Devops tutorials">
+    <meta name="keywords" content="Devops, Jenkins, Docker, Kubernetes, Helm Chart, Shell script, Python, Linux, Jfrog artifactory, Nexus, Anchore, Sonarqube">
+    <meta name="author" content="Vignesh Sweekaran">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     {% if site.google_analytics %}
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
       <script>
@@ -14,53 +31,11 @@
     {% endif %}
     <meta charset="UTF-8">
     {% feed_meta %}
-{% seo %}
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <style>  
+    {% seo %}
+    <style>
       .navbar-custom {
         background-color: #157878;
       }
-      /* .newsletter {
-        padding: 80px 0;
-        background: #157878;
-      }
-
-      .newsletter .content {
-        max-width: 650px;
-        margin: 0 auto;
-        text-align: center;
-        position: relative;
-        z-index: 2;
-      }
-      .newsletter .content h2 {
-        color: #243c4f;
-        margin-bottom: 40px;
-      }
-      .newsletter .content .form-control {
-        height: 50px;
-        border-color: #ffffff;
-        border-radius:0;
-      }
-      .newsletter .content.form-control:focus {
-        box-shadow: none;
-        border: 2px solid #243c4f;
-      }
-      .newsletter .content .btn {
-        min-height: 50px; 
-        border-radius:0;
-        background: #243c4f;
-        color: #fff;
-        font-weight:600;
-      } */
     </style>
     <nav class="navbar navbar-expand-sm navbar-custom navbar-light">
       <ul class="navbar-nav">
@@ -103,46 +78,11 @@
     </nav>
   </head>
   <body>
-    <script type="text/javascript">
-      window.omnisend = window.omnisend || [];
-      omnisend.push(["accountID", "610928dcebf988001ff504ee"]);
-      omnisend.push(["track", "$pageViewed"]);
-      !function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://omnisnippet1.com/inshop/launcher-v2.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
-    </script>  
-    {% if page.enable_header %}
-    <header class="page-header" role="banner">
-      <h1>Welcome Devops Engineers</h1>
-      <p>All the Best</p>
-      <p> Want to kickstart your DevOps Journey ? Dont know where to start ?   <a class="badge badge-success" href="/content/devops-journey/devops-journey">Click here for RoadMap</a></p>
-      <p>Connect with me on <a class="badge badge-success" href="https://www.linkedin.com/in/vignesh-sweekaran-236841168/">Linkedin</a></p>
-      <p><a class="badge badge-success" href="https://paypal.me/vigneshsweekaran">Buy me a coffee</a></p>
-    </header>
-    {% endif %}
-
     <main id="content" class="main-content" role="main">
       {{ content }}
-
       <footer class="site-footer">
           <span class="site-footer-owner"><a href="https://devopspilot.com">devopspilot.com</a> 2021-2023 </span>
-          <!-- <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span> -->
       </footer>
     </main>
-    <!-- <section class="newsletter">
-      <div class="container">
-      <div class="row">
-      <div class="col-sm-12">
-        <div class="content">
-          <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
-        <div class="input-group">
-          <input type="email" class="form-control" placeholder="Enter your email">
-          <span class="input-group-btn">
-          <button class="btn" type="submit">Subscribe Now</button>
-          </span>
-        </div>
-        </div>
-      </div>
-      </div>
-      </div>
-      </section> -->
   </body>
 </html>
