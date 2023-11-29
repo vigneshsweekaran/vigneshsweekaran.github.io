@@ -1,7 +1,4 @@
 nav-list:
-  - title: Home
-    url: https://vigneshsweekaran.github.io/index.html
-
   - title: Interview-Questions
     url: https://vigneshsweekaran.github.io/nav/interview-questions.html
 
