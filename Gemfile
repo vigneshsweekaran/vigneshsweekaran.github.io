@@ -2,9 +2,9 @@ source "https://rubygems.org"
 
 gem 'jekyll'
 
-group :jekyll_plugins do
-  gem 'jekyll-relative-links'
-  gem 'jekyll-sitemap'
-  gem 'jekyll-feed'
-  gem 'jekyll-seo-tag'
-end
+# Gem to convert all md to html without definining --- 
+# https://github.com/benbalter/jekyll-optional-front-matter
+gem 'jekyll-optional-front-matter'
+
+# Relative links
+gem 'jekyll-relative-links'

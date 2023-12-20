@@ -1,14 +1,11 @@
 title: DevOps Tutorial
 description: Best tutorial blog for learning DevOps
 google_analytics: UA-199918385-1
+
 plugins:
+  - jekyll-optional-front-matter
   - jekyll-relative-links
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-relative_links:
-  enabled: true
-  collections: true
+
 include:
   - CONTRIBUTING.md
   - README.md
@@ -19,4 +16,10 @@ include:
   - ISSUE_TEMPLATE.md
   - PULL_REQUEST_TEMPLATE.md
 
-theme: jekyll-theme-cayman
+# To inclue default layout for all
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"

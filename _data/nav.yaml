@@ -1,62 +1,62 @@
 nav-list:
   - title: Interview-Questions
-    url: https://vigneshsweekaran.github.io/nav/interview-questions.html
+    url: /nav/interview-questions.html
 
   - title: DevOps-RoadMap
-    url: https://vigneshsweekaran.github.io/content/devops-journey/devops-journey
+    url: /content/devops-journey/devops-journey
 
   - title: Git
-    url: https://vigneshsweekaran.github.io/nav/git.html
+    url: /nav/git.html
 
   - title: Docker
-    url: https://vigneshsweekaran.github.io/nav/docker.html
+    url: /nav/docker.html
 
   - title: Kubernetes
-    url: https://vigneshsweekaran.github.io/nav/kubernetes.html
+    url: /nav/kubernetes.html
 
   - title: Terraform
-    url: https://vigneshsweekaran.github.io/nav/terraform.html
+    url: /nav/terraform.html
 
   - title: Linux
-    url: https://vigneshsweekaran.github.io/nav/linux.html
+    url: /nav/linux.html
 
   - title: SSL/TLS
-    url: https://vigneshsweekaran.github.io/nav/ssl-tls.html
+    url: /nav/ssl-tls.html
 
   - title: Sonarqube
-    url: https://vigneshsweekaran.github.io/nav/sonarqube.html
+    url: /nav/sonarqube.html
 
   - title: Tomcat
-    url: https://vigneshsweekaran.github.io/nav/tomcat.html
+    url: /nav/tomcat.html
 
   - title: Nginx
-    url: https://vigneshsweekaran.github.io/nav/nginx.html
+    url: /nav/nginx.html
 
   - title: Maven
-    url: https://vigneshsweekaran.github.io/nav/maven.html
+    url: /nav/maven.html
 
   - title: Jfrog
-    url: https://vigneshsweekaran.github.io/nav/jfrog.html
+    url: /nav/jfrog.html
 
   # - title: Services
-  #   url: https://vigneshsweekaran.github.io/nav/services.html
+  #   url: /nav/services.html
 
 cicd-nav-list:
   - title: Jenkins
-    url: https://vigneshsweekaran.github.io/nav/jenkins.html
+    url: /nav/jenkins.html
   - title: Gitlab CI/CD
-    url: https://vigneshsweekaran.github.io/nav/gitlab-cicd.html
+    url: /nav/gitlab-cicd.html
   - title: Azure Devops
-    url: https://vigneshsweekaran.github.io/nav/azure-devops.html
+    url: /nav/azure-devops.html
 
 cloud-nav-list:
   - title: AWS
-    url: https://vigneshsweekaran.github.io/nav/aws.html
+    url: /nav/aws.html
   - title: Azure
-    url: https://vigneshsweekaran.github.io/nav/azure.html
+    url: /nav/azure.html
 
 scripting-nav-list:
   - title: Shell-Script
-    url: https://vigneshsweekaran.github.io/nav/shell-script.html
+    url: /nav/shell-script.html
   - title: Python
-    url: https://vigneshsweekaran.github.io/nav/python.html
+    url: /nav/python.html
