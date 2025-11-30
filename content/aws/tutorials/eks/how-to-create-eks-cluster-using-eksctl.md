@@ -8,7 +8,7 @@
 ### Create EKS cluster with EC2 instances as nodes
 Configure aws credentials
 
-Craete a eks-cluster.yaml file with the following content
+Create a eks-cluster.yaml file with the following content
 
 ```
 apiVersion: eksctl.io/v1alpha5

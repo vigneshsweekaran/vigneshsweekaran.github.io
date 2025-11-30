@@ -76,38 +76,5 @@ So the Java compiler will convert the Java code to machine understandable code
 
 * It takes longer to run and also requires more memory.
 
-### What is Maven
-
-### How to install maven in linux operating system
-
-`Ubuntu Operating system`
-Run the following command to install maven
-```
-sudo apt update
-sudo apt install maven
-```
-
-`Centos Operating system`
-If Java is not installed, run the following command to install Java
-```
-sudo yum install java-11-openjdk
-```
-
-Run the following command to install maven
-```
-sudo yum update
-sudo yum install maven
-```
-
-### To check the version of maven
-```
-ubuntu@manikandan:~$ mvn --version
-Apache Maven 3.6.3
-Maven home: /usr/share/maven
-Java version: 11.0.19, vendor: Ubuntu, runtime: /usr/lib/jvm/java-11-openjdk-amd64
-Default locale: en, platform encoding: UTF-8
-OS name: "linux", version: "5.15.0-1033-oracle", arch: "amd64", family: "unix"
-```
-
 ##### Next Topic
 [How to generate a sample java application using Maven](/content/maven/tutorials/02-generate-a-sample-java-application-using-maven)

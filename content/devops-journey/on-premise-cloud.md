@@ -9,13 +9,13 @@
 
 ### Datacenter
 
-A data center is a collection of serevrs to  provide shared access to applications and data using a complex network, compute, and storage infrastructure
+A data center is a collection of servers to  provide shared access to applications and data using a complex network, compute, and storage infrastructure
 
 ![](/content/devops-journey/images/data-center.jpg)
 
 ### On premises vs Cloud
 
-On premises means the Datacenter owned only by the Company/Organaization
+On premises means the Datacenter owned only by the Company/Organization
 
 Cloud means the Datacenter is owned by the provider and given as service to the customer and the servers will be shared by multiple customers
 
